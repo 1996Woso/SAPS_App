@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Suspect>
+@*Add this because we used it on SuspectController*@
+@{
+    ViewData["Title"] = "Index";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div style="background-color:white;color:black" class="alert alert-success"> 
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+
+<div class="container p-3">
+    <div class="row p-4">
+        <div class="col-6">
+            <h2>Suspect List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Suspect" asp-action="AddSuspects" class="btn btn-primary" style="color:black;background-color:forestgreen">
+                <i class="bi bi-plus-circle"></i> &nbsp; Add New Suspect
+            </a><br /><br />
+        </div>
+    </div>
+</div>
+<br />
+@* <div class="col-3">
+    <form asp-controller="Suspect" asp-action="SearchSuspect">
+        <div class="input-group">
+            <input type="text" name="suspectId" class="form-control" placeholder="Enter Suspect ID">
+            <button type="submit" class="btn btn-primary" style="color:black;background-color:grey"><i class="bi bi-search"></i> Search</button>
+        </div>
+    </form>
+</div> *@
+
+<table class="table table-striped" id="myTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Suspect Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Total number of Offences</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.SuspectNumber</td>
+                <td>@obj.SuspectId</td>
+                <td>@obj.FirstName</td>
+                <td>@obj.LastName</td>
+                <td>@obj.TotalCriminalRecords</td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Suspect" asp-action="ShowSuspectDetails" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="background-color:dodgerblue;">
+                            <i class="bi bi-info-circle"> Show Details</i>
+                        </a>
+                        <a asp-controller="CriminalRecord" asp-action="AddRecords" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="color:black;background-color:forestgreen">
+                            <i class="bi bi-plus-circle"></i>Add Criminal Record
+                        </a> @*  &nbsp; *@
+                        <a asp-controller="Suspect" asp-action="EditSuspect" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="color:black;background-color:mediumspringgreen;width:fit-content;height:fit-content">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table>
+    <tr>
+        <td><strong>Total Criminal Records:</strong></td>
+        <td>@ViewBag.TotalCriminalRecords</td>
+    </tr>
+</table>
+<div>
+    <a asp-controller="Suspect" asp-action="DownloadSuspects" class="btn btn-success">
+        <i class="bi bi-download">Download List</i>
+    </a>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

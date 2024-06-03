@@ -1,0 +1,77 @@
+﻿@model Suspect
+<!-- Add this to your HTML file to include SweetAlert2 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/site.js"></script>
+@if (TempData["DuplicateMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["DuplicateMessage"]
+    </div>
+}
+<form method="post" asp-action="AddSuspects" id="create">
+    <div border p-3 mt-4>
+        <div class="row pb-2">
+            <h2>Add New Suspect</h2>
+        </div>
+        <div class="mb-3">
+            <label asp-for="SuspectId"></label>
+            <input asp-for="SuspectId" class="form-control" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
+            <span asp-validation-for="SuspectId" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')"onpaste="pasteAlphabets(event,'name',20)" required />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')"onpaste="pasteAlphabets(event,'surname',20)" required />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+        <p id="create-status"></p>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+@* <script>
+    function Submit(event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        //Check if inputs are filled
+        const id = $("#SuspectId").val();
+        const name = $("#FirstName").val();
+        const surname = $("#LastName").val();
+        const validID = ValidID(id);
+        const validName = Alphabets(name);
+        const validSurname = Alphabets(surname);
+
+        // Perform your client-side validations here
+        if (id==true && name==true && surname==true && validID==true && validName==true && validSurname==true) {
+            // All validations passed, submit the form
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'Suspect is successfully added to the data base.',
+            }).then(() => {
+                document.getElementById('create').submit();
+            });
+        } else {
+            // Show error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'Please fill in all required fields correctly.'
+            });
+        }
+    }
+</script> *@
+

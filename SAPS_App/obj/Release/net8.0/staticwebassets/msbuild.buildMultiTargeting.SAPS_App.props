@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SAPS_App.props" />
+</Project>

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<CriminalRecord>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Index";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div style="background-color:white;color:black" class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div class="container p-3">
+    <div class="row p-4">
+        <div class="col-6">
+            <h2>Criminal Record List</h2>
+        </div>
+    @*     <div class="col-6 text-end">
+            <a asp-controller="Suspect" asp-action="AddRecords" class="btn btn-primary" style="color:black;background-color:forestgreen">
+                <i class="bi bi-plus-circle"></i> &nbsp; Add New Criminal Record
+            </a>
+        </div> *@
+    </div>
+</div>
+<br />
+@if (User.IsInRole(SD.Role_Manager))
+{
+    <table class="table table-striped" id="myTable">
+        <thead>
+            <tr>
+                <th>Record Id</th>
+                <th>Offence</th>
+                <th>Sentence</th>
+                <th>Issued At</th>
+                <th>Issued By</th>
+                <th>Issued Date</th>
+           @*      <th>Manager Number</th> *@
+                <th>Case Manager Name</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.Id</td>
+                    <td>@obj.OffenceCommited</td>
+                    <td>@obj.Sentence years</td>
+                    <td>@obj.IssuedAt</td>
+                    <td>@obj.IssuedBy</td>
+                    <td>@obj.IssueDate.ToShortDateString()</td>
+                 @*    <th>@obj.CaseManagerNo</th> *@
+                    <th>@obj.CaseManagerName</th>
+                    @*Edit Button*@
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@obj.Id" class="btn btn-primary mx-2" style="color:black;background-color:mediumspringgreen;width:fit-content;height:fit-content">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@if (!(User.IsInRole(SD.Role_Manager)))
+{
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var userId = UserManager.GetUserId(User);
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>Record Id</th>
+                    <th>Offence</th>
+                    <th>Sentence</th>
+                    <th>Issued At</th>
+                    <th>Issued By</th>
+                    <th>Issued Date</th>
+                    <th>Edit</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach(var obj in Model)
+                {
+                    @if (@obj.CaseManagerId == userId)
+                    {
+                        <tr>
+                            <td>@obj.Id</td>
+                            <td>@obj.OffenceCommited</td>
+                            <td>@obj.Sentence years</td>
+                            <td>@obj.IssuedAt</td>
+                            <td>@obj.IssuedBy</td>
+                            <td>@obj.IssueDate.ToShortDateString()</td>
+                            <td>
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@obj.Id" class="btn btn-primary mx-2" style="color:black;background-color:mediumspringgreen;width:fit-content;height:fit-content">
+                                        <i class="bi bi-pencil-square"></i> Edit
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+}
+<div>
+    <a asp-controller="CriminalRecord" asp-action="DownloadCases" class="btn btn-success">
+        <i class="bi bi-download">Download List</i>
+    </a>
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

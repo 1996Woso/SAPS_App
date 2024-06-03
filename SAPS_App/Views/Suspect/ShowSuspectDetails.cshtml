@@ -1,0 +1,113 @@
+﻿@model SuspectDetailsViewModel
+
+<div class="container">
+    <div class="row">
+        <!-- First column (Search Form) -->
+        <div class="col-lg-4 mb-3">
+            <form asp-controller="Suspect" asp-action="SearchSuspect">
+                <div class="input-group">
+                    <input type="text" name="suspectId" class="form-control" size="15" placeholder="Enter Suspect ID">
+                    <button type="submit" class="btn btn-primary" style="color:black;background-color:grey"><i class="bi bi-search"></i> Search</button>
+                </div>
+            </form>
+            @if (Model != null && Model.Suspect != null)
+            {
+                <table class="table table-striped">
+                    <tr>
+                        <td><strong>Suspect No</strong></td>
+                        <td>@Model.Suspect.SuspectNumber</td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>@Model.Suspect.SuspectId</td>
+                    </tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Model.Suspect.FirstName</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>@Model.Suspect.LastName</td>
+                    </tr>
+                </table>
+            }
+            else if (IsSearchExecuted()) // Check if the search has been executed
+            {
+                <p style="background-color:white;color:red"><strong>@ViewBag.Input does not currently have a record in the database.</strong></p>
+            }
+            @functions {
+                private bool IsSearchExecuted()
+                {
+                    // Add logic to check if the search has been executed
+                    // For example, you can check if the Model is null after the search
+                    return Model != null;
+                }
+            }
+        </div>
+
+        <!-- Second column (Suspect Records) -->
+        <div class="col-lg-8">
+            @if (Model != null && Model.Suspect != null)
+            {
+                @if (Model.CriminalRecords.Any())
+                {
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h2><img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />Criminal Records</h2>
+                        </div>
+
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Record ID</th>
+                                        <th>Suspect Number</th>
+                                        <th>Offence Committed</th>
+                                        <th>Sentence</th>
+                                        <th>Issued At</th>
+                                        <th>Issued By</th>
+                                        <th>Issue Date</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var record in Model.CriminalRecords)
+                                    {
+                                        <tr>
+                                            <td>@record.Id</td>
+                                            <td>@Model.Suspect.SuspectNumber</td>
+                                            <td>@record.OffenceCommited</td>
+                                            <td>@record.Sentence years</td>
+                                            <td>@record.IssuedAt</td>
+                                            <td>@record.IssuedBy</td>
+                                            <td>@record.IssueDate.ToShortDateString()</td>
+                                            @*Edit Button*@
+                                            <td>
+                                                <div class="w-75 btn-group" role="group">
+                                                    <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@record.Id" class="btn btn-primary mx-2" style="background-color:black;width:fit-content;height:fit-content">
+                                                        <i class="bi bi-pencil-square"></i> Edit
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a asp-controller="CriminalRecord" asp-action="AddRecords" asp-route-id="@Model.Suspect.SuspectNumber" class="btn btn-primary" style="background-color:forestgreen">
+                                <i class="bi bi-plus-circle"></i> &nbsp; Add New Criminal Record
+                            </a>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <h2><img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />Criminal Records</h2>
+                    <p>No Criminal records found for @Model.Suspect.SuspectId</p>
+                    <a asp-controller="CriminalRecord" asp-action="AddRecords" class="btn btn-primary" style="background-color:forestgreen">
+                        <i class="bi bi-plus-circle"></i> &nbsp; Add New Criminal Record
+                    </a>
+                }
+            }
+        </div>
+    </div>
+</div>
