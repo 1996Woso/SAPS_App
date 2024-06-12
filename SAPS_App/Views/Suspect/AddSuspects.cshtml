@@ -11,27 +11,33 @@
     </div>
 }
 <form method="post" asp-action="AddSuspects" id="create">
-    <div border p-3 mt-4>
-        <div class="row pb-2">
-            <h2>Add New Suspect</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div border p-3 mt-4>
+                    <div class="row pb-2">
+                        <h2>Add New Suspect</h2>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="SuspectId"></label>
+                        <input asp-for="SuspectId" class="form-control" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
+                        <span asp-validation-for="SuspectId" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="FirstName"></label>
+                        <input asp-for="FirstName" class="form-control" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="LastName"></label>
+                        <input asp-for="LastName" class="form-control" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <p id="create-status"></p>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label asp-for="SuspectId"></label>
-            <input asp-for="SuspectId" class="form-control" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
-            <span asp-validation-for="SuspectId" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="FirstName"></label>
-            <input asp-for="FirstName" class="form-control" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')"onpaste="pasteAlphabets(event,'name',20)" required />
-            <span asp-validation-for="FirstName" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="LastName"></label>
-            <input asp-for="LastName" class="form-control" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')"onpaste="pasteAlphabets(event,'surname',20)" required />
-            <span asp-validation-for="LastName" class="text-danger"></span>
-        </div>
-		<button type="submit" class="btn btn-primary">Submit</button>
-        <p id="create-status"></p>
     </div>
 </form>
 

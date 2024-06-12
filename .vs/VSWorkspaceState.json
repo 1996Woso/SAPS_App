@@ -3,9 +3,12 @@
     "",
     "\\SAPS_App",
     "\\SAPS_App\\Views",
+    "\\SAPS_App\\Views\\CriminalRecord",
     "\\SAPS_App\\Views\\Home",
+    "\\SAPS_App\\Views\\Suspect",
     "\\SAPS_App\\wwwroot",
     "\\SAPS_App\\wwwroot\\css"
   ],
+  "SelectedNode": "\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
   "PreviewInSolutionExplorer": false
 }
