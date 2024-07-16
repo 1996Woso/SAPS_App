@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
+using SAPS_App.Context;
 using SAPS_App.Models;
 
 namespace SAPS_App.Controllers
 {
     public class CriminalRecordController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CriminalRecordController(ApplicationDbContext db)
+        private readonly SAPS_Context _db;
+        public CriminalRecordController(SAPS_Context db)
         {
             _db = db;
         }

@@ -4,14 +4,15 @@ using SAPS_App;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using SAPS_App.Areas.Identity.Pages;
 using OfficeOpenXml;
+using SAPS_App.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //This is done after connecting MsServer and creating a table on  (appsettings.json and ApplictationsDbContext.cs
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
-            builder.Configuration.GetConnectionString("DefaultConnection")
+builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
+            builder.Configuration.GetConnectionString("Somee")
             ));/* after writing this code , install Microsoft.EntityFrameworkCore.SqlServer
                 * Then Add a migration (first install Microsoft.EntityFrameworkCore.Tools)
                 * to add migration go to toolS>Nuget Package manager>package manager console
@@ -20,10 +21,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
                 * After all these steps , the project will be connected to MSSQL
                 */
 //This  Code did not add roles
-/*builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();*/ //I removed this:options => options.SignIn.RequireConfirmedAccount = true: on <IdentityUser>()
+/*builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext
+ * >();*/ //I removed this:options => options.SignIn.RequireConfirmedAccount = true: on <IdentityUser>()
 //To add roles to Identity
 //After adding roles on on views, now add 'AddDefaultTokenProviders 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();//added AddDefaultTokenProviders()
+builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<SAPS_Context>().AddDefaultTokenProviders();//added AddDefaultTokenProviders()
 //Add this so that register and login can work
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender,EmailSender>();//Registering what is in EmailSender class

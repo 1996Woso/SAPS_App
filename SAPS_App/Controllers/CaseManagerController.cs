@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
+using SAPS_App.Context;
 using SAPS_App.Models;
 
 namespace SAPS_App.Controllers
 {
     public class CaseManagerController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CaseManagerController(ApplicationDbContext db)
+        private readonly SAPS_Context _db;
+        public CaseManagerController(SAPS_Context db)
         {
             _db = db;
         }

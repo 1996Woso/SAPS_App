@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
+using SAPS_App.Context;
 using SAPS_App.Models;
 using System.Security.Claims;
 
@@ -10,11 +11,12 @@ namespace SAPS_App.Controllers
 {
     public class SuspectController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public SuspectController(ApplicationDbContext db)
+        public readonly SAPS_Context _db;
+        public SuspectController(SAPS_Context db)
         {
             _db = db;
         }
+
         public IActionResult Index()
         {
             //IEnumerable<Suspect> suspects = _db.Suspects;

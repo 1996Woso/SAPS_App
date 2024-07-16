@@ -13477,11 +13477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\10114629\\Downloads\\ASP.NET Core MVC\\SAPS_App\\SAPS_App\\SAPS_App.csproj",
+      "projectUniqueName": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\SAPS_App.csproj",
       "projectName": "SAPS_App",
-      "projectPath": "C:\\Users\\10114629\\Downloads\\ASP.NET Core MVC\\SAPS_App\\SAPS_App\\SAPS_App.csproj",
+      "projectPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\SAPS_App.csproj",
       "packagesPath": "C:\\Users\\10114629\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\10114629\\Downloads\\ASP.NET Core MVC\\SAPS_App\\SAPS_App\\obj\\",
+      "outputPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\10114629\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -13492,6 +13492,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13504,6 +13505,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -13580,7 +13586,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
