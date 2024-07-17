@@ -1,7 +1,6 @@
 ﻿@model Suspect
-@{
-	ViewData["Title"] = "Edit";
-}
+@*To display notifications*@
+<partial name="_Notifications" />
 
 <form method="post" asp-controller="Suspect" asp-action="EditSuspect">
 	<div class="border p-3 mt-4">

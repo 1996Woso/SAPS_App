@@ -42,17 +42,25 @@ namespace SAPS_App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditRecord(CriminalRecord obj)
         {
-            _db.CriminalRecords.Update(obj);//Update new row to the database
-            _db.SaveChanges();//Gos to the database and save the changes(store new row)
-            TempData["SuccessMessage"] = "Criminal record is successfully edited";
-            return RedirectToAction("Index");
+            try
+            {
+                _db.CriminalRecords.Update(obj);//Update new row to the database
+                _db.SaveChanges();//Gos to the database and save the changes(store new row)
+                TempData["succes"] = "Criminal record is successfully edited.";
+            }
+            catch (Exception ex) 
+            {
+                TempData["error"] = "An error occured while editing criminal record.";
+            }
+            return View();
 
         }
         //ADD CRIMINAL RECORD
             
         //GET
-        public IActionResult AddRecords()//right-click to create a View
+        public IActionResult AddRecords(int id)//right-click to create a View
         {
+            TempData["SuspectNumber"] = id;
             return View();
         }
         //POST
@@ -60,17 +68,19 @@ namespace SAPS_App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddRecords(CriminalRecord obj)
         {
+            obj.Id = 0;//To fix the error (SqlException: Cannot insert explicit value for identity column in table 'CriminalRecords' when IDENTITY_INSERT is set to OFF.)
             // Check if the SuspectNumber exists in the Suspects table
             var existingSuspect = _db.Suspects.FirstOrDefault(s => s.SuspectNumber == obj.SuspectNumber);
 
             if (existingSuspect == null)
             {
                 // If the SuspectNumber doesn't exist, return an error message
-                TempData["ErrorMessage"] = "The specified suspect number does not exist.";
-                return RedirectToAction("Index");
+                TempData["error"] = "The specified suspect number does not exist.";
+                return View();
             }
 
             // Proceed with adding the record
+
             var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
 
             if (managers.Count > 0)
@@ -95,19 +105,19 @@ namespace SAPS_App.Controllers
                     _db.CriminalRecords.Add(obj);
                     _db.SaveChanges();
 
-                    TempData["SuccessMessage"] = "Criminal record is successfully added to the database.";
-                    return RedirectToAction("Index");
+                    TempData["success"] = "Criminal record is successfully added to the database.";
+                    return View();
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-                    return RedirectToAction("Index");
+                    TempData["error"] = "No managers available to assign the criminal record.";
+                    return View();
                 }
             }
             else
             {
-                TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-                return RedirectToAction("Index");
+                TempData["error"] = "No managers available to assign the criminal record.";
+                return View();
             }
         }
 

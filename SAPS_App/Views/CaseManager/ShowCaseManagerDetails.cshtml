@@ -12,11 +12,11 @@
                         <td>@Model.CaseManager.CaseManagerNo</td>
                     </tr>
                     <tr>
-                        <td>First Name</td>
+                        <td><strong>First Name </strong> </td>
                         <td>@Model.CaseManager.Name</td>
                     </tr>
                     <tr>
-                        <td>Surname</td>
+                        <td><strong>Surname </strong> </td>
                         <td>@Model.CaseManager.Surname</td>
                     </tr>
                 </table>
@@ -43,7 +43,7 @@
                 {
                     <div class="card mt-3">
                         <div class="card-header">
-                            <h2>Allocated Cases</h2> @*<img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />*@
+                            <h5>Allocated Cases</h5> @*<img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />*@
                         </div>
 
                         <div class="card-body">
@@ -89,14 +89,10 @@
                         </div>
                     </div>
                 }
-              @*   else
+                else
                 {
-                    <h2><img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />Criminal Records</h2>
-                    <p>No Criminal records found for @Model.Suspect.SuspectId</p>
-                    <a asp-controller="CriminalRecord" asp-action="AddRecords" class="btn btn-primary" style="background-color:forestgreen">
-                        <i class="bi bi-plus-circle"></i> &nbsp; Add New Criminal Record
-                    </a>
-                } *@
+                    <h5>No Allocated Cases </h5>
+                }
             }
         </div>
     </div>

@@ -1,10 +1,7 @@
 ﻿@model CaseManager
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["SuccessMessage"]
-    </div>
-}
+
+@*To display notifications*@
+<partial name="_Notifications" />
 <form method="post" asp-controller="Suspect" asp-action="EditManager">
     <div border p-3 pb-2>
         <div class="row pb-2">

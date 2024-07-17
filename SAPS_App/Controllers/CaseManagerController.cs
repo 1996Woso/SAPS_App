@@ -83,9 +83,18 @@ namespace SAPS_App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditManager(CaseManager obj)
         {
-            _db.Case_Managers.Update(obj);
-            _db.SaveChanges();
-            TempData["SuccessMessage"] = "Case Manager is successfully edited.";
+            try
+            {
+                _db.Case_Managers.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Case Manager is successfully edited.";
+            }
+            catch (Exception ex) 
+            {
+                TempData["error"] = "An error occured while editing Case Manager.";
+            }
+           
+            
             return RedirectToAction("ViewManagers");
 
         }
@@ -100,15 +109,35 @@ namespace SAPS_App.Controllers
             var criminalRecords = _db.CriminalRecords.Where(cr => cr.CaseManagerNo == manager.CaseManagerNo).ToList();
             // Retrieve suspects associated with the criminal records and the manager
             var suspectNumbers = criminalRecords.Select(cr => cr.SuspectNumber).ToList();
-            var suspects = _db.Suspects.Where(s => suspectNumbers.Contains(s.SuspectNumber)).ToList();
-            var viewModel = new CaseManagerDetailsViewModel
+            List<Suspect> suspects = new List<Suspect>();
+            if(suspectNumbers != null && suspectNumbers.Any())
             {
-                CaseManager = manager,
-                CriminalRecords = criminalRecords,
-                Suspects = suspects,
-            };
+                foreach(var suspectNumber in suspectNumbers)
+                {
+                    var suspect = _db.Suspects.FirstOrDefault(s => s.SuspectNumber == suspectNumber);
+                    suspects.Add(suspect); 
+                }
+                //var suspects = _db.Suspects.Where(s => suspectNumbers.Contains(s.SuspectNumber)).ToList();
+                var viewModel = new CaseManagerDetailsViewModel
+                {
+                    CaseManager = manager,
+                    CriminalRecords = criminalRecords,
+                    Suspects = suspects,
+                };
 
-            return View(viewModel);
+                return View(viewModel);
+            }
+            else
+            {
+                var viewModel = new CaseManagerDetailsViewModel
+                {
+                    CaseManager = manager,
+                    CriminalRecords = criminalRecords,
+                    Suspects = new List<Suspect>()
+                };
+                return View(viewModel); 
+            }
+           
         }
         public IActionResult DownloadCaseManagers()
         {

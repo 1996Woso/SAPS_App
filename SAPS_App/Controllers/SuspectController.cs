@@ -40,14 +40,22 @@ namespace SAPS_App.Controllers
         {
             if (_db.Suspects.Any(s => s.SuspectId == obj.SuspectId))
             {
-                TempData["DuplicateMessage"] = "A suspect with " + obj.SuspectId + " already exists in the database";
+                TempData["duplicate"] = "A suspect with " + obj.SuspectId + " already exists in the database";
                 return RedirectToAction("AddSuspects");
             }
+            try
+            {
+                _db.Suspects.Add(obj);
+                _db.SaveChanges();
+                TempData["success"] = $"{obj.FirstName} {obj.LastName} is successfully added to the database.";
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = $"An error occured while adding {obj.FirstName} {obj.LastName} .";
+            }
 
-            _db.Suspects.Add(obj);
-            _db.SaveChanges();
-            TempData["SuccessMessage"] = $"{obj.FirstName} {obj.LastName} is successfully added to the database.";
-            return RedirectToAction("Index");
+
+            return View();
 
 
         }
@@ -113,11 +121,18 @@ namespace SAPS_App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditSuspect(Suspect obj)
         {
-            _db.Suspects.Update(obj);
-            _db.SaveChanges();
-            TempData["SuccessMessage"] = "Suspect information is successfully edited.";
+            try
+            {
+                _db.Suspects.Update(obj);
+                _db.SaveChanges();
+                TempData["success"] = "Suspect information is successfully edited.";
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = "An error occured while editing suspect information .";
+            }
             // Redirect to another action or view after successful submission
-            return RedirectToAction("Index");
+            return View();
 
         }
         public IActionResult DownloadSuspects()

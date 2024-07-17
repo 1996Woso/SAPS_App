@@ -12,7 +12,7 @@ using SAPS_App.Context;
 namespace SAPS_App.Migrations
 {
     [DbContext(typeof(SAPS_Context))]
-    [Migration("20240716134624_SAPS")]
+    [Migration("20240717093605_SAPS")]
     partial class SAPS
     {
         /// <inheritdoc />

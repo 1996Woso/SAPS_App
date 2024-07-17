@@ -10,6 +10,8 @@
     @*this is for bootstrap icons*@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    @* For toastr *@
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 </head>
 <body style="background-color:whitesmoke">
 @*     <header style="background-color:lightblue;text-align:center">
@@ -57,7 +59,7 @@
                                 <a class="nav-link " style="color:white" asp-controller="Suspect" asp-action="Record">Case</a>
                             </li> *@
                             <li class="nav-item">
-                                <a class="nav-link " style="color:white" asp-controller="CriminalRecord" asp-action="Record">
+                                <a class="nav-link " style="color:white" asp-controller="CriminalRecord" asp-action="Index">
                                    My Cases
                                 </a>
                             </li>
