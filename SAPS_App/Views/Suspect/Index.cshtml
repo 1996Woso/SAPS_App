@@ -86,14 +86,24 @@
 </div>
 
 @section Scripts {
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#myTable').DataTable();
+            $('#myTable').DataTable({
+                order: [[2, 'asc']],
+                rowGroup: {
+                    dataSrc: 2
+                },
+                "scrollY": "100vh",
+                "scrollCollapse": true,
+                "paging": true,
+                "pagingType": "full_numbers"
+            });
         });
     </script>
     @{
         <partial name="_ValidationScriptsPartial" />
     }
+
 }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SAPS_App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6ecb1a750baa7cd7f680c7159131255c1a22da7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c913849b7fdeaab1715f6ae4dc1af1c17476a0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SAPS_App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SAPS_App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

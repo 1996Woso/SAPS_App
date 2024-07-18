@@ -185,5 +185,39 @@ namespace SAPS_App.Controllers
                 return File(fileContents, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Cases.xlsx");
             }
         }
+        //Action to download all the tables (Suspects,CriminalRecords, and Case_Managers
+        public IActionResult DownloadCombinedReport()
+        {
+            // Fetch the data
+            var caseManagers = _db.Case_Managers.Include(s => s.CriminalRecords).ToList();
+            var criminalRecords = _db.CriminalRecords.ToList();
+            var suspects = _db.Suspects.Include(s => s.CriminalRecords).ToList();
+
+            using (var package = new OfficeOpenXml.ExcelPackage())
+            {
+                // Create a worksheet
+                var worksheet = package.Workbook.Worksheets.Add("CombinedReport");
+
+                // Load the Case Managers data
+                worksheet.Cells["A1"].LoadFromCollection(caseManagers, true);
+
+                // Find the row number where the Criminal Records data should start
+                int caseManagersRowCount = caseManagers.Count + 3; // +1 for header, +1 for an empty row
+                worksheet.Cells[$"A{caseManagersRowCount}"].LoadFromCollection(criminalRecords, true);
+
+                // Find the row number where the Suspects data should start
+                int criminalRecordsRowCount = caseManagersRowCount + criminalRecords.Count + 2; // +1 for header, +1 for an empty row
+                worksheet.Cells[$"A{criminalRecordsRowCount}"].LoadFromCollection(suspects, true);
+
+                // Get the combined file as a byte array
+                byte[] fileContents = package.GetAsByteArray();
+
+                // Return the combined Excel file
+                return File(fileContents, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "CombinedReport.xlsx");
+            }
+        }
+
+
+
     }
 }

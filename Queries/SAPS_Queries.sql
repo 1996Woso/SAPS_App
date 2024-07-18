@@ -93,6 +93,25 @@ GO
 ALTER TABLE [dbo].[CriminalRecords] CHECK CONSTRAINT [FK_CriminalRecords_Suspects_SuspectNumber];
 GO
 
-drop table  AspNetRoles
-drop table AspNetUsers
-drop
+-- Create the CriminalRecords table with all constraints
+CREATE TABLE [dbo].[CriminalRecords] (
+    [Id] INT IDENTITY(1,1) NOT NULL,
+    [OffenceCommited] NVARCHAR(MAX) NOT NULL,
+    [Sentence] NVARCHAR(3) NOT NULL,
+    [IssuedAt] NVARCHAR(20) NOT NULL,
+    [IssuedBy] NVARCHAR(20) NOT NULL,
+    [IssueDate] DATETIME2(7) NOT NULL,
+    [SuspectNumber] INT NOT NULL,
+    [CaseManagerNo] INT NOT NULL,
+    [CaseManagerId] NVARCHAR(50) NOT NULL,
+    [Email] NVARCHAR(MAX) NOT NULL,
+    [CaseManagerName] NVARCHAR(MAX) NOT NULL,
+    CONSTRAINT [PK_CriminalRecords] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_CriminalRecords_Case_Managers_CaseManagerNo] FOREIGN KEY ([CaseManagerNo])
+        REFERENCES [dbo].[Case_Managers] ([CaseManagerNo])
+        ON DELETE CASCADE,
+    CONSTRAINT [FK_CriminalRecords_Suspects_SuspectNumber] FOREIGN KEY ([SuspectNumber])
+        REFERENCES [dbo].[Suspects] ([SuspectNumber])
+        ON DELETE CASCADE
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+

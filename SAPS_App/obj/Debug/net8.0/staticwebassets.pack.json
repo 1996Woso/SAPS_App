@@ -57,8 +57,24 @@
       "PackagePath": "staticwebassets\\Images\\homelogo.png"
     },
     {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\datatable.css",
+      "PackagePath": "staticwebassets\\css\\datatable.css"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\datatable_1.12_min.css",
+      "PackagePath": "staticwebassets\\css\\datatable_1.12_min.css"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\datatable_2.2.3_min.css",
+      "PackagePath": "staticwebassets\\css\\datatable_2.2.3_min.css"
+    },
+    {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\favicon.ico",
