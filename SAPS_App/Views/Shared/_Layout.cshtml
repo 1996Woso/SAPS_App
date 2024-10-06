@@ -18,6 +18,9 @@
         <h3 style="font-family:fantasy">To protect and to serve.</h3>
         <img src="~/Images/SAPS logo.png" alt="SAPS Logo" width="300" height="200" />
     </header> *@
+    <div id="preloader">
+        <img src="~/Images/07-57-40-974_512.webp"/>
+    </div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:blue">
             <div class="container-fluid">
@@ -103,5 +106,15 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        $(window).on('load', function () {
+            setTimeout(function () {
+                $('#preloader').fadeOut('slow', function () {
+                    $(this).remove();
+                });
+                $('.loading-spinner').hide();
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

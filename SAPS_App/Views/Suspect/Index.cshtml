@@ -14,19 +14,92 @@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
-<div class="container p-3">
-    <div class="row p-4">
-        <div class="col-6">
-            <h2>Suspect List</h2>
+
+<div class="card shadow-border-0 mt-4">
+    <div class="card-header bg-secondary bg-gredient ml-0 py-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Suspect List</h2>
+            </div>
         </div>
-        <div class="col-6 text-end">
-            <a asp-controller="Suspect" asp-action="AddSuspects" class="btn btn-primary" style="color:black;background-color:forestgreen">
-                <i class="bi bi-plus-circle"></i> &nbsp; Add New Suspect
-            </a><br /><br />
+    </div>
+    <div class="card-body p-4">
+        <div class="btn-group w-100 mb-4" role="group">
+            <div class="hover-btn">
+                <a asp-controller="Suspect" asp-action="DownloadSuspects" class="btn">
+                    <i class="bi bi-download"></i>
+                </a>
+                <span>Download List</span>
+            </div>
+            <div class="hover-btn">
+                <a asp-controller="Suspect" asp-action="AddSuspects" class="btn">
+                    <i class="bi bi-plus-circle"></i>
+                </a>
+                <span>Add New Suspect</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col=md-12">
+                <section>
+                    <table class="table table-striped" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Suspect Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Total number of Offences</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var obj in Model)
+                            {
+                                <tr>
+                                    <td>@obj.SuspectNumber</td>
+                                    <td>@obj.SuspectId</td>
+                                    <td>@obj.FirstName</td>
+                                    <td>@obj.LastName</td>
+                                    <td>@obj.TotalCriminalRecords</td>
+                                    <td>
+                                        <div class="w-75 btn-group" role="group">
+                                            <div class="hover-btn">
+                                                <a asp-controller="Suspect" asp-action="ShowSuspectDetails" asp-route-id="@obj.SuspectNumber" class="btn mx-2">
+                                                    <i class="bi bi-info-circle"></i>
+                                                </a>
+                                                <span>Show details</span>
+                                            </div>
+                                            <div class="hover-btn">
+                                                <a asp-controller="CriminalRecord" asp-action="AddRecords" asp-route-id="@obj.SuspectNumber" class="btn mx-2">
+                                                    <i class="bi bi-plus-circle"></i>
+                                                </a>
+                                                <span>Add criminal record</span>
+                                            </div>
+
+                                            <div class="hover-btn">
+                                                <a asp-controller="Suspect" asp-action="EditSuspect" asp-route-id="@obj.SuspectNumber" class="btn mx-2">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </a>
+                                                <span>Edit</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><strong>Total Criminal Records:</strong></td>
+                            <td>@ViewBag.TotalCriminalRecords</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
         </div>
     </div>
 </div>
-<br />
+
 @* <div class="col-3">
     <form asp-controller="Suspect" asp-action="SearchSuspect">
         <div class="input-group">
@@ -36,54 +109,7 @@
     </form>
 </div> *@
 
-<table class="table table-striped" id="myTable">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Suspect Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Total number of Offences</th>
-            <th>Options</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var obj in Model)
-        {
-            <tr>
-                <td>@obj.SuspectNumber</td>
-                <td>@obj.SuspectId</td>
-                <td>@obj.FirstName</td>
-                <td>@obj.LastName</td>
-                <td>@obj.TotalCriminalRecords</td>
-                <td>
-                    <div class="w-75 btn-group" role="group">
-                        <a asp-controller="Suspect" asp-action="ShowSuspectDetails" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="background-color:dodgerblue;">
-                            <i class="bi bi-info-circle"> Show Details</i>
-                        </a>
-                        <a asp-controller="CriminalRecord" asp-action="AddRecords" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="color:black;background-color:forestgreen">
-                            <i class="bi bi-plus-circle"></i>Add Criminal Record
-                        </a> @*  &nbsp; *@
-                        <a asp-controller="Suspect" asp-action="EditSuspect" asp-route-id="@obj.SuspectNumber" class="btn btn-primary mx-2" style="color:black;background-color:mediumspringgreen;width:fit-content;height:fit-content">
-                            <i class="bi bi-pencil-square"></i> Edit
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<table>
-    <tr>
-        <td><strong>Total Criminal Records:</strong></td>
-        <td>@ViewBag.TotalCriminalRecords</td>
-    </tr>
-</table>
-<div>
-    <a asp-controller="Suspect" asp-action="DownloadSuspects" class="btn btn-success">
-        <i class="bi bi-download">Download List</i>
-    </a>
-</div>
+
 
 @section Scripts {
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -95,7 +121,8 @@
                 rowGroup: {
                     dataSrc: 2
                 },
-                "scrollY": "100vh",
+                "scrollY": "50vh",
+                // "scrollX": true,
                 "scrollCollapse": true,
                 "paging": true,
                 "pagingType": "full_numbers"

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qYdnpT0gAjDHhDMB38xVeGZiXMn5pDWQB71xozaJ2+Q=",
+  "Hash": "joFi4yarr25NUw7l+8vkKAJ4RkNU5iUKki2qVRmPqN4=",
   "Source": "SAPS_App",
   "BasePath": "_content/SAPS_App",
   "Mode": "Default",
@@ -1347,6 +1347,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\07-57-40-974_512.webp",
+      "SourceId": "SAPS_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\",
+      "BasePath": "_content/SAPS_App",
+      "RelativePath": "Images/07-57-40-974_512.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\07-57-40-974_512.webp"
+    },
+    {
       "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Admin.png",
       "SourceId": "SAPS_App",
       "SourceType": "Discovered",
@@ -1592,6 +1611,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\SuspectSearch.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\loading.js",
+      "SourceId": "SAPS_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\",
+      "BasePath": "_content/SAPS_App",
+      "RelativePath": "js/loading.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\loading.js"
     },
     {
       "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",

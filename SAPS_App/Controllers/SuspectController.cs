@@ -55,7 +55,7 @@ namespace SAPS_App.Controllers
             }
 
 
-            return View();
+            return RedirectToAction("Index");
 
 
         }
@@ -132,7 +132,7 @@ namespace SAPS_App.Controllers
                 TempData["error"] = "An error occured while editing suspect information .";
             }
             // Redirect to another action or view after successful submission
-            return View();
+            return RedirectToAction("Index");
 
         }
         public IActionResult DownloadSuspects()

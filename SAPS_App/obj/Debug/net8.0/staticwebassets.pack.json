@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SAPS_App.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\07-57-40-974_512.webp",
+      "PackagePath": "staticwebassets\\Images\\07-57-40-974_512.webp"
+    },
+    {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Admin.png",
       "PackagePath": "staticwebassets\\Images\\Admin.png"
     },
@@ -79,6 +83,10 @@
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\loading.js",
+      "PackagePath": "staticwebassets\\js\\loading.js"
     },
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",

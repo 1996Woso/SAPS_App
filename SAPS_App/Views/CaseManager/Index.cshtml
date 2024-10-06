@@ -10,82 +10,95 @@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
-<div class="container p-3">
-    <div class="row p-4">
-        <div class="col-6">
-            <h2>Case Manager List</h2>
-        </div>
-        <div class="col-3 text-end">
-            @*     <a asp-controller="Account" asp-action="Register" class="btn btn-primary" style="color:black;background-color:forestgreen">
-            <i class="bi bi-plus-circle"></i> &nbsp; Add New Case Manager
-            </a> *@
-            <a class="nav-link text-white" id="register" style="color:black;background-color:forestgreen;width:fit-content" asp-area="Identity" asp-page="/Account/Register">
-                <i class="bi bi-plus-circle"></i> &nbsp; Add New Case Manager
-            </a><br /><br />
+<div class="card shadow-border-9 mt-4">
+    <div class="card-hrader bg-secondary bg-gradient ml-0 py-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Case Manager List</h2>
+            </div>
         </div>
     </div>
+    <div class="card-body p-4">
+        <section>
+            <div class="w-100 btn-group mb-4" role="group">
+                <div class="hover-btn">
+                    <a asp-controller="CaseManager" asp-action="DownloadCaseManagers" class="btn">
+                        <i class="bi bi-download"></i>
+                    </a>
+                    <span>Download List</span>
+                </div>
+                <div class="hover-btn">
+                    <a class="btn" id="register" asp-area="Identity" asp-page="/Account/Register">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                    <span>Add New Case Manager</span>
+                </div>
+            </div>
+            <table class="table table-striped" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Manager Number</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Total number of Cases</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td>@obj.CaseManagerNo</td>
+                            <td>@obj.Name</td>
+                            <td>@obj.Surname</td>
+                            <td>@obj.Email</td>
+                            <td>@obj.TotalCases</td>
+                            <td>
+                                <div class="w-75 btn-group" role="group">
+                                    <div class="hover-btn">
+                                        <a asp-controller="CaseManager" asp-action="ShowCaseManagerDetails" asp-route-id="@obj.CaseManagerNo" class="btn">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
+                                        <span>Show Details</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <table>
+                <tr>
+                    <td><strong>Total Cases:</strong></td>
+                    <td>@ViewBag.TotalCriminalRecords</td>
+                </tr>
+            </table>
+        </section>
+    </div>
 </div>
-@* <div class="col-3">
-    <form asp-controller="CaseManager" asp-action="SearchManager">
-        <div class="input-group">
-            <input type="text" name="email" class="form-control" placeholder="Search by Email">
-            <button type="submit" class="btn btn-primary" style="color:black;background-color:grey"><i class="bi bi-search"></i> Search</button>
-        </div>
-    </form>
-</div> *@
 
-<table class="table table-striped" id="myTable">
-    <thead>
-        <tr>
-            <th>Manager Number</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Email</th>
-            <th>Total number of Cases</th>
-            <th>Details</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var obj in Model)
-        {
-            <tr>
-                <td>@obj.CaseManagerNo</td>
-                <td>@obj.Name</td>
-                <td>@obj.Surname</td>
-                <td>@obj.Email</td>
-                <td>@obj.TotalCases</td>
-                <td>
-                    <div class="w-75 btn-group" role="group">
-                        <a asp-controller="CaseManager" asp-action="ShowCaseManagerDetails" asp-route-id="@obj.CaseManagerNo" class="btn btn-primary" style="background-color:dodgerblue;">
-                            <i class="bi bi-info-circle"> Show Details</i>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<table>
-    <tr>
-        <td><strong>Total Cases:</strong></td>
-        <td>@ViewBag.TotalCriminalRecords</td>
-    </tr>
-</table>
-<div>
-    <a asp-controller="CaseManager" asp-action="DownloadCaseManagers" class="btn btn-success">
-        <i class="bi bi-download">Download List</i>
-    </a>
-</div>
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#myTable').DataTable();
-        });
+            $('#myTable').DataTable({
+                order: [[2, 'asc']],
+                    rowGroup: {
+                            dataSrc: 2
+                        },
+                        "scrollY": "50vh",
+                        // "scrollX": true,
+                        "scrollCollapse": true,
+                        "paging": true,
+                        "pagingType": "full_numbers"
+                    });
+                });
     </script>
     @{
         <partial name="_ValidationScriptsPartial" />
     }
+
 }

@@ -35,3 +35,76 @@ nav a:hover {
     color: white;
     border-radius: 4px;
 }
+/*THYIS IS FOR GIF*/
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#preloader {
+    background-color: transparent;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*THIS ADDS A LINE */
+.divider-text:before,
+.divider-text:after{
+    color:white;
+    content: "";
+    flex:1;
+    border-bottom: 1px solid #555;
+    margin: auto 0.25rem;
+    box-shadow: 0 -2px;
+}
+/*THIS IS FOR HOVERING A BUTTON*/
+
+/*hover-btn class*/
+.hover-btn {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+/*hover-btn styling*/
+.hover-btn a button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #555;
+    border-radius: 4px;
+    background-color: white;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+}
+/*Shadow effect on hover*/
+/*.hover-btn:hover {
+    box-shadow: 0 0 10px rgb(0,0,0,0.5);
+    border-color: #333;
+}*/
+/*Hidden tooltip text by default*/
+    .hover-btn span {
+        visibility: hidden;
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Ensure text fills the content */
+        white-space: nowrap;
+   /*     width: auto;
+        max-width: none;*/
+    }
+/*Show the tooltip text when hovering over button*/
+.hover-btn:hover span {
+    visibility:visible;
+    opacity:1;
+}
