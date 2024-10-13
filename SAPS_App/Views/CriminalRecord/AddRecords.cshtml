@@ -5,64 +5,73 @@
 	// TempData.Keep("suspectNumber");
 }
 @*To display notifications*@
-<partial name="_Notifications" />
+@* <partial name="_Notifications" /> *@
 
-<form method="post" asp-controller="CriminalRecord" asp-action="AddRecords" id="record">
-	<div class="container">
+<div class="card shadow-border-0 mt-4">
+	<div class="card-header bg-secondary bg-gradient m-lg-0 py-4">
 		<div class="row">
-			<div class="col-lg-4">
-				<div class="border p-3 mt-4">
-					<div class="row pb-2">
-						<h1>New Criminal Record </h1>
-						<hr />
-					</div>
-					<div class="mb-3">
-						<input asp-for="Id" class="form-control" placeholder="Id" hidden />
-					</div>
-					<div class="mb-3">
-						<input asp-for="SuspectNumber" class="form-control" value="@suspectNumber" placeholder="Suspect Number" hidden />
-					</div>
-					<div class="mb-3">
-						<label asp-for="OffenceCommited"></label>
-						@Html.DropDownListFor(model => model.OffenceCommited,
-															new SelectList(new[] { "Assault", "Burglary", "Drugs","Hijacking","Murder","Offences of Dishonesty","Other offences","Public drinking",
-						"Rape","Robbery","Sexual Harrassment","Sexual Offences","Violence"}),
-															"Select Criminal Record",
-															new { @class = "form-control" })
-						<span asp-validation-for="OffenceCommited" class="text-danger"></span>
-					</div>
-					<div class="mb-3">
-						<label asp-for="Sentence"></label>
-						<input asp-for="Sentence" class="form-control" placeholder="Number of years" id="sentence" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
-						<span asp-validation-for="Sentence" class="text-danger"></span>
-					</div>
-					<div class="mb-3">
-						<label asp-for="IssuedAt"></label>
-						<input asp-for="IssuedAt" class="form-control" type="text" required placeholder="Issued At" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
-						<span asp-validation-for="IssuedAt" class="text-danger"></span>
-					</div>
-					<div class="mb-3">
-						<label asp-for="IssuedBy"></label>
-						<input asp-for="IssuedBy" class="form-control" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
-						<span asp-validation-for="IssuedBy" class="text-danger"></span>
-					</div>
-					<div class="mb-3">
-						<label asp-for="IssueDate"></label>
-						<input asp-for="IssueDate" class="form-control" type="date" required placeholder="yyyy/mm/dd" required />
-						<span asp-validation-for="IssueDate" class="text-danger"></span>
-					</div>
-
-
-					<button type="submit" class="btn btn-primary" style="color:black;width:150px">Save Changes</button>
-					@* <button type="submit" class="btn btn-primary" style="color:black;width:150px" onclick="CloseWindow()">Close</button> *@
-					@* <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary" style="width:150px">
-					Back To List
-					</a> *@
-				</div>
+			<div class="col-12 text-center">
+				<h2>Add New Criminal Record</h2>
 			</div>
 		</div>
 	</div>
-</form>
+	<div class="card-body p-4">
+		<form method="post" asp-controller="CriminalRecord" asp-action="AddRecords" id="record">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="border p-3 mt-4">
+							<div class="mb-3">
+								<input asp-for="Id" class="form-control" placeholder="Id" hidden />
+							</div>
+							<div class="mb-3">
+								<input asp-for="SuspectNumber" class="form-control" value="@suspectNumber" placeholder="Suspect Number" hidden />
+							</div>
+							<div class="mb-3">
+								<label asp-for="OffenceCommited"></label>
+								@Html.DropDownListFor(model => model.OffenceCommited,
+																	new SelectList(new[] { "Assault", "Burglary", "Drugs","Hijacking","Murder","Offences of Dishonesty","Other offences","Public drinking",
+								"Rape","Robbery","Sexual Harrassment","Sexual Offences","Violence"}),
+																	"Select Criminal Record",
+																	new { @class = "form-control" })
+								<span asp-validation-for="OffenceCommited" class="text-danger"></span>
+							</div>
+							<div class="mb-3">
+								<label asp-for="Sentence"></label>
+								<input asp-for="Sentence" class="form-control" placeholder="Number of years" id="sentence" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
+								<span asp-validation-for="Sentence" class="text-danger"></span>
+							</div>
+							<div class="mb-3">
+								<label asp-for="IssuedAt"></label>
+								<input asp-for="IssuedAt" class="form-control" type="text" required placeholder="Issued At" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
+								<span asp-validation-for="IssuedAt" class="text-danger"></span>
+							</div>
+							<div class="mb-3">
+								<label asp-for="IssuedBy"></label>
+								<input asp-for="IssuedBy" class="form-control" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
+								<span asp-validation-for="IssuedBy" class="text-danger"></span>
+							</div>
+							<div class="mb-3">
+								<label asp-for="IssueDate"></label>
+								<input asp-for="IssueDate" class="form-control" type="date" required placeholder="yyyy/mm/dd" required />
+								<span asp-validation-for="IssueDate" class="text-danger"></span>
+							</div>
+
+
+							<button class="btn btn-primary w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+							@* <button type="submit" class="btn btn-primary" style="color:black;width:150px" onclick="CloseWindow()">Close</button> *@
+							@* <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary" style="width:150px">
+							Back To List
+							</a> *@
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
 
 @section Scripts{
 	@{

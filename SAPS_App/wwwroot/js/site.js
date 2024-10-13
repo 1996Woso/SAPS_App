@@ -138,5 +138,60 @@ function pasteDigits(event, inputId, maxLength) {
     return false;
 }
 
+//document.addEventListener('DOMContentLoaded', function () {
+//    const addSuspectForm = document.getElementById('add-suspect');
+//    addSuspectForm.addEventListener('submit',async function (event) {
+//        event.preventDefault();
+//        AddSuspect()
+//    });
+//});
 
+//async function AddSuspect() {
+//    const addSuspectForm = document.getElementById('add-suspect');
+//    var inputs = document.querySelectorAll('.add-suspect');
+//    var allFilled = true;
 
+//    inputs.forEach(function (input) {
+//        if (!input.value) {
+//            allFilled = false;
+//        }
+//    });
+//    if (allFilled) {
+//        const addSuspectFormData = new FormData(addSuspectForm);
+//        const addSuspect = await fetch('/Suspect/AddSuspects', {
+//            method: 'POST',
+//            body: addSuspectFormData
+//        });
+
+//        if (addSuspect.ok) {
+//            Swal.fire({
+//                icon: 'success',
+//                text: 'Suspect captured successfully!',
+//                showConfirmButton:false,
+//                allowOutsideClick: false,
+//                timer: 4000,
+//            }).then(() => {
+//                window.location.href = '/Suspect/Index';
+//            });
+//        }
+//        else {
+//            const errorMessage = await addSuspect.text();
+//            Swal.fire({
+//                icon: 'error',
+//                text: `Failed to add suspect. ${errorMessage}`,
+//                allowOutsideClick: false,
+//                showConfirmButton: true,
+//            });
+//        }
+
+//    }
+//    else {
+//        Swal.fire({
+//            icon: 'error',
+//            title: 'Unfilled field(s)',
+//            text: 'Please fill all the required fields!',
+//            allowOutsideClick: false,
+//            showConfirmButton: true,
+//        });
+//    }
+//}

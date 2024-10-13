@@ -5,7 +5,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="~/js/site.js"></script>
 @*To display notifications*@
-<partial name="_Notifications" />
+@* <partial name="_Notifications" /> *@
 <div class="card shadow-border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-4">
         <div class="row">
@@ -15,24 +15,24 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" asp-action="AddSuspects" id="create">
+        <form method="post" asp-controller="Suspect" asp-action="AddSuspects" id="add-suspect">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div border p-3 mt-4>
                             <div class="mb-3">
                                 <label asp-for="SuspectId"></label>
-                                <input asp-for="SuspectId" class="form-control" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
+                                <input asp-for="SuspectId" class="form-control add-suspect" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
                                 <span asp-validation-for="SuspectId" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label asp-for="FirstName"></label>
-                                <input asp-for="FirstName" class="form-control" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
+                                <input asp-for="FirstName" class="form-control add-suspect" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
                                 <span asp-validation-for="FirstName" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label asp-for="LastName"></label>
-                                <input asp-for="LastName" class="form-control" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
+                                <input asp-for="LastName" class="form-control add-suspect" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
                                 <span asp-validation-for="LastName" class="text-danger"></span>
                             </div>
    @*                          <div class="mb-3">
@@ -63,37 +63,62 @@
     }
 }
 
-@* <script>
-    function Submit(event) {
-        // Prevent default form submission
-        event.preventDefault();
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const addSuspectForm = document.getElementById('add-suspect');
+        addSuspectForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            AddSuspect()
+        });
+    });
 
-        //Check if inputs are filled
-        const id = $("#SuspectId").val();
-        const name = $("#FirstName").val();
-        const surname = $("#LastName").val();
-        const validID = ValidID(id);
-        const validName = Alphabets(name);
-        const validSurname = Alphabets(surname);
+    async function AddSuspect() {
+        const addSuspectForm = document.getElementById('add-suspect');
+        var inputs = document.querySelectorAll('.add-suspect');
+        var allFilled = true;
 
-        // Perform your client-side validations here
-        if (id==true && name==true && surname==true && validID==true && validName==true && validSurname==true) {
-            // All validations passed, submit the form
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Suspect is successfully added to the data base.',
-            }).then(() => {
-                document.getElementById('create').submit();
+        inputs.forEach(function (input) {
+            if (!input.value) {
+                allFilled = false;
+            }
+        });
+        if (allFilled) {
+            const addSuspectFormData = new FormData(addSuspectForm);
+            const addSuspect = await fetch('/Suspect/AddSuspects', {
+                method: 'POST',
+                body: addSuspectFormData
             });
-        } else {
-            // Show error message
+
+            if (addSuspect.ok) {
+                Swal.fire({
+                    icon: 'success',
+                    text: 'Suspect captured successfully!',
+                    showConfirmButton: false,
+                    allowOutsideClick: false,
+                    timer: 4000,
+                }).then(() => {
+                    window.location.href = '/Suspect/Index';
+                });
+            }
+            else {
+                const errorMessage = await addSuspect.text();
+                Swal.fire({
+                    icon: 'error',
+                    text: `Failed to add suspect. ${errorMessage}`,
+                    allowOutsideClick: false,
+                    showConfirmButton: true,
+                });
+            }
+
+        }
+        else {
             Swal.fire({
                 icon: 'error',
-                title: 'Error!',
-                text: 'Please fill in all required fields correctly.'
+                title: 'Unfilled field(s)',
+                text: 'Please fill all the required fields!',
+                allowOutsideClick: false,
+                showConfirmButton: true,
             });
         }
     }
-</script> *@
-
+</script>

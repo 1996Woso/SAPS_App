@@ -3,13 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-@if (TempData["SuccessMessage"] != null)
+@* @if (TempData["SuccessMessage"] != null)
 {
     <div style="background-color:white;color:black" class="alert alert-success"> 
         @TempData["SuccessMessage"]
     </div>
 }
-
+ *@
 @*This is for data-tables*@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
@@ -27,7 +27,7 @@
         <div class="btn-group w-100 mb-4" role="group">
             <div class="hover-btn">
                 <a asp-controller="Suspect" asp-action="DownloadSuspects" class="btn">
-                    <i class="bi bi-download"></i>
+                    <i class="bi bi-download"></i> @*fs-4 is the size of the icon (fs-6 is the smallest)*@
                 </a>
                 <span>Download List</span>
             </div>

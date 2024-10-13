@@ -18,9 +18,9 @@
         <h3 style="font-family:fantasy">To protect and to serve.</h3>
         <img src="~/Images/SAPS logo.png" alt="SAPS Logo" width="300" height="200" />
     </header> *@
-    <div id="preloader">
+@*     <div id="preloader">
         <img src="~/Images/07-57-40-974_512.webp"/>
-    </div>
+    </div> *@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:blue">
             <div class="container-fluid">
@@ -96,7 +96,7 @@
 
     <footer class="border-top footer text-white" style="text-align: center;flex-shrink: 0;background-color:blue">
         <div class="container">
-            &copy;2024 SAPS. All rights reserved. @* - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
+            &copy;@DateTime.Now.Year SAPS. All rights reserved. @* - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
         </div>
     </footer>
     @*This for datatables*@

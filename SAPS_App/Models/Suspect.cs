@@ -43,6 +43,7 @@ namespace SAPS_App.Models
                 //}
             }
         }
+
         public List<CriminalRecord> CriminalRecords { get; set; }
         //public string ManagerId { get; set; }
         //public ApplicationUser Manager { get; set; }
