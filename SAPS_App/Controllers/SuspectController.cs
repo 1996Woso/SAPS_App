@@ -41,18 +41,23 @@ namespace SAPS_App.Controllers
             if (_db.Suspects.Any(s => s.SuspectId == obj.SuspectId))
             {
                 //TempData["duplicate"] = "A suspect with " + obj.SuspectId + " already exists in the database";
-                return BadRequest("A suspect with " + obj.SuspectId + " already exists in the database.");
+                return BadRequest(new {message = "A suspect with " + obj.SuspectId + " already exists in the database." });
             }
             try
             {
                 _db.Suspects.Add(obj);
                 _db.SaveChanges();
                 //TempData["success"] = $"{obj.FirstName} {obj.LastName} is successfully added to the database.";
+                return Ok(new
+                {
+                    message = $"{obj.FirstName} {obj.LastName} is successfully added to the database.",
+                    redirectUrl = Url.Action("Index","Suspect")
+            });
             }
             catch (Exception ex)
             {
                 //TempData["error"] = $"An error occured while adding {obj.FirstName} {obj.LastName} .";
-                return BadRequest($"An error occured while adding {obj.FirstName} {obj.LastName} .");
+                return BadRequest(new {message = $"An error occured while adding {obj.FirstName} {obj.LastName} ." });
             }
             return RedirectToAction("Index");
         }

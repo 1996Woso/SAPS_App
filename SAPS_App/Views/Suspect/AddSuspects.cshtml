@@ -15,24 +15,24 @@
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post" asp-controller="Suspect" asp-action="AddSuspects" id="add-suspect">
+        <form method="post" asp-controller="Suspect" asp-action="AddSuspects" class="edit-form" data-action-url="@Url.Action("AddSuspects","Suspect")" id="add-suspect">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div border p-3 mt-4>
                             <div class="mb-3">
                                 <label asp-for="SuspectId"></label>
-                                <input asp-for="SuspectId" class="form-control add-suspect" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
+                                <input asp-for="SuspectId" class="form-control edit-form-input" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
                                 <span asp-validation-for="SuspectId" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label asp-for="FirstName"></label>
-                                <input asp-for="FirstName" class="form-control add-suspect" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
+                                <input asp-for="FirstName" class="form-control edit-form-input" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
                                 <span asp-validation-for="FirstName" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label asp-for="LastName"></label>
-                                <input asp-for="LastName" class="form-control add-suspect" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
+                                <input asp-for="LastName" class="form-control edit-form-input" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
                                 <span asp-validation-for="LastName" class="text-danger"></span>
                             </div>
    @*                          <div class="mb-3">
@@ -63,7 +63,7 @@
     }
 }
 
-<script>
+@* <script>
     document.addEventListener('DOMContentLoaded', function () {
         const addSuspectForm = document.getElementById('add-suspect');
         addSuspectForm.addEventListener('submit', async function (event) {
@@ -121,4 +121,4 @@
             });
         }
     }
-</script>
+</script> *@

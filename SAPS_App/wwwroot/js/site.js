@@ -138,17 +138,73 @@ function pasteDigits(event, inputId, maxLength) {
     return false;
 }
 
-//document.addEventListener('DOMContentLoaded', function () {
-//    const addSuspectForm = document.getElementById('add-suspect');
-//    addSuspectForm.addEventListener('submit',async function (event) {
-//        event.preventDefault();
-//        AddSuspect()
-//    });
-//});
+document.addEventListener('DOMContentLoaded', function () {
+    //const editForm = document.querySelector('.edit-form');
+    //if (editForm) {
+    //    editForm.addEventListener('submit', async function (event) {
+    //        event.preventDefault();
+    //        EditForm(editForm)
+    //    });
+    //}
 
-//async function AddSuspect() {
-//    const addSuspectForm = document.getElementById('add-suspect');
-//    var inputs = document.querySelectorAll('.add-suspect');
+    var editForms = document.querySelectorAll('.edit-form');
+    editForms.forEach(function (editForm) {
+        editForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            var inputs = editForm.querySelectorAll('.edit-form-input');
+            var allFilled = true;
+
+            inputs.forEach(function (input) {
+                if (!input.value) {
+                    allFilled = false;
+                }
+            });
+            if (allFilled) {
+                const formData = new FormData(editForm);
+                const actionUrl = editForm.getAttribute('data-action-url');
+                const response = await fetch(actionUrl, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    Swal.fire({
+                        icon: 'success',
+                        text: result.message,
+                        showConfirmButton: false,
+                        allowOutsideClick: false,
+                        timer: 4000,
+                    }).then(() => {
+                        window.location.href = result.redirectUrl;
+                    });
+                }
+                else {
+                    const result = await response.json();
+                    Swal.fire({
+                        icon: 'error',
+                        text: `Failed. ${result.message}`,
+                        allowOutsideClick: false,
+                        showConfirmButton: true,
+                    });
+                }
+
+            }
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Unfilled field(s)',
+                    text: 'Please fill all the required fields!',
+                    allowOutsideClick: false,
+                    showConfirmButton: true,
+                });
+            }
+        });
+    });
+});
+
+//async function EditForm(form) {
+//    var inputs = form.querySelectorAll('.edit-form-input');
 //    var allFilled = true;
 
 //    inputs.forEach(function (input) {
@@ -157,28 +213,30 @@ function pasteDigits(event, inputId, maxLength) {
 //        }
 //    });
 //    if (allFilled) {
-//        const addSuspectFormData = new FormData(addSuspectForm);
-//        const addSuspect = await fetch('/Suspect/AddSuspects', {
+//        const formData = new FormData(form);
+//        const actionUrl = form.getAttribute('data-action-url');
+//        const response = await fetch(actionUrl, {
 //            method: 'POST',
-//            body: addSuspectFormData
+//            body: formData
 //        });
 
-//        if (addSuspect.ok) {
+//        if (response.ok) {
+//            const result = await response.json();
 //            Swal.fire({
 //                icon: 'success',
-//                text: 'Suspect captured successfully!',
+//                text: result.message,
 //                showConfirmButton:false,
 //                allowOutsideClick: false,
 //                timer: 4000,
 //            }).then(() => {
-//                window.location.href = '/Suspect/Index';
+//                window.location.href = result.redirectUrl;
 //            });
 //        }
 //        else {
-//            const errorMessage = await addSuspect.text();
+//            const result = await response.json();
 //            Swal.fire({
 //                icon: 'error',
-//                text: `Failed to add suspect. ${errorMessage}`,
+//                text: `Failed. ${result.message}`,
 //                allowOutsideClick: false,
 //                showConfirmButton: true,
 //            });
