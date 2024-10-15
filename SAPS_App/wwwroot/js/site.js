@@ -2,7 +2,6 @@
     let pattern = /^[a-zA-Z]+$/;
     return pattern.test(input);
 }
-
 function validID(suspectId) {
     // Check if the suspectId is a non-empty string
     if (typeof suspectId !== 'string' || suspectId.length === 0) {
@@ -60,7 +59,6 @@ function allowAlphabets(event) {
         event.preventDefault();
     }
 }
-
 function letterCapitalize(inputId) {
     let input = document.getElementById(inputId);
     let value = input.value.toLowerCase().split(' ');
@@ -149,60 +147,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var editForms = document.querySelectorAll('.edit-form');
     editForms.forEach(function (editForm) {
-        editForm.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            var inputs = editForm.querySelectorAll('.edit-form-input');
-            var allFilled = true;
-
-            inputs.forEach(function (input) {
-                if (!input.value) {
-                    allFilled = false;
-                }
-            });
-            if (allFilled) {
-                const formData = new FormData(editForm);
-                const actionUrl = editForm.getAttribute('data-action-url');
-                const response = await fetch(actionUrl, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (response.ok) {
-                    const result = await response.json();
-                    Swal.fire({
-                        icon: 'success',
-                        text: result.message,
-                        showConfirmButton: false,
-                        allowOutsideClick: false,
-                        timer: 4000,
-                    }).then(() => {
-                        window.location.href = result.redirectUrl;
-                    });
-                }
-                else {
-                    const result = await response.json();
-                    Swal.fire({
-                        icon: 'error',
-                        text: `Failed. ${result.message}`,
-                        allowOutsideClick: false,
-                        showConfirmButton: true,
-                    });
-                }
-
-            }
-            else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Unfilled field(s)',
-                    text: 'Please fill all the required fields!',
-                    allowOutsideClick: false,
-                    showConfirmButton: true,
-                });
-            }
-        });
+        editForm.removeEventListener('submit', EditForm);
+        editForm.addEventListener('submit', EditForm);
     });
-});
 
+ 
+});
+async function EditForm(event) {
+    event.preventDefault();
+    var inputs = this.querySelectorAll('.edit-form-input');
+    var allFilled = true;
+
+    inputs.forEach(function (input) {
+        if (!input.value) {
+            allFilled = false;
+        }
+    });
+    if (allFilled) {
+        const formData = new FormData(this);
+        const actionUrl = this.getAttribute('data-action-url');
+        const response = await fetch(actionUrl, {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            Swal.fire({
+                icon: 'success',
+                text: result.message,
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                timer: 4000,
+            }).then(() => {
+                window.location.href = result.redirectUrl;
+            });
+        }
+        else {
+            const result = await response.json();
+            Swal.fire({
+                icon: 'error',
+                text: `Failed. ${result.message}`,
+                allowOutsideClick: false,
+                showConfirmButton: true,
+            });
+        }
+
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Unfilled field(s)',
+            text: 'Please fill all the required fields!',
+            allowOutsideClick: false,
+            showConfirmButton: true,
+        });
+    }
+}
 //async function EditForm(form) {
 //    var inputs = form.querySelectorAll('.edit-form-input');
 //    var allFilled = true;

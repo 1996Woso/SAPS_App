@@ -45,15 +45,19 @@ namespace SAPS_App.Controllers
             try
             {
                 _db.CriminalRecords.Update(obj);//Update new row to the database
-                _db.SaveChanges();//Gos to the database and save the changes(store new row)
-                TempData["succes"] = "Criminal record is successfully edited.";
+                _db.SaveChanges();//Goes to the database and save the changes(store new row)
+                //TempData["succes"] = "Criminal record is successfully edited.";
+                return Ok(new
+                {
+                    message = "Criminal record is successfully edited.",
+                    redirectUrl = Url.Action("Index","CriminalRecord")
+                });
             }
             catch (Exception ex) 
             {
-                TempData["error"] = "An error occured while editing criminal record.";
+                //TempData["error"] = "An error occured while editing criminal record.";
+                return BadRequest(new { message = ex.Message.ToString() });
             }
-            return View();
-
         }
         //ADD CRIMINAL RECORD
             
@@ -82,43 +86,52 @@ namespace SAPS_App.Controllers
             // Proceed with adding the record
 
             var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
-
-            if (managers.Count > 0)
+            try
             {
-                // Find the minimum number of cases
-                var minCases = managers.Min(m => m.TotalCases);
-
-                // Filter managers with the minimum number of cases
-                var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
-
-                if (managersWithMinCases.Count > 0)
+                if (managers.Count > 0)
                 {
-                    // If there are multiple managers with the same minimum number of cases, randomly select one
-                    var random = new Random();
-                    var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
+                    // Find the minimum number of cases
+                    var minCases = managers.Min(m => m.TotalCases);
 
-                    // Assign ManagerId and IssuedBy to the CriminalRecord
-                    obj.CaseManagerNo = randomManager.CaseManagerNo;
-                    obj.CaseManagerId = randomManager.CaseManagerId;
-                    obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
+                    // Filter managers with the minimum number of cases
+                    var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
 
-                    _db.CriminalRecords.Add(obj);
-                    _db.SaveChanges();
+                    if (managersWithMinCases.Count > 0)
+                    {
+                        // If there are multiple managers with the same minimum number of cases, randomly select one
+                        var random = new Random();
+                        var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
 
-                    TempData["success"] = "Criminal record is successfully added to the database.";
-                    return View();
+                        // Assign ManagerId and IssuedBy to the CriminalRecord
+                        obj.CaseManagerNo = randomManager.CaseManagerNo;
+                        obj.CaseManagerId = randomManager.CaseManagerId;
+                        obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
+
+                        _db.CriminalRecords.Add(obj);
+                        _db.SaveChanges();
+                        return Ok(new
+                        {
+                            message = "Criminal record is successfully added to the database.",
+                            redirectUrl = Url.Action("Index", "CriminalRecord")
+                        });
+                        //TempData["success"] = "Criminal record is successfully added to the database.";
+                    }
+                    else
+                    {
+                        return BadRequest(new { message = "No managers available to assign the criminal record." });
+                    }
                 }
                 else
                 {
-                    TempData["error"] = "No managers available to assign the criminal record.";
-                    return View();
+                    //TempData["error"] = "No managers available to assign the criminal record.";
+                    return BadRequest(new { message = "No managers available to assign the criminal record." });
                 }
             }
-            else
+            catch(Exception ex)
             {
-                TempData["error"] = "No managers available to assign the criminal record.";
-                return View();
+                return BadRequest(new { message = ex.Message.ToString() });
             }
+          
         }
 
         //[HttpPost]

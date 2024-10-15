@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
 using SAPS_App.Context;
@@ -57,9 +58,9 @@ namespace SAPS_App.Controllers
             catch (Exception ex)
             {
                 //TempData["error"] = $"An error occured while adding {obj.FirstName} {obj.LastName} .";
-                return BadRequest(new {message = $"An error occured while adding {obj.FirstName} {obj.LastName} ." });
+                //return BadRequest(new {message = $"An error occured while adding {obj.FirstName} {obj.LastName} ." });
+                return BadRequest(new { message = ex.Message.ToString() });
             }
-            return RedirectToAction("Index");
         }
         //SEARCH SUSPECT
         public IActionResult SearchSuspect()
@@ -123,19 +124,34 @@ namespace SAPS_App.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult EditSuspect(Suspect obj)
         {
+            var originalSuspect = _db.Suspects.AsNoTracking().FirstOrDefault(s => s.SuspectNumber == obj.SuspectNumber);
+            if(originalSuspect?.FirstName == obj.FirstName && originalSuspect.LastName == obj.LastName && originalSuspect.SuspectId == obj.SuspectId)
+            {
+                return BadRequest(new { message = "No changes made." });
+            }
+            int suspectNumber = originalSuspect?.SuspectNumber ?? 0;
+            if (_db.Suspects.Any(s => s.SuspectId == obj.SuspectId && s.SuspectNumber != obj.SuspectNumber))
+            {
+                //TempData["duplicate"] = "A suspect with " + obj.SuspectId + " already exists in the database";
+                return BadRequest(new { message = "A suspect with " + obj.SuspectId + " already exists in the database." });
+            }
+
             try
             {
                 _db.Suspects.Update(obj);
                 _db.SaveChanges();
-                TempData["success"] = "Suspect information is successfully edited.";
+                //TempData["success"] = "Suspect information is successfully edited.";
+                return Ok(new
+                {
+                    message = "Suspect information is successfully edited.",
+                    redirectUrl  = Url.Action("Index","Suspect")
+                });
             }
             catch (Exception ex)
             {
-                TempData["error"] = "An error occured while editing suspect information .";
+                //TempData["error"] = "An error occured while editing suspect information .";
+                return BadRequest(new {message = ex.Message.ToString() });
             }
-            // Redirect to another action or view after successful submission
-            return RedirectToAction("Index");
-
         }
         public IActionResult DownloadSuspects()
         {

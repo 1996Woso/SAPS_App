@@ -3,7 +3,7 @@
 @* <partial name="_Notifications" /> *@
 
 <div class="card shadow-border-0 mt-4">
-    <div class="card-header bg-secondary bg-gradient ml-0 py-4">
+    <div class="card-header bg-gradient ml-0 py-4" style="background-color:cadetblue;color:white">
         <dvi class="row">
             <div class="col-12 text-center">
                 <h2>Edit Suspect Details</h2>
@@ -11,27 +11,34 @@
         </dvi>
     </div>
     <div class="card-body">
-        <form method="post" asp-controller="Suspect" asp-action="EditSuspect">
+        <form method="post" asp-controller="Suspect" asp-action="EditSuspect" class="edit-form" data-action-url ="@Url.Action("EditSuspect","Suspect")" id="edit-suspect">
             <div class="border p-3 mt-4">
                 <div class="mb-3">
                     <input asp-for="SuspectNumber" class="form-control" placeholder="Suspect Number" hidden />
                 </div>
                 <div class="mb-3">
                     <label asp-for="SuspectId"></label>
-                    <input asp-for="SuspectId" class="form-control" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
+                    <input asp-for="SuspectId" class="form-control edit-form-input" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
                     <span asp-validation-for="SuspectId" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <label asp-for="FirstName"></label>
-                    <input asp-for="FirstName" class="form-control" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
+                    <input asp-for="FirstName" class="form-control edit-form-input" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <label asp-for="LastName"></label>
-                    <input asp-for="LastName" class="form-control" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
+                    <input asp-for="LastName" class="form-control edit-form-input" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
-                <button class="btn btn-primary w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="/Suspect/Index" class=" btn btn-success w-100"><i class="bi bi-arrow-left-square w-100"> Go Back</i></a>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
