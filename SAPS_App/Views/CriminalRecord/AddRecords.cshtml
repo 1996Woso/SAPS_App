@@ -19,6 +19,16 @@
 		<form method="post" asp-controller="CriminalRecord" asp-action="AddRecords" class="edit-form" data-action-url ="@Url.Action("AddRecords","CriminalRecord")" id="record">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-6">
+						<a href="/OffenceStation/AddStation" class="btn btn-primary w-100" target="_blank">
+							<i class="bi bi-plus-circle"></i> Add Station
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="/OffenceStation/AddOffence" class="btn btn-primary w-100" target="_blank">
+							<i class="bi bi-plus-circle"></i> Add Offrence
+						</a>
+					</div>
 					<div class="col-md-12">
 						<div class="border p-3 mt-4">
 							<div class="mb-3">
@@ -30,10 +40,9 @@
 							<div class="mb-3">
 								<label asp-for="OffenceCommited"></label>
 								@Html.DropDownListFor(model => model.OffenceCommited,
-																	new SelectList(new[] { "Assault", "Burglary", "Drugs","Hijacking","Murder","Offences of Dishonesty","Other offences","Public drinking",
-								"Rape","Robbery","Sexual Harrassment","Sexual Offences","Violence"}),
+																	new SelectList(ViewBag.Offences),
 																	"Select Criminal Record",
-																	new { @class = "form-control" })
+																	new { @class = "form-control edit-form-input", @id="offence" })
 								<span asp-validation-for="OffenceCommited" class="text-danger edit-form-input"></span>
 							</div>
 							<div class="mb-3">
@@ -41,29 +50,45 @@
 								<input asp-for="Sentence" class="form-control edit-form-input" placeholder="Number of years" id="sentence" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
 								<span asp-validation-for="Sentence" class="text-danger"></span>
 							</div>
-							<div class="mb-3">
+						@* 	<div class="mb-3">
 								<label asp-for="IssuedAt"></label>
 								<input asp-for="IssuedAt" class="form-control edit-form-input" type="text" required placeholder="Issued At" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
+								<span asp-validation-for="IssuedAt" class="text-danger"></span>
+							</div> *@
+							<div class="mb-3">
+								<label asp-for="IssuedAt"></label>
+								@Html.DropDownListFor(model => model.IssuedAt,
+																	new SelectList(ViewBag.Stations),
+																	"Select Police Station",
+																	new { @class = "form-control edit-form-input",@id="station" })
 								<span asp-validation-for="IssuedAt" class="text-danger"></span>
 							</div>
 							<div class="mb-3">
 								<label asp-for="IssuedBy"></label>
-								<input asp-for="IssuedBy" class="form-control edit-form-input" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
+								<input asp-for="IssuedBy" class="form-control edit-form-input" id="police" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false"/>
 								<span asp-validation-for="IssuedBy" class="text-danger"></span>
 							</div>
 							<div class="mb-3">
 								<label asp-for="IssueDate"></label>
-								<input asp-for="IssueDate" class="form-control edit-form-input" type="date" required placeholder="yyyy/mm/dd" required />
+								<input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date" required placeholder="yyyy/mm/dd"/>
 								<span asp-validation-for="IssueDate" class="text-danger"></span>
 							</div>
 
 
-							<button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+							
 							@* <button type="submit" class="btn btn-primary" style="color:black;width:150px" onclick="CloseWindow()">Close</button> *@
 							@* <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary" style="width:150px">
 							Back To List
 							</a> *@
 						</div>
+					</div>
+					<div class="col-md-6 mt-3">
+						<a href="/Suspect/Index" class="btn btn-success w-100">
+							<i class="bi bi-arrow-left-square"> Go Back</i>
+						</a>
+					</div>
+					<div class="col-md-6 mt-3">
+						<button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
 					</div>
 				</div>
 			</div>

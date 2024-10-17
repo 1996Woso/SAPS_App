@@ -157,12 +157,19 @@ async function EditForm(event) {
     event.preventDefault();
     var inputs = this.querySelectorAll('.edit-form-input');
     var allFilled = true;
-
+    var police = document.getElementById('police').value;
+    var date = document.getElementById('date').value;
+    var station = document.getElementById('station').value;
+    var offence = document.getElementById('offence').value;
+    var sentence = document.getElementById('sentence').value;
     inputs.forEach(function (input) {
         if (!input.value) {
             allFilled = false;
         }
     });
+    if (police && date && station && offence && sentence) {
+        allFilled = true
+    }
     if (allFilled) {
         const formData = new FormData(this);
         const actionUrl = this.getAttribute('data-action-url');

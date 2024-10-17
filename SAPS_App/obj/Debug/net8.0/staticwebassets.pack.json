@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\Dashboard.png"
     },
     {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Hand cuff.png",
+      "PackagePath": "staticwebassets\\Images\\Hand cuff.png"
+    },
+    {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\HomeLogoBlack.png",
       "PackagePath": "staticwebassets\\Images\\HomeLogoBlack.png"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Logout.png",
       "PackagePath": "staticwebassets\\Images\\Logout.png"
+    },
+    {
+      "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Police Station.png",
+      "PackagePath": "staticwebassets\\Images\\Police Station.png"
     },
     {
       "Id": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Register.png",

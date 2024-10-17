@@ -310,6 +310,38 @@ namespace SAPS_App.Migrations
                     b.ToTable("CriminalRecords");
                 });
 
+            modelBuilder.Entity("SAPS_App.Models.Offences", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Offences");
+                });
+
+            modelBuilder.Entity("SAPS_App.Models.PoliceStations", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PoliceStations");
+                });
+
             modelBuilder.Entity("SAPS_App.Models.Suspect", b =>
                 {
                     b.Property<int>("SuspectNumber")

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using SAPS_App.Areas.Identity.Pages;
 using OfficeOpenXml;
 using SAPS_App.Context;
+using SAPS_App.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,7 @@ builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStor
 //Add this so that register and login can work
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender,EmailSender>();//Registering what is in EmailSender class
+builder.Services.AddScoped<SAPS_Services>();
 // Set EPPlus license context
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Or LicenseContext.Commercial if you have a commercial license
 var app = builder.Build();

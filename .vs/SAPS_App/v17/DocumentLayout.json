@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\editrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\editrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -23,12 +15,56 @@
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\criminalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\suspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\suspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\offencestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\offencestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\services\\saps_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\services\\saps_services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\offences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\offences.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\policestations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\policestations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\suspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\suspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -62,16 +98,8 @@
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\searchsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\editsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\editsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\casemanager\\showcasemanagerdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -102,14 +130,6 @@
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\casemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\managerdetailsviewmodel - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\managerdetailsviewmodel - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -124,10 +144,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -157,72 +173,173 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "SAPS_App\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T14:28:49.555Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddSuspects.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-06T12:49:57.401Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditRecord.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAB5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-06T13:06:00.46Z"
+              "Title": "CriminalRecordController.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAIwIUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T12:30:47.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EditSuspect.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-06T11:30:21.596Z"
+              "DocumentIndex": 5,
+              "Title": "CriminalRecord.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\CriminalRecord.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\CriminalRecord.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:28:00.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\Index.cshtml",
               "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-06T11:30:22.019Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "OffenceStationController.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\OffenceStationController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\OffenceStationController.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\OffenceStationController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\OffenceStationController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwDsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T15:10:44.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Program.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Program.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Program.cs",
+              "RelativeToolTip": "SAPS_App\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:07:11.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SuspectController.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\SuspectController.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\SuspectController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwH0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T12:14:06.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditRecord.cshtml",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAABIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T13:06:00.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Offences.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\Offences.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\Offences.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\Offences.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\Offences.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T14:52:55.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PoliceStations.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\PoliceStations.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\PoliceStations.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\PoliceStations.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\PoliceStations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T14:47:54.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SAPS_Services.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\SAPS_Services.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Services\\SAPS_Services.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\SAPS_Services.cs",
+              "RelativeToolTip": "SAPS_App\\Services\\SAPS_Services.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T15:36:19.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddSuspects.cshtml",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T12:49:57.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T12:00:04.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddRecords.cshtml",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T05:46:21.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
@@ -234,7 +351,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 24,
+              "Title": "EditSuspect.cshtml",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T11:30:21.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SAPS_Context.cs",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Context\\SAPS_Context.cs",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
+              "RelativeToolTip": "SAPS_App\\Context\\SAPS_Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T15:18:54.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\AppData\\Local\\SourceServer\\f034911cad9cb0fcb3723c850024920d720f7845da4618a7c7ed6bb3e873dc92\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\f034911cad9cb0fcb3723c850024920d720f7845da4618a7c7ed6bb3e873dc92\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
@@ -246,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "ShowSuspectDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\ShowSuspectDetails.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\ShowSuspectDetails.cshtml",
@@ -258,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\Index.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
@@ -270,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -282,56 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "SAPS_App\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAuwJ0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-08T06:00:48.972Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddRecords.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T05:46:21.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SuspectController.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\SuspectController.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
-              "RelativeToolTip": "SAPS_App\\Controllers\\SuspectController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAwwH0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T12:14:06.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CriminalRecordController.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\CriminalRecordController.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
-              "RelativeToolTip": "SAPS_App\\Controllers\\CriminalRecordController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAYwHgAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T12:30:47.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Suspect.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\Suspect.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Models\\Suspect.cs",
@@ -343,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -355,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
@@ -367,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
@@ -379,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "EditManager.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\EditManager.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\EditManager.cshtml",
@@ -391,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "SearchManager.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\SearchManager.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\SearchManager.cshtml",
@@ -403,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "SearchSuspect.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\SearchSuspect.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\SearchSuspect.cshtml",
@@ -415,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "ShowCaseManagerDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
@@ -427,19 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-06T12:00:04.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Shared\\_Layout.cshtml",
@@ -451,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "SuspectDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\SuspectDetailsViewModel.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Models\\SuspectDetailsViewModel.cs",
@@ -463,31 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SAPS_Context.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Context\\SAPS_Context.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
-              "RelativeToolTip": "SAPS_App\\Context\\SAPS_Context.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBgAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T15:18:54.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "CriminalRecord.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Models\\CriminalRecord.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
-              "RelativeToolTip": "SAPS_App\\Models\\CriminalRecord.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T09:28:00.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "CaseManagerController.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CaseManagerController.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Controllers\\CaseManagerController.cs",
@@ -499,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\css\\site.css",
@@ -511,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -523,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.Development.json",
               "RelativeDocumentMoniker": "SAPS_App\\appsettings.Development.json",
@@ -535,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "ManagerDetailsViewModel - Copy.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\ManagerDetailsViewModel - Copy.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Models\\ManagerDetailsViewModel - Copy.cs",
@@ -547,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "SD.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\SD.cs",
               "RelativeDocumentMoniker": "SAPS_App\\SD.cs",
@@ -559,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.json",
               "RelativeDocumentMoniker": "SAPS_App\\appsettings.json",
@@ -571,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\EmailSender.cs",
               "RelativeDocumentMoniker": "SAPS_App\\EmailSender.cs",
@@ -583,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Logout.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
@@ -595,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "loading.js",
               "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\loading.js",
               "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\js\\loading.js",
@@ -604,6 +660,40 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-10-06T10:16:09.56Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "99b5292a-1a31-4bbb-aa75-bd8c56071ae1",
+        "Display": 0,
+        "X": 982,
+        "Y": 65,
+        "Width": 1907,
+        "Height": 804,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "SAPS_App\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwKIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-10-08T06:00:48.972Z",
+              "EditorCaption": ""
             }
           ]
         }

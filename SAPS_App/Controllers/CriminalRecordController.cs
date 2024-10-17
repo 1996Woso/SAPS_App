@@ -3,15 +3,19 @@ using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
 using SAPS_App.Context;
 using SAPS_App.Models;
+using SAPS_App.Services;
+using System.Runtime.ConstrainedExecution;
 
 namespace SAPS_App.Controllers
 {
     public class CriminalRecordController : Controller
     {
         private readonly SAPS_Context _db;
-        public CriminalRecordController(SAPS_Context db)
+        private readonly SAPS_Services _services;
+        public CriminalRecordController(SAPS_Context db,SAPS_Services services)
         {
             _db = db;
+            _services = services;
         }
         //CRIMINAL RECORDS
         public IActionResult Index()
@@ -20,58 +24,27 @@ namespace SAPS_App.Controllers
             return View(objCriminalRecordList);
             //return View();
         }
-        //EDIT BUTTON
-
-        //GET
-        public IActionResult EditRecord(int? id)//right-click to create a View
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var customerFromDb = _db.CriminalRecords.Find(id);
-
-            if (customerFromDb == null)
-            {
-                return NotFound();
-            }
-            return View(customerFromDb);
-        }
-        //POST
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult EditRecord(CriminalRecord obj)
-        {
-            try
-            {
-                _db.CriminalRecords.Update(obj);//Update new row to the database
-                _db.SaveChanges();//Goes to the database and save the changes(store new row)
-                //TempData["succes"] = "Criminal record is successfully edited.";
-                return Ok(new
-                {
-                    message = "Criminal record is successfully edited.",
-                    redirectUrl = Url.Action("Index","CriminalRecord")
-                });
-            }
-            catch (Exception ex) 
-            {
-                //TempData["error"] = "An error occured while editing criminal record.";
-                return BadRequest(new { message = ex.Message.ToString() });
-            }
-        }
         //ADD CRIMINAL RECORD
             
         //GET
-        public IActionResult AddRecords(int id)//right-click to create a View
+        public async Task<IActionResult> AddRecordsAsync(int id)//right-click to create a View
         {
             TempData["SuspectNumber"] = id;
-            return View();
+			ViewBag.Offences = await _services.GetOffencesAsync();
+			ViewBag.Stations = await _services.GetStationsAsync();
+			return View();
         }
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddRecords(CriminalRecord obj)
+        public async Task<IActionResult> AddRecordsAsync(CriminalRecord obj)
         {
+			//if (!ModelState.IsValid)
+			//{
+			//	return BadRequest(new { message = "Validation failed." });
+			//}
+			ViewBag.Offences = await _services.GetOffencesAsync();
+            ViewBag.Stations = await _services.GetStationsAsync();
             obj.Id = 0;//To fix the error (SqlException: Cannot insert explicit value for identity column in table 'CriminalRecords' when IDENTITY_INSERT is set to OFF.)
             // Check if the SuspectNumber exists in the Suspects table
             var existingSuspect = _db.Suspects.FirstOrDefault(s => s.SuspectNumber == obj.SuspectNumber);
@@ -133,53 +106,95 @@ namespace SAPS_App.Controllers
             }
           
         }
+		//EDIT BUTTON
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult AddRecords(CriminalRecord obj)
-        //{
+		//GET
+		public async Task<IActionResult> EditRecordAsync(int? id)//right-click to create a View
+		{
+			ViewBag.Offences = await _services.GetOffencesAsync();
+			ViewBag.Stations = await _services.GetStationsAsync();
+			if (id == null || id == 0)
+			{
+				return NotFound();
+			}
+			var customerFromDb = _db.CriminalRecords.Find(id);
 
-        //    var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
-        //    //var manager = _db.ApplicationUsers.Include(s=>s.CriminalRecords).ToList();
+			if (customerFromDb == null)
+			{
+				return NotFound();
+			}
+			return View(customerFromDb);
+		}
+		//POST
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> EditRecordAsync(CriminalRecord obj)
+		{
+			//ViewBag.Offences = await _services.GetOffencesAsync();
+			//ViewBag.Stations = await _services.GetStationsAsync();
+			try
+			{
+				_db.CriminalRecords.Update(obj);//Update new row to the database
+				_db.SaveChanges();//Goes to the database and save the changes(store new row)
+								  //TempData["succes"] = "Criminal record is successfully edited.";
+				return Ok(new
+				{
+					message = "Criminal record is successfully edited.",
+					redirectUrl = Url.Action("Index", "CriminalRecord")
+				});
+			}
+			catch (Exception ex)
+			{
+				//TempData["error"] = "An error occured while editing criminal record.";
+				return BadRequest(new { message = ex.Message.ToString() });
+			}
+		}
+		//[HttpPost]
+		//[ValidateAntiForgeryToken]
+		//public IActionResult AddRecords(CriminalRecord obj)
+		//{
 
-        //    if (managers.Count > 0)
-        //    {
-        //        // Find the minimum number of cases
-        //        var minCases = managers.Min(m => m.TotalCases);
+		//    var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
+		//    //var manager = _db.ApplicationUsers.Include(s=>s.CriminalRecords).ToList();
 
-        //        // Filter managers with the minimum number of cases
-        //        var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
+		//    if (managers.Count > 0)
+		//    {
+		//        // Find the minimum number of cases
+		//        var minCases = managers.Min(m => m.TotalCases);
 
-        //        if (managersWithMinCases.Count > 0)
-        //        {
-        //            // If there are multiple managers with the same minimum number of cases, randomly select one
-        //            var random = new Random();
-        //            var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
+		//        // Filter managers with the minimum number of cases
+		//        var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
 
-        //            // Assign ManagerId and IssuedBy to the CriminalRecord
-        //            obj.CaseManagerNo = randomManager.CaseManagerNo;
-        //            obj.CaseManagerId = randomManager.CaseManagerId;
-        //            obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
+		//        if (managersWithMinCases.Count > 0)
+		//        {
+		//            // If there are multiple managers with the same minimum number of cases, randomly select one
+		//            var random = new Random();
+		//            var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
 
-        //            _db.CriminalRecords.Add(obj);
-        //            _db.SaveChanges();
+		//            // Assign ManagerId and IssuedBy to the CriminalRecord
+		//            obj.CaseManagerNo = randomManager.CaseManagerNo;
+		//            obj.CaseManagerId = randomManager.CaseManagerId;
+		//            obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
 
-        //            TempData["SuccessMessage"] = "Criminal record is successfully added to the database.";
-        //            return RedirectToAction("Index");
-        //        }
-        //        else
-        //        {
-        //            TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-        //            return RedirectToAction("Index");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-        //        return RedirectToAction("Index");
-        //    }
-        //}
-        public int TotalOffences(int suspectNumber)
+		//            _db.CriminalRecords.Add(obj);
+		//            _db.SaveChanges();
+
+		//            TempData["SuccessMessage"] = "Criminal record is successfully added to the database.";
+		//            return RedirectToAction("Index");
+		//        }
+		//        else
+		//        {
+		//            TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
+		//            return RedirectToAction("Index");
+		//        }
+		//    }
+		//    else
+		//    {
+		//        TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
+		//        return RedirectToAction("Index");
+		//    }
+		//}
+		public int TotalOffences(int suspectNumber)
         {
             var records = _db.CriminalRecords.Where(cr => cr.SuspectNumber == suspectNumber).ToList();
             return records.Count;

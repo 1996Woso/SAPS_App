@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "joFi4yarr25NUw7l+8vkKAJ4RkNU5iUKki2qVRmPqN4=",
+  "Hash": "Xp2easDyJZ8tGtImrXG0Gdjd07kCVZLjzAzuGVf8yxw=",
   "Source": "SAPS_App",
   "BasePath": "_content/SAPS_App",
   "Mode": "Default",
@@ -1442,6 +1442,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\Dashboard.png"
     },
     {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Hand cuff.png",
+      "SourceId": "SAPS_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\",
+      "BasePath": "_content/SAPS_App",
+      "RelativePath": "Images/Hand cuff.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Hand cuff.png"
+    },
+    {
       "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\homelogo.png",
       "SourceId": "SAPS_App",
       "SourceType": "Discovered",
@@ -1516,6 +1535,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Logout.png"
+    },
+    {
+      "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Police Station.png",
+      "SourceId": "SAPS_App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\",
+      "BasePath": "_content/SAPS_App",
+      "RelativePath": "Images/Police Station.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Police Station.png"
     },
     {
       "Identity": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\Register.png",

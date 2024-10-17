@@ -14,15 +14,15 @@ namespace SAPS_App.Models
 		[Required]
 		[StringLength(3, MinimumLength = 1, ErrorMessage = "The Sentence must not have more than 3 digits")]
 		public string Sentence { get; set; }
-		[Required]
-		[StringLength(20, MinimumLength = 3, ErrorMessage = "Issued At must have have 3 to 20 characters .")]
+		//[Required]
+		//[StringLength(20, MinimumLength = 3, ErrorMessage = "Issued At must have have 3 to 20 characters .")]
 		[DisplayName("Issued At")]
 		public string IssuedAt { get; set; }
 		[StringLength(20, MinimumLength = 3, ErrorMessage = "Issued By must have have 3 to 20 characters .")]
 		[DisplayName("Issued By")]
 		public string IssuedBy { get; set; }	
 		[DisplayName("Issue Date")]
-		[Required]
+		//[Required]
 		public DateTime IssueDate { get; set; }
 		//[Required]
 		public int SuspectNumber { get; set; }

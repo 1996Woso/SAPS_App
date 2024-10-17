@@ -1,0 +1,40 @@
+﻿@model PoliceStations
+<script src="~/js/site.js"></script>
+@*To display notifications*@
+@* <partial name="_Notifications" /> *@
+<div class="card shadow-border-0 mt-4">
+    <div class="card-header bg-gradient ml-0 py-4" style="background-color:cadetblue;color:white">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Add New Station</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" asp-controller="OffenceStation" asp-action="AddStation" class="edit-form" data-action-url="@Url.Action("AddStation","OffenceStation")">
+            <div class="border p-3 mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div border p-3 mt-4>
+                            <div class="mb-3">
+                                <label asp-for="Name"></label>
+                                <input asp-for="Name" class="form-control edit-form-input" placeholder="Police station name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

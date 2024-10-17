@@ -16,6 +16,8 @@ namespace SAPS_App.Context
         public DbSet<SuspectSearch> SuspectCriminalRecords { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<CaseManager> Case_Managers { get; set; }
+        public DbSet<Offences> Offences { get; set; }
+        public DbSet<PoliceStations> PoliceStations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
