@@ -3,12 +3,12 @@
 @* <partial name="_Notifications" /> *@
 
 <div class="card shadow-border-0 mt-4">
-    <div class="card-header bg-gradient ml-0 py-4" style="background-color:cadetblue;color:white">
-        <dvi class="row">
-            <div class="col-12 text-center">
-                <h2>Edit Suspect Details</h2>
+    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
+        <div class="row" style="height:0.5rem">
+            <div class="col-md-12 text-md-center">
+                <h5>Edit Suspect Details</h5>
             </div>
-        </dvi>
+        </div>
     </div>
     <div class="card-body">
         <form method="post" asp-controller="Suspect" asp-action="EditSuspect" class="edit-form" data-action-url ="@Url.Action("EditSuspect","Suspect")" id="edit-suspect">

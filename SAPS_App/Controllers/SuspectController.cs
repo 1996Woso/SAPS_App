@@ -52,8 +52,8 @@ namespace SAPS_App.Controllers
                 return Ok(new
                 {
                     message = $"{obj.FirstName} {obj.LastName} is successfully added to the database.",
-                    redirectUrl = Url.Action("Index","Suspect")
-            });
+                    redirectUrl = "/Suspect/Index"
+                });
             }
             catch (Exception ex)
             {

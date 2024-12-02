@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //    });
     //}
 
-    var editForms = document.querySelectorAll('.edit-form');
+    var editForms = document.querySelectorAll('.edit-form');//Returns a static NodeList
     editForms.forEach(function (editForm) {
         editForm.removeEventListener('submit', EditForm);
         editForm.addEventListener('submit', EditForm);
@@ -157,11 +157,16 @@ async function EditForm(event) {
     event.preventDefault();
     var inputs = this.querySelectorAll('.edit-form-input');
     var allFilled = true;
-    var police = document.getElementById('police').value;
-    var date = document.getElementById('date').value;
-    var station = document.getElementById('station').value;
-    var offence = document.getElementById('offence').value;
-    var sentence = document.getElementById('sentence').value;
+    var action = this.getAttribute('data-action-url');
+    var police, date, station, offence, sentence;
+    if (action.substring(0,15) === '/CriminalRecord') {
+        police = document.getElementById('police').value;
+        date = document.getElementById('date').value;
+        station = document.getElementById('station').value;
+        offence = document.getElementById('offence').value;
+        sentence = document.getElementById('sentence').value;
+    }
+
     inputs.forEach(function (input) {
         if (!input.value) {
             allFilled = false;
