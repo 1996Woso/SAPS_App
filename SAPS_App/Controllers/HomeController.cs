@@ -18,7 +18,7 @@ namespace SAPS_App.Controllers
         {
             return View();
         }
-        //[Authorize(Roles = "IT Support,Developer")]
+        [Authorize(Roles = "IT Support,Developer")]
         public IActionResult ManageRoles()
         {
             return View();

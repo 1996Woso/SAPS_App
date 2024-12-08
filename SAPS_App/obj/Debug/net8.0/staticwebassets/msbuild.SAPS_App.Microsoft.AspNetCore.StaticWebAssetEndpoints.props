@@ -84,6 +84,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FWR8GdFxbO/BUsvw1UzZo1m9OwkM7WsbFy3J1SlpjSA="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"8448"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022FWR8GdFxbO/BUsvw1UzZo1m9OwkM7WsbFy3J1SlpjSA=\u0022"},{"Name":"Last-Modified","Value":"Mon, 02 Dec 2024 20:02:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SAPS_App/Images/Access Denied.l4fuikeyzs.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Access Denied.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l4fuikeyzs"},{"Name":"integrity","Value":"sha256-FSrS9MZ2P\u002BtgcOEOJHdxCgH/8WjK6xryOkV\u002B0XtooDs="},{"Name":"label","Value":"_content/SAPS_App/Images/Access Denied.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"11683"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022FSrS9MZ2P\u002BtgcOEOJHdxCgH/8WjK6xryOkV\u002B0XtooDs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 03 Dec 2024 19:35:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SAPS_App/Images/Access Denied.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Access Denied.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-FSrS9MZ2P\u002BtgcOEOJHdxCgH/8WjK6xryOkV\u002B0XtooDs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"11683"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022FSrS9MZ2P\u002BtgcOEOJHdxCgH/8WjK6xryOkV\u002B0XtooDs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 03 Dec 2024 19:35:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SAPS_App/Images/Admin.05pvs1azm4.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Admin.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

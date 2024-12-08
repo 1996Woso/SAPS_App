@@ -28,6 +28,12 @@ builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
 //To add roles to Identity
 //After adding roles on on views, now add 'AddDefaultTokenProviders 
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<SAPS_Context>().AddDefaultTokenProviders();//added AddDefaultTokenProviders()
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Account/Login"; // Path to login Razor page
+    options.AccessDeniedPath = "/Identity/Account/AccessDenied"; // Path to access denied Razor page
+});
+
 //Add this so that register and login can work
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IEmailSender,EmailSender>();//Registering what is in EmailSender class

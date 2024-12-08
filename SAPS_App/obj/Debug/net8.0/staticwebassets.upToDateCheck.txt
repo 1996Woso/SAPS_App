@@ -5,6 +5,7 @@ wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
 wwwroot\Images\07-57-40-974_512.webp
+wwwroot\Images\Access Denied.png
 wwwroot\Images\Admin.png
 wwwroot\Images\CaseManager.PNG
 wwwroot\Images\CriminalRecord.PNG

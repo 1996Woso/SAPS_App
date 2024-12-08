@@ -2305,6 +2305,88 @@
       ]
     },
     {
+      "Route": "Images/Access Denied.l4fuikeyzs.png",
+      "AssetFile": "Images/Access Denied.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FSrS9MZ2P+tgcOEOJHdxCgH/8WjK6xryOkV+0XtooDs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Dec 2024 19:35:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l4fuikeyzs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FSrS9MZ2P+tgcOEOJHdxCgH/8WjK6xryOkV+0XtooDs="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Access Denied.png"
+        }
+      ]
+    },
+    {
+      "Route": "Images/Access Denied.png",
+      "AssetFile": "Images/Access Denied.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11683"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FSrS9MZ2P+tgcOEOJHdxCgH/8WjK6xryOkV+0XtooDs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Dec 2024 19:35:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FSrS9MZ2P+tgcOEOJHdxCgH/8WjK6xryOkV+0XtooDs="
+        }
+      ]
+    },
+    {
       "Route": "Images/Admin.05pvs1azm4.png",
       "AssetFile": "Images/Admin.png",
       "Selectors": [],
