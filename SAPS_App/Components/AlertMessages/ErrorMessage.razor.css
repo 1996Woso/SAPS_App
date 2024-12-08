@@ -1,0 +1,12 @@
+﻿body {
+}
+.btn-close {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover {
+    background-color: darkgray;  
+    color: white;                
+}

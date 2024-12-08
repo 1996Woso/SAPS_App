@@ -1,0 +1,15 @@
+body[b-0pvi1u6ucu] {
+}
+.success-message[b-0pvi1u6ucu]{
+
+}
+.btn-close[b-0pvi1u6ucu] {
+    width: 2rem;           
+    height: 2rem;           
+    border-radius: 50%;     
+}
+
+.btn-close:hover[b-0pvi1u6ucu] {
+    background-color: darkgray;  
+    color: white;                
+}

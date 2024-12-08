@@ -1,0 +1,21 @@
+﻿@inject IJSRuntime IJSRuntime
+
+@if (IsDivDisplayed)
+{
+    <div class="alert alert-info mt-3 w-100 d-flex justify-content-between align-items-center">
+        <h6>
+            <span style="border:2px solid white; border-radius:25%; padding:5px;background-color:white">ℹ️</span> @Message
+        </h6>
+        <div class="hover-btn">
+            <button class="btn btn-close" @onclick="() => IsDivDisplayed = !IsDivDisplayed"></button>
+            <span>Dismiss</span>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string? Message { get; set; }
+    [Parameter]
+    public bool IsDivDisplayed { get; set; } 
+}

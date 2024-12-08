@@ -1,0 +1,27 @@
+﻿@if (IsDivDisplayed)
+{
+    <div class="alert alert-success mt-3 w-100 d-flex justify-content-between align-items-center">
+        <h6>✅ @Message @MarkupMessage</h6>
+        <div class="hover-btn">
+            <button class="btn btn-close" @onclick="HideMessage"></button>
+            <span>Dismiss</span>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public string? Message { get; set; }
+    [Parameter]
+    public MarkupString MarkupMessage { get; set; }
+    [Parameter]
+    public bool IsDivDisplayed { get; set; } = true;
+    [Parameter]
+    public EventCallback<bool> IsDivDisplayedChanged { get; set; } // Add an EventCallback
+
+    private void HideMessage()
+    {
+        IsDivDisplayed = false;
+        IsDivDisplayedChanged.InvokeAsync(IsDivDisplayed); // Notify the parent component
+    }
+}

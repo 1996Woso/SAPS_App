@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 //using SAPS_App.Models;
 using System.Diagnostics;
@@ -17,7 +18,11 @@ namespace SAPS_App.Controllers
         {
             return View();
         }
-
+        //[Authorize(Roles = "IT Support,Developer")]
+        public IActionResult ManageRoles()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

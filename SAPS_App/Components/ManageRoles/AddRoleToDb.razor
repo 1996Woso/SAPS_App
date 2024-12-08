@@ -1,0 +1,93 @@
+﻿@inject RoleManager<IdentityRole> RoleManager
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h6 class="text-center"><u>Add Role To Batabase</u></h6>
+        <EditForm Model="@Role" OnValidSubmit="AddRole" FormName="addRoleToDb">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="input-group">
+                <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name" @onchange = "ClearMessages"/>
+                <ValidationMessage For="() => Role.Name" class="text-danger" />
+                <button type="submit" class="btn btn-outline-primary">
+                    <i class="bi bi-plus-circle"> Add Role</i>
+                </button>
+            </div>
+        </EditForm>
+
+        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="error-div">
+                <ErrorMessage Message="@ErrorMessage" IsDivDisplayed="true"/>
+            </div>
+           @*  return; *@
+        }
+        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed="true"/>
+            </div>
+  @*           return; *@
+        }
+        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="info-div">
+                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true" />
+            </div>
+        @*     return; *@
+        }
+    </div>
+</div>
+@code {
+    private IdentityRole? Role = new IdentityRole();
+    private string? ErrorMessage { get; set; }
+    private string? SuccessMessage { get; set; }
+    private string? InfoMessage { get; set; }
+    private bool IsFormSubmitted = false;
+
+    private async Task AddRole()
+    {
+        IsFormSubmitted = true;
+        // Ensure Name is bound properly
+        if (Role == null || string.IsNullOrEmpty(Role.Name))
+        {
+            InfoMessage = "Role name cannot be empty.";
+            return;
+        }
+
+        // Check if Role already exists
+        if (!await RoleManager.RoleExistsAsync(Role.Name))
+        {
+            var identityRole = new IdentityRole(Role.Name);
+
+            var result = await RoleManager.CreateAsync(identityRole);
+
+            if (result.Succeeded)
+            {
+                SuccessMessage = $"Role '{Role.Name}' added successfully.";
+                ErrorMessage = "";
+                InfoMessage = "";
+                Role = new IdentityRole(); // Reset form
+            }
+            else
+            {
+                ErrorMessage = "Error adding Role: " + string.Join(", ", result.Errors.Select(e => e.Description));
+                SuccessMessage = "";
+                InfoMessage = "";
+            }
+        }
+        else
+        {
+            InfoMessage = $"Role '{Role.Name}' already exists.";
+            SuccessMessage = "";
+            ErrorMessage = "";
+        }
+    }
+    private void ClearMessages()
+    {
+        InfoMessage = string.Empty;
+        SuccessMessage = string.Empty;
+        ErrorMessage = string.Empty;
+    }
+}

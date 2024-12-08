@@ -1,0 +1,36 @@
+﻿@page
+@using SAPS_App.Areas.Identity.Pages.Account.Manage.RoleManagement
+@model ManageRolesModel
+@{
+}
+<div class="card mx-auto" style="max-width:100%;margin-top:50px">
+    <div class="card-header text-center" style="background-color:floralwhite;color:black">
+        <h5>Users Management</h5> 
+    </div>
+    <div class="card-body">
+        <div class="grid-container">
+            <button class="btn btn-light" onclick="showAssignRoleToUser()">
+                <i class="bi bi-person-add" style="font-size:1.5rem"></i> Assign Role
+            </button>
+            <button class="btn btn-danger remove-role" onclick="showRemoveRoleFromUser()">
+                <i class="bi bi-person-x" style="font-size:1.5rem"></i> Remove Role
+            </button>
+            <button class="btn btn-success add" onclick="showAddRoleToDb()">
+                <i class="bi bi-bag-plus" style="font-size:1.2rem"></i> Add Role
+            </button>
+        </div>
+    </div>
+</div>
+
+@if (Model.ShowAssignRoleToUser)
+{
+    <partial name="_AssignRoleToUser" />
+}
+else if (Model.ShowAddRoleToDb)
+{
+    <partial name="_AddRoleToDb" />
+}
+else if (Model.ShowRemoveRoleFromUser)
+{
+    <partial name="_RemoveRoleFromUser" />
+}

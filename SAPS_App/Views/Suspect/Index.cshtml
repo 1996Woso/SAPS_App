@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
-
 <div class="card shadow-border-0 mt-4">
     <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
         <div class="row" style="height:0.5rem">
@@ -39,16 +38,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col=md-12">
+            <div class="col-md-12">
                 <section>
-                    <table class="table table-striped" id="myTable">
+                    <table class="table table-striped table-responsive" id="myTable">
                         <thead>
                             <tr>
                                 <th>Id</th>
                                 <th>Suspect Id</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
-                                <th>Total number of Offences</th>
+                                <th>Total Offences</th>
                                 <th>Options</th>
                             </tr>
                         </thead>
@@ -114,7 +113,7 @@
 @section Scripts {
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script>
+    @* <script>
         $(document).ready(function () {
             $('#myTable').DataTable({
                 order: [[2, 'asc']],
@@ -128,7 +127,22 @@
                 "pagingType": "full_numbers"
             });
         });
+    </script> *@
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                autoWidth: false, // Prevent DataTables from automatically resizing
+                scrollY: "100vh",
+                scrollCollapse: true,
+                paging: true,
+                pagingType: "full_numbers",
+                columnDefs: [
+                    { targets: '_all', className: 'dt-center' } // Center align all columns
+                ]
+            });
+        });
     </script>
+
     @{
         <partial name="_ValidationScriptsPartial" />
     }

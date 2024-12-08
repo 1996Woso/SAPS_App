@@ -1,0 +1,123 @@
+﻿@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h6 class="text-center"><u>Remove Role From User</u></h6>
+        <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
+            <DataAnnotationsValidator />
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email" @onchange="ClearMessages">
+                    <option value="">Select Email</option>
+                    @foreach (var email in Emails)
+                    {
+                        <option value="@email">@email</option>
+                    }
+                </InputSelect>
+                <label for="Email">Email</label>
+                <ValidationMessage For="() => model.Email" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role" @onchange = "ClearMessages">
+                    <option value="">Select Role</option>
+                    @foreach (var role in Roles)
+                    {
+                        <option value="@role">@role</option>
+                    }
+                </InputSelect>
+                <label for="Role">Role</label>
+                <ValidationMessage For="() => model.Role" class="text-danger" />
+            </div>
+            <button class="btn btn-danger w-100" type="submit">
+                <i class="bi bi-x-circle"></i> Remove Role
+            </button>
+        </EditForm>
+        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="error-div">
+               <ErrorMessage Message="@ErrorMessage" IsDivDisplayed ="true"/>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="success-div">
+                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed ="true"/>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
+        {
+            <div class="fade-message w-100" id="info-div">
+                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true"/>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private RemoveRoleModel model = new();
+    private IdentityUser? User;
+    private List<string> Roles = new();
+    private List<string> Emails = new();
+    private string? ErrorMessage { get; set; }
+    private string? SuccessMessage { get; set; }
+    private string? InfoMessage { get; set; }
+    private bool IsFormSubmitted = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(User != null)
+        {
+            Roles = (await UserManager.GetRolesAsync(User)).ToList();
+        }
+        else
+        {
+            Roles = await RoleManager.Roles.Select(x => x.Name ?? "").ToListAsync();
+        }
+        Emails = await UserManager.Users.Select(x => x.UserName ?? "").ToListAsync();
+    }
+
+    private async Task RemoveRole()
+    {
+        IsFormSubmitted = true;
+        User = await UserManager.FindByEmailAsync(model.Email ?? "");
+
+        if (!await UserManager.IsInRoleAsync(User, model.Role))
+        {
+            InfoMessage = $"'{User.UserName}' is not in role '{model.Role}'.";
+            SuccessMessage = "";
+            ErrorMessage = "";
+            return;
+        }
+        if(User != null && !string.IsNullOrEmpty(model.Role))
+        {
+            var result = await UserManager.RemoveFromRoleAsync(User, model.Role);
+            if (result.Succeeded)
+            {
+                SuccessMessage = $"'{model.Role}' has been removed successfully from {User.UserName}.";
+                ErrorMessage = "";
+                InfoMessage = "";
+                return;
+            }
+            else
+            {
+                ErrorMessage = result.Errors.ToString();
+                SuccessMessage = "";
+                InfoMessage = "";
+                return;
+            }  
+        }
+    }
+    private void ClearMessages()
+    {
+        InfoMessage = string.Empty;
+        SuccessMessage = string.Empty;
+    }
+    public class RemoveRoleModel
+    {
+        [Required(ErrorMessage = "Email is requred.")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "Role is requred.")]
+        public string? Role { get; set; }
+    }
+}

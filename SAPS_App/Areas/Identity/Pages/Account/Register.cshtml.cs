@@ -134,12 +134,6 @@ namespace SAPS_App.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            //Adding roles to db
-            if (!_roleManager.RoleExistsAsync(SD.Role_CaseManager).GetAwaiter().GetResult())//If this role does not exist we create it
-            {
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_CaseManager)).GetAwaiter().GetResult();
-                _roleManager.CreateAsync(new IdentityRole(SD.Role_Manager)).GetAwaiter().GetResult();
-            }
             //Populating role options
             Input = new()
             {
@@ -179,10 +173,10 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                     }
                     else//Default role
                     {
-                        await _userManager.AddToRoleAsync(user, SD.Role_CaseManager);
+                        await _userManager.AddToRoleAsync(user, "CaseManager");
                     }
                     //Add managers to Managers(Table I created myself)
-                    if (Input.Role == SD.Role_CaseManager || String.IsNullOrEmpty(Input.Role))
+                    if (Input.Role == "CaseManager" || String.IsNullOrEmpty(Input.Role))
                     {
                         var caseManager = new CaseManager
                         {

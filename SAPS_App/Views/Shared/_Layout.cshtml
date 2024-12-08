@@ -39,8 +39,10 @@
                         <li class="nav-item" >
                             <a class="nav-link " style="color:white" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-
-                        @if (User.IsInRole(SD.Role_Manager))
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="ManageRoles">Manage Roles</a>
+                        </li>
+                        @if (User.IsInRole("Manager"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link" style="color:white" asp-controller="Suspect" asp-action="Index">Dashboard</a>
@@ -60,7 +62,7 @@
                                 <a class="nav-link text-danger" asp-controller="CaseManager" asp-action="Index"><img src="~/Images/CaseManager.PNG" width="50" height="50" /><br />Case<br />Managers</a>
                             </li> *@
                         }
-                        @if (User.IsInRole(SD.Role_CaseManager))
+                        @if (User.IsInRole("CaseManager"))
                         {
                         @*     <li class="nav-item">
                                 <a class="nav-link " style="color:white" asp-controller="Suspect" asp-action="Record">Case</a>
@@ -109,6 +111,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--This Is for Blazor-->
+    <base href="~/" />
+    <script src="_framework/blazor.server.js"></script>
+    <!------------------------------------------------>
     @await RenderSectionAsync("Scripts", required: false)
     <script>
         $(window).on('load', function () {

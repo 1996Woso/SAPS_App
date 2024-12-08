@@ -115,3 +115,22 @@ label {
 i.bi{
     font-size: 1.5rem; /*Equivalent to fs-4*/
 }
+/*Tables*/
+table#myTable {
+    width: 100%;
+    table-layout: auto; /* Adjust column width automatically */
+}
+table#myTable th, table#myTable td {
+        white-space: nowrap; /* Prevent content wrapping in cells */
+        text-align: center; /* Center align content */
+        vertical-align: middle; /* Align content vertically */
+}
+/*Grid container*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(8rem,1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+  
