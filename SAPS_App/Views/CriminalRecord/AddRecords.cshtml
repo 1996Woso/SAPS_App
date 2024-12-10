@@ -1,6 +1,13 @@
-﻿@model CriminalRecord
+﻿
+@using Microsoft.AspNetCore.Identity
+@model CriminalRecord
+@inject SAPS_App.Services.SAPS_Services service
+@inject UserManager<IdentityUser> UserManager
+
 <script src="~/js/site.js"></script>
 @{
+	var userEmail = User.Identity?.Name;
+	var user = await service.GetUserAsync(userEmail??"");
 	var suspectNumber = TempData["SuspectNumber"];
 	// TempData.Keep("suspectNumber");
 }
@@ -45,11 +52,11 @@
 																	new { @class = "form-control edit-form-input", @id="offence" })
 								<span asp-validation-for="OffenceCommited" class="text-danger edit-form-input"></span>
 							</div>
-							<div class="mb-3">
+						@* 	<div class="mb-3">
 								<label asp-for="Sentence"></label>
-								<input asp-for="Sentence" class="form-control edit-form-input" placeholder="Number of years" id="sentence" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
+								<input asp-for="Sentence" class="form-control edit-form-input" placeholder="Number of years" id="sentence" value ="0" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
 								<span asp-validation-for="Sentence" class="text-danger"></span>
-							</div>
+							</div> *@
 						@* 	<div class="mb-3">
 								<label asp-for="IssuedAt"></label>
 								<input asp-for="IssuedAt" class="form-control edit-form-input" type="text" required placeholder="Issued At" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
@@ -63,15 +70,14 @@
 																	new { @class = "form-control edit-form-input",@id="station" })
 								<span asp-validation-for="IssuedAt" class="text-danger"></span>
 							</div>
-							<div class="mb-3">
+							<div class="mb-3" hidden>
 								<label asp-for="IssuedBy"></label>
-								<input asp-for="IssuedBy" class="form-control edit-form-input" id="police" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false"/>
+								<input asp-for="IssuedBy" value="@user.Name @user.Surname" class="form-control edit-form-input" id="police" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false"/>
 								<span asp-validation-for="IssuedBy" class="text-danger"></span>
 							</div>
-							<div class="mb-3">
-								<label asp-for="IssueDate"></label>
-								<input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date" required placeholder="yyyy/mm/dd"/>
-								<span asp-validation-for="IssueDate" class="text-danger"></span>
+							<div class="mb-3" hidden>
+								@* <input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date" placeholder="yyyy/mm/dd"/> *@
+								<input asp-for="IssuerId" value="@user.Id" id="id"/>
 							</div>
 
 

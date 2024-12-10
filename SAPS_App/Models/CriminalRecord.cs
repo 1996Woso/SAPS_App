@@ -13,23 +13,24 @@ namespace SAPS_App.Models
 		public string OffenceCommited { get; set; }
 		[Required]
 		[StringLength(3, MinimumLength = 1, ErrorMessage = "The Sentence must not have more than 3 digits")]
-		public string Sentence { get; set; }
+		public string? Sentence { get; set; } = "";
 		//[Required]
 		//[StringLength(20, MinimumLength = 3, ErrorMessage = "Issued At must have have 3 to 20 characters .")]
 		[DisplayName("Issued At")]
 		public string IssuedAt { get; set; }
 		[StringLength(20, MinimumLength = 3, ErrorMessage = "Issued By must have have 3 to 20 characters .")]
 		[DisplayName("Issued By")]
-		public string IssuedBy { get; set; }	
+		public string IssuedBy { get; set; }
 		[DisplayName("Issue Date")]
 		//[Required]
-		public DateTime IssueDate { get; set; }
+		public DateTime IssueDate { get; set; } = DateTime.Now;
 		//[Required]
+		public string? Status { get; set; } = "Opended";
 		public int SuspectNumber { get; set; }
 		public Suspect Suspect { get; set; }
-
+		public string? IssuerId { get; set; }
         public int CaseManagerNo { get; set; }
-		public string CaseManagerId { get; set; }
+		public string? CaseManagerId { get; set; }
 		public string CaseManagerName { get; set; }	
         public CaseManager CaseManager { get; set; }
     }

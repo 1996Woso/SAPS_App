@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YGt4ee7i+oo=",
+  "dgSpecHash": "7IejW3ObwrQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\SAPS_App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eviwe\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\eviwe\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\eviwe\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\eviwe\\.nuget\\packages\\epplus\\7.1.0\\epplus.7.1.0.nupkg.sha512",
     "C:\\Users\\eviwe\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
     "C:\\Users\\eviwe\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",

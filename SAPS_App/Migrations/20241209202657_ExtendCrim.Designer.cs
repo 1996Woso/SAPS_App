@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SAPS_App.Context;
 
@@ -11,9 +12,11 @@ using SAPS_App.Context;
 namespace SAPS_App.Migrations
 {
     [DbContext(typeof(SAPS_Context))]
-    partial class SAPS_ContextModelSnapshot : ModelSnapshot
+    [Migration("20241209202657_ExtendCrim")]
+    partial class ExtendCrim
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

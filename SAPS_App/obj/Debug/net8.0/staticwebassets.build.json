@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ScAZd6Iu7qGuRJl16HqkYOXpvCvAsGIIqiXsdb+TtiA=",
+  "Hash": "GvE0wMgRTe8Uk9peXN12qsjkZvvNQ01Ri0COpB/VYh4=",
   "Source": "SAPS_App",
   "BasePath": "_content/SAPS_App",
   "Mode": "Default",
@@ -1879,8 +1879,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "e9r957lti6",
-      "Integrity": "vtzadaj2u6PUzkoQKNvQu8Ihe1lsBndQSroyv7YHIlY=",
+      "Fingerprint": "99j5gas7aa",
+      "Integrity": "Qxd8LoClndjgVyLtSkwosVCtWg2260QQviHq1NQ+x38=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -7347,7 +7347,7 @@
       ]
     },
     {
-      "Route": "js/site.e9r957lti6.js",
+      "Route": "js/site.99j5gas7aa.js",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7357,7 +7357,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9904"
+          "Value": "9870"
         },
         {
           "Name": "Content-Type",
@@ -7365,11 +7365,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vtzadaj2u6PUzkoQKNvQu8Ihe1lsBndQSroyv7YHIlY=\""
+          "Value": "\"Qxd8LoClndjgVyLtSkwosVCtWg2260QQviHq1NQ+x38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 20:02:33 GMT"
+          "Value": "Mon, 09 Dec 2024 20:46:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7379,7 +7379,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "e9r957lti6"
+          "Value": "99j5gas7aa"
         },
         {
           "Name": "label",
@@ -7387,7 +7387,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vtzadaj2u6PUzkoQKNvQu8Ihe1lsBndQSroyv7YHIlY="
+          "Value": "sha256-Qxd8LoClndjgVyLtSkwosVCtWg2260QQviHq1NQ+x38="
         }
       ]
     },
@@ -7402,7 +7402,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9904"
+          "Value": "9870"
         },
         {
           "Name": "Content-Type",
@@ -7410,11 +7410,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vtzadaj2u6PUzkoQKNvQu8Ihe1lsBndQSroyv7YHIlY=\""
+          "Value": "\"Qxd8LoClndjgVyLtSkwosVCtWg2260QQviHq1NQ+x38=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 02 Dec 2024 20:02:33 GMT"
+          "Value": "Mon, 09 Dec 2024 20:46:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7424,7 +7424,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vtzadaj2u6PUzkoQKNvQu8Ihe1lsBndQSroyv7YHIlY="
+          "Value": "sha256-Qxd8LoClndjgVyLtSkwosVCtWg2260QQviHq1NQ+x38="
         }
       ]
     },
@@ -12125,7 +12125,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Dec 2024 19:26:55 GMT"
+          "Value": "Mon, 09 Dec 2024 21:32:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12174,7 +12174,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Dec 2024 19:26:55 GMT"
+          "Value": "Mon, 09 Dec 2024 21:32:48 GMT"
         },
         {
           "Name": "Link",
@@ -12219,7 +12219,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Dec 2024 19:26:55 GMT"
+          "Value": "Mon, 09 Dec 2024 21:32:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12260,7 +12260,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 07 Dec 2024 19:26:55 GMT"
+          "Value": "Mon, 09 Dec 2024 21:32:48 GMT"
         },
         {
           "Name": "Link",

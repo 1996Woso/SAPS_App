@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
@@ -22,7 +23,6 @@ namespace SAPS_App.Controllers
         {
             //IEnumerable<Suspect> suspects = _db.Suspects;
             var suspects = _db.Suspects.Include(s => s.CriminalRecords).ToList();
-
             //Calculate total criminal records in the database
             var totalCriminalRecords = _db.CriminalRecords.Count();
             ViewBag.TotalCriminalRecords = totalCriminalRecords;
@@ -30,6 +30,7 @@ namespace SAPS_App.Controllers
         }
         //ADD SUSPECTS
         //GET
+        [Authorize(Roles ="Police Officer")]
         public IActionResult AddSuspects()
         {
             return View();
@@ -105,6 +106,7 @@ namespace SAPS_App.Controllers
 
         }
         //EDIT SUSPECT
+        [Authorize(Roles = "Police Officer")]
         public IActionResult EditSuspect(int? id)//right-click to create a View
         {
             if (id == null || id == 0)

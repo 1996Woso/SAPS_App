@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
 using SAPS_App.Context;
@@ -25,8 +26,9 @@ namespace SAPS_App.Controllers
             //return View();
         }
         //ADD CRIMINAL RECORD
-            
+
         //GET
+        [Authorize(Roles ="Police Officer")]
         public async Task<IActionResult> AddRecordsAsync(int id)//right-click to create a View
         {
             TempData["SuspectNumber"] = id;
@@ -43,6 +45,8 @@ namespace SAPS_App.Controllers
 			//{
 			//	return BadRequest(new { message = "Validation failed." });
 			//}
+            //obj.IssueDate = DateTime.Now;
+            //obj.Status = "Opened";
 			ViewBag.Offences = await _services.GetOffencesAsync();
             ViewBag.Stations = await _services.GetStationsAsync();
             obj.Id = 0;//To fix the error (SqlException: Cannot insert explicit value for identity column in table 'CriminalRecords' when IDENTITY_INSERT is set to OFF.)
@@ -106,10 +110,11 @@ namespace SAPS_App.Controllers
             }
           
         }
-		//EDIT BUTTON
+        //EDIT BUTTON
 
-		//GET
-		public async Task<IActionResult> EditRecordAsync(int? id)//right-click to create a View
+        //GET
+        [Authorize(Roles = "Police Officer")]
+        public async Task<IActionResult> EditRecordAsync(int? id)//right-click to create a View
 		{
 			ViewBag.Offences = await _services.GetOffencesAsync();
 			ViewBag.Stations = await _services.GetStationsAsync();

@@ -158,13 +158,13 @@ async function EditForm(event) {
     var inputs = this.querySelectorAll('.edit-form-input');
     var allFilled = true;
     var action = this.getAttribute('data-action-url');
-    var police, date, station, offence, sentence;
+    var police, id, station, offence;
     if (action.substring(0,15) === '/CriminalRecord') {
         police = document.getElementById('police').value;
-        date = document.getElementById('date').value;
+     /*   date = document.getElementById('date').value;*/
         station = document.getElementById('station').value;
         offence = document.getElementById('offence').value;
-        sentence = document.getElementById('sentence').value;
+        id = document.getElementById('id').value;
     }
 
     inputs.forEach(function (input) {
@@ -172,7 +172,7 @@ async function EditForm(event) {
             allFilled = false;
         }
     });
-    if (police && date && station && offence && sentence) {
+    if (police && station && offence && id) {
         allFilled = true
     }
     if (allFilled) {

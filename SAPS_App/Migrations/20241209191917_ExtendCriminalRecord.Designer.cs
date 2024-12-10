@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SAPS_App.Context;
 
@@ -11,9 +12,11 @@ using SAPS_App.Context;
 namespace SAPS_App.Migrations
 {
     [DbContext(typeof(SAPS_Context))]
-    partial class SAPS_ContextModelSnapshot : ModelSnapshot
+    [Migration("20241209191917_ExtendCriminalRecord")]
+    partial class ExtendCriminalRecord
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -266,6 +269,7 @@ namespace SAPS_App.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CaseManagerId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CaseManagerName")
@@ -286,9 +290,6 @@ namespace SAPS_App.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("IssuerId")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OffenceCommited")
                         .IsRequired()

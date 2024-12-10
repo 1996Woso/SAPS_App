@@ -94,7 +94,9 @@
                                                         <td>@record.Id</td>
                                                         <td>@Model.Suspect.SuspectNumber</td>
                                                         <td>@record.OffenceCommited</td>
-                                                        <td>@record.Sentence years</td>
+                                                        <td>
+                                                            @((string.IsNullOrEmpty(record.Sentence) ? "-": record.Sentence +" years"))
+                                                        </td>
                                                         <td>@record.IssuedAt</td>
                                                         <td>@record.IssuedBy</td>
                                                         <td>@record.IssueDate.ToShortDateString()</td>
