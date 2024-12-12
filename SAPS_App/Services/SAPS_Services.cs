@@ -13,7 +13,7 @@ namespace SAPS_App.Services
         private readonly string con;
         private readonly IConfiguration _config;
 
-        List<AspNetUser> users = new List<AspNetUser>();    
+        List<AspNetUsers> users = new List<AspNetUsers>();    
         public SAPS_Services(SAPS_Context db,IConfiguration confif)
         {
             _db = db;
@@ -29,16 +29,18 @@ namespace SAPS_App.Services
         {
             return await  _db.PoliceStations.Select(x => x.Name).ToListAsync();
         }
-        public async Task<AspNetUser> GetUserAsync(string email)
+        public async Task<ApplicationUser> GetUserAsync(string email)
         {
-            using (var connection = new SqlConnection(con))
-            {
-                connection.Open();
-                var sqlCommand = "Exec AspNetUser @Email";
-                var param = new { Email = email };
-                var user = await connection.QueryFirstOrDefaultAsync<AspNetUser>(sqlCommand,param);
-                return user!;
-            }
+            //using (var connection = new SqlConnection(con))
+            //{
+            //    connection.Open();
+            //    var sqlCommand = "Exec AspNetUser @Email";
+            //    var param = new { Email = email };
+            //    var user = await connection.QueryFirstOrDefaultAsync<AspNetUser>(sqlCommand, param);
+            //    return user!;
+            //}
+            var user = await _db.ApplicationUsers.Where(x => x.UserName == email).FirstOrDefaultAsync();
+            return user!;
 
         }
     }

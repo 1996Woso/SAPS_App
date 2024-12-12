@@ -166,31 +166,31 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-                    //Assign role to a user
-                    if (!String.IsNullOrEmpty(Input.Role))
-                    {
-                        await _userManager.AddToRoleAsync(user, Input.Role);
-                    }
-                    else//Default role
-                    {
-                        await _userManager.AddToRoleAsync(user, "CaseManager");
-                    }
-                    //Add managers to Managers(Table I created myself)
-                    if (Input.Role == "CaseManager" || String.IsNullOrEmpty(Input.Role))
-                    {
-                        var caseManager = new CaseManager
-                        {
-                            Name = Input.Name,
-                            Surname = Input.Surname,
-                            Email = Input.Email,
-                            CaseManagerId = user.Id,
-                            CriminalRecords = new List<CriminalRecord>()
-                        };
-                        _db.Case_Managers.Add(caseManager);
-                        await _db.SaveChangesAsync();
-                        //return RedirectToPage("Suspect","ViewManagers");
+                    ////Assign role to a user
+                    //if (!String.IsNullOrEmpty(Input.Role))
+                    //{
+                    //    await _userManager.AddToRoleAsync(user, Input.Role);
+                    //}
+                    //else//Default role
+                    //{
+                    //    await _userManager.AddToRoleAsync(user, "CaseManager");
+                    //}
+                    ////Add managers to Managers(Table I created myself)
+                    //if (Input.Role == "CaseManager" || String.IsNullOrEmpty(Input.Role))
+                    //{
+                    //    var caseManager = new CaseManager
+                    //    {
+                    //        Name = Input.Name,
+                    //        Surname = Input.Surname,
+                    //        Email = Input.Email,
+                    //        CaseManagerId = user.Id,
+                    //        CriminalRecords = new List<CriminalRecord>()
+                    //    };
+                    //    _db.Case_Managers.Add(caseManager);
+                    //    await _db.SaveChangesAsync();
+                    //    //return RedirectToPage("Suspect","ViewManagers");
 
-                    }
+                    //}
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

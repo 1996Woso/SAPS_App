@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class AspNetUser
+    public class AspNetUsers
     {
         public string Id { get; set; } 
         public string Discriminator { get; set; }

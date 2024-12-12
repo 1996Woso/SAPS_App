@@ -1,5 +1,7 @@
 ﻿@inject UserManager<IdentityUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
+@inject SAPS_App.Context.SAPS_Context _db
+@inject SAPS_App.Services.SAPS_Services service
 
 <div class="row justify-content-center">
     <div class="col-md-6">
@@ -7,7 +9,7 @@
         <EditForm Model="assinRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email" @onchange="ClearMessages">
+                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
                     {
@@ -18,7 +20,7 @@
                 <ValidationMessage For ="() => assinRoleModel.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role" @onchange = "ClearMessages">
+                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
                     {
@@ -63,6 +65,7 @@
 
     private async Task AssignRole()
     {
+        var role = assinRoleModel.Role;
         IsFormSubmitted = true;
         var user = await UserManager.FindByEmailAsync(assinRoleModel.Email ?? "");
         if (user != null && !string.IsNullOrEmpty(assinRoleModel.Email))
@@ -75,7 +78,20 @@
                     SuccessMessage = $"'{assinRoleModel.Role}' has been added successfully to {user.UserName}.";
                     InfoMessage = "";
                     assinRoleModel = new AssinRoleModel();
-
+                    //Add managers to Managers(Table I created myself)
+                    if (role == "CaseManager")
+                    {
+                        var manager = await service.GetUserAsync(user.UserName!);
+                        var caseManager = new CaseManager
+                       {
+                           Name = manager.Name,
+                           Surname = manager.Surname,
+                           Email = manager.Email!,
+                           CaseManagerId = manager.Id,
+                       };
+                       _db.Case_Managers.Add(caseManager);
+                       await _db.SaveChangesAsync();
+                    }
                 }
             }
             else
@@ -87,17 +103,6 @@
         }
 
     }
-
-    private void ClearMessages()
-    {
-        InfoMessage = string.Empty;
-        SuccessMessage = string.Empty;
-    }
-    // [Inject]
-    // private UserManager<ApplicationUser>? UserManager { get; set; }
-
-    // [Inject]
-    // private RoleManager<IdentityRole>? RoleManager { get; set; }
 
     public class AssinRoleModel
     {

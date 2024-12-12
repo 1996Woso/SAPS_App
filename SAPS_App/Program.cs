@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddServerSideBlazor(); 
+builder.Services.AddServerSideBlazor(); //This service is for Razor Components(Blazor Components)
 //This is done after connecting MsServer and creating a table on  (appsettings.json and ApplictationsDbContext.cs
 builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
             builder.Configuration.GetConnectionString("Somee")
@@ -61,5 +61,5 @@ app.MapRazorPages();//To map the pipeline(Now the Register and Login pages shoul
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapBlazorHub();
+app.MapBlazorHub();// Maps the Blazor Hub endpoint
 app.Run();

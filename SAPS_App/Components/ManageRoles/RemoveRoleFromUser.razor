@@ -7,7 +7,7 @@
         <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email" @onchange="ClearMessages">
+                <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
                     {
@@ -18,7 +18,7 @@
                 <ValidationMessage For="() => model.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role" @onchange = "ClearMessages">
+                <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
                     {
@@ -106,11 +106,6 @@
                 return;
             }  
         }
-    }
-    private void ClearMessages()
-    {
-        InfoMessage = string.Empty;
-        SuccessMessage = string.Empty;
     }
     public class RemoveRoleModel
     {
