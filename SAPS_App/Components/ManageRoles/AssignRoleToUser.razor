@@ -6,10 +6,10 @@
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h6 class="text-center"><u>Assign Role To User</u></h6>
-        <EditForm Model="assinRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
+        <EditForm Model="assignRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
             <DataAnnotationsValidator />
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email">
+                <InputSelect @bind-Value="assignRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
                     {
@@ -17,10 +17,10 @@
                     }
                 </InputSelect>
                 <label for="Email">Email</label>
-                <ValidationMessage For ="() => assinRoleModel.Email" class="text-danger" />
+                <ValidationMessage For ="() => assignRoleModel.Email" class="text-danger" />
             </div>
             <div class="form-floating mb-3">
-                <InputSelect @bind-Value="assinRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
+                <InputSelect @bind-Value="assignRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
                     {
@@ -28,7 +28,7 @@
                     }
                 </InputSelect>
                 <label for="Role">Role</label>
-                <ValidationMessage For="() => assinRoleModel.Role" class="text-danger" />
+                <ValidationMessage For="() => assignRoleModel.Role" class="text-danger" />
             </div>
             <button class="btn btn-primary w-100" type="submit">
                 <i class="bi bi-plus-circle"></i> Assign Role
@@ -49,7 +49,7 @@
     </div>
 </div>
 @code {
-    private AssinRoleModel assinRoleModel = new();
+    private AssignRoleModel assignRoleModel = new();
     private List<string> Roles = new();
     private List<string> Emails = new();
     private string? ErrorMessage { get; set; }
@@ -65,19 +65,19 @@
 
     private async Task AssignRole()
     {
-        var role = assinRoleModel.Role;
+        var role = assignRoleModel.Role;
         IsFormSubmitted = true;
-        var user = await UserManager.FindByEmailAsync(assinRoleModel.Email ?? "");
-        if (user != null && !string.IsNullOrEmpty(assinRoleModel.Email))
+        var user = await UserManager.FindByEmailAsync(assignRoleModel.Email ?? "");
+        if (user != null && !string.IsNullOrEmpty(assignRoleModel.Email))
         {
-            if(!await UserManager.IsInRoleAsync(user, assinRoleModel.Role ?? ""))
+            if(!await UserManager.IsInRoleAsync(user, assignRoleModel.Role ?? ""))
             {
-                var result = await UserManager.AddToRoleAsync(user, assinRoleModel.Role ?? "");
+                var result = await UserManager.AddToRoleAsync(user, assignRoleModel.Role ?? "");
                 if (result.Succeeded)
                 {
-                    SuccessMessage = $"'{assinRoleModel.Role}' has been added successfully to {user.UserName}.";
+                    SuccessMessage = $"'{assignRoleModel.Role}' has been added successfully to {user.UserName}.";
                     InfoMessage = "";
-                    assinRoleModel = new AssinRoleModel();
+                    assignRoleModel = new AssignRoleModel();
                     //Add managers to Managers(Table I created myself)
                     if (role == "CaseManager")
                     {
@@ -96,7 +96,7 @@
             }
             else
             {
-                InfoMessage = $"'{assinRoleModel.Role}' has already  been assigned  to {user.UserName}.";
+                InfoMessage = $"'{assignRoleModel.Role}' has already  been assigned  to {user.UserName}.";
                 SuccessMessage = "";
             }
 
@@ -104,7 +104,7 @@
 
     }
 
-    public class AssinRoleModel
+    public class AssignRoleModel
     {
         [Required(ErrorMessage ="Email is requred.")]
         public string? Email { get; set; }
