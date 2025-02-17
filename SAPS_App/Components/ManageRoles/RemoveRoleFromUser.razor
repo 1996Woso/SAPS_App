@@ -1,12 +1,14 @@
-﻿@inject UserManager<IdentityUser> UserManager
+﻿@using SAPS_App.Context
+@inject UserManager<IdentityUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
+@inject SAPS_Context _db
 
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h6 class="text-center"><u>Remove Role From User</u></h6>
         <EditForm Model="model" OnValidSubmit="RemoveRole" FormName="removeRole">
             <DataAnnotationsValidator />
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 col-md-6">
                 <InputSelect @bind-Value="model.Email" class="form-control" aria-required="true" placeholder="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
@@ -17,7 +19,7 @@
                 <label for="Email">Email</label>
                 <ValidationMessage For="() => model.Email" class="text-danger" />
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 col-md-6">
                 <InputSelect @bind-Value="model.Role" class="form-control" aria-required="true" placeholder="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
@@ -35,7 +37,7 @@
         @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
         {
             <div class="fade-message w-100" id="error-div">
-               <ErrorMessage Message="@ErrorMessage" IsDivDisplayed ="true"/>
+                <ErrorMessage Message="@ErrorMessage" IsDivDisplayed ="true"/>
             </div>
         }
         else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
@@ -90,9 +92,20 @@
         }
         if(User != null && !string.IsNullOrEmpty(model.Role))
         {
+
             var result = await UserManager.RemoveFromRoleAsync(User, model.Role);
             if (result.Succeeded)
-            {
+            { 
+                if(model.Role == "Case Manager")
+                {
+                    var caseManager = await _db.Case_Managers.FirstOrDefaultAsync(x => x.CaseManagerId == User.Id);
+                    if (caseManager != null)
+                    {
+                        caseManager.IsActive = false;
+                        _db.Case_Managers.Update(caseManager);
+                        await _db.SaveChangesAsync();
+                    }
+                }
                 SuccessMessage = $"'{model.Role}' has been removed successfully from {User.UserName}.";
                 ErrorMessage = "";
                 InfoMessage = "";

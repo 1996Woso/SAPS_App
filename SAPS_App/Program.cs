@@ -6,11 +6,14 @@ using SAPS_App.Areas.Identity.Pages;
 using OfficeOpenXml;
 using SAPS_App.Context;
 using SAPS_App.Services;
+using SAPS_App.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<IdentityContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Somee")));
 builder.Services.AddServerSideBlazor(); //This service is for Razor Components(Blazor Components)
 //This is done after connecting MsServer and creating a table on  (appsettings.json and ApplictationsDbContext.cs
 builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
@@ -27,7 +30,10 @@ builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
  * >();*/ //I removed this:options => options.SignIn.RequireConfirmedAccount = true: on <IdentityUser>()
 //To add roles to Identity
 //After adding roles on on views, now add 'AddDefaultTokenProviders 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<SAPS_Context>().AddDefaultTokenProviders();//added AddDefaultTokenProviders()
+builder.Services.AddIdentity<IdentityUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddSignInManager()
+    .AddDefaultTokenProviders();//added AddDefaultTokenProviders()
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Account/Login"; // Path to login Razor page
@@ -36,8 +42,11 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 //Add this so that register and login can work
 builder.Services.AddRazorPages();
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SMTP"));
 builder.Services.AddScoped<IEmailSender,EmailSender>();//Registering what is in EmailSender class
+builder.Services.AddScoped<EmailSender>();
 builder.Services.AddScoped<SAPS_Services>();
+builder.Services.AddScoped<ISAPSService, SAPSService>();
 // Set EPPlus license context
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Or LicenseContext.Commercial if you have a commercial license
 var app = builder.Build();

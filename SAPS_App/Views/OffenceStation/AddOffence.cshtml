@@ -2,13 +2,9 @@
 <script src="~/js/site.js"></script>
 @*To display notifications*@
 @* <partial name="_Notifications" /> *@
-<div class="card shadow-border-0 mt-4">
-    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
-        <div class="row" style="height:0.5rem">
-            <div class="col-md-12 text-md-center">
-                <h5>Add New Offence</h5>
-            </div>
-        </div>
+<div class="card small-box">
+    <div class="card-header heading-form" >
+        <h5>Add New Offence</h5>
     </div>
     <div class="card-body p-4">
         <form method="post" asp-controller="OffenceStation" asp-action="AddOffence" class="edit-form" data-action-url="@Url.Action("AddOffence","OffenceStation")">
@@ -16,7 +12,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div border p-3 mt-4>
-                            <div class="mb-3">
+                            <div class="mb-3 col-md-6">
                                 <label asp-for="Name"></label>
                                 <input asp-for="Name" class="form-control edit-form-input" placeholder="Offence name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
                                 <span asp-validation-for="Name" class="text-danger"></span>

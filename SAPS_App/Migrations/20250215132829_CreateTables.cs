@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SAPS_App.Migrations
 {
     /// <inheritdoc />
-    public partial class SAPS : Migration
+    public partial class CreateTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,37 +51,6 @@ namespace SAPS_App.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Case_Managers",
-                columns: table => new
-                {
-                    CaseManagerNo = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Surname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CaseManagerId = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Case_Managers", x => x.CaseManagerNo);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Suspects",
-                columns: table => new
-                {
-                    SuspectNumber = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    SuspectId = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Suspects", x => x.SuspectNumber);
                 });
 
             migrationBuilder.CreateTable(
@@ -190,39 +159,6 @@ namespace SAPS_App.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "CriminalRecords",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OffenceCommited = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Sentence = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    IssuedAt = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    IssuedBy = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    IssueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    SuspectNumber = table.Column<int>(type: "int", nullable: false),
-                    CaseManagerNo = table.Column<int>(type: "int", nullable: false),
-                    CaseManagerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CaseManagerName = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CriminalRecords", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_CriminalRecords_Case_Managers_CaseManagerNo",
-                        column: x => x.CaseManagerNo,
-                        principalTable: "Case_Managers",
-                        principalColumn: "CaseManagerNo",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CriminalRecords_Suspects_SuspectNumber",
-                        column: x => x.SuspectNumber,
-                        principalTable: "Suspects",
-                        principalColumn: "SuspectNumber",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -261,16 +197,6 @@ namespace SAPS_App.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CriminalRecords_CaseManagerNo",
-                table: "CriminalRecords",
-                column: "CaseManagerNo");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CriminalRecords_SuspectNumber",
-                table: "CriminalRecords",
-                column: "SuspectNumber");
         }
 
         /// <inheritdoc />
@@ -292,19 +218,10 @@ namespace SAPS_App.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "CriminalRecords");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Case_Managers");
-
-            migrationBuilder.DropTable(
-                name: "Suspects");
         }
     }
 }

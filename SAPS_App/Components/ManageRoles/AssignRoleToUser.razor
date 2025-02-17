@@ -1,14 +1,14 @@
 ﻿@inject UserManager<IdentityUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
 @inject SAPS_App.Context.SAPS_Context _db
-@inject SAPS_App.Services.SAPS_Services service
+@inject SAPS_App.Services.ISAPSService service
 
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h6 class="text-center"><u>Assign Role To User</u></h6>
         <EditForm Model="assignRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
             <DataAnnotationsValidator />
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 col-md-6">
                 <InputSelect @bind-Value="assignRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
@@ -19,7 +19,7 @@
                 <label for="Email">Email</label>
                 <ValidationMessage For ="() => assignRoleModel.Email" class="text-danger" />
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-3 col-md-6">
                 <InputSelect @bind-Value="assignRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
@@ -79,18 +79,34 @@
                     InfoMessage = "";
                     assignRoleModel = new AssignRoleModel();
                     //Add managers to Managers(Table I created myself)
-                    if (role == "CaseManager")
+                    if (role == "Case Manager")
                     {
-                        var manager = await service.GetUserAsync(user.UserName!);
-                        var caseManager = new CaseManager
-                       {
-                           Name = manager.Name,
-                           Surname = manager.Surname,
-                           Email = manager.Email!,
-                           CaseManagerId = manager.Id,
-                       };
-                       _db.Case_Managers.Add(caseManager);
-                       await _db.SaveChangesAsync();
+                        var isExisting = await _db.Case_Managers.AnyAsync(x => x.CaseManagerId == user.Id);
+                        var isActive = await _db.Case_Managers.AnyAsync(x => x.CaseManagerId == user.Id && x.IsActive == true);
+                        if (!isExisting)
+                        {//If case manager does not exist
+                            var manager = await service.GetAplicationUserUserByUsernameAsync(user.UserName);
+                            var caseManager = new CaseManager
+                                {
+                                    Name = manager.Name,
+                                    Surname = manager.Surname,
+                                    Email = manager.Email!,
+                                    CaseManagerId = manager.Id,
+                                };
+                            _db.Case_Managers.Add(caseManager);
+                            await _db.SaveChangesAsync();
+                        }
+                        else if (isExisting && !isActive)//If case manager is not active
+                        {
+                            var caseManager = await _db.Case_Managers.FirstOrDefaultAsync(x => x.CaseManagerId == user.Id);
+                            if(caseManager != null)
+                            {
+                                caseManager.IsActive = true;
+                                _db.Case_Managers.Update(caseManager);
+                                await _db.SaveChangesAsync();
+                            }
+                          
+                        }
                     }
                 }
             }
@@ -101,7 +117,6 @@
             }
 
         }
-
     }
 
     public class AssignRoleModel

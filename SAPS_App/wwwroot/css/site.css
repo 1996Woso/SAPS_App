@@ -132,5 +132,14 @@ table#myTable th, table#myTable td {
     gap: 1rem;
     justify-content: center;
 }
-
+/*----------------------------*/
+.small-box{
+    max-width: 400px;
+    margin: 50px auto 0;
+}
+.heading-form{
+    background-color: lightskyblue;
+    border-radius: 0.4rem;
+    text-align: center;
+}
   

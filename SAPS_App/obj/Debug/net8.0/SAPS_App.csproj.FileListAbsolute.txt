@@ -2392,6 +2392,12 @@ C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\refint\S
 C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.pdb
 C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.genruntimeconfig.cache
 C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\ref\SAPS_App.dll
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\bin\Debug\net8.0\Dapper.dll
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Areas\Identity\Pages\Account\Manage\RoleManagement\ManageRoles.cshtml.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\ErrorMessage.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\InfoMessage.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\SuccessMessage.razor.rz.scp.css
+C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\ManageRoles\ApplicationUsersManagement.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\bin\Debug\net8.0\appsettings.json
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\bin\Debug\net8.0\SAPS_App.staticwebassets.runtime.json
@@ -2709,9 +2715,3 @@ C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\refint\SAPS
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.pdb
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.genruntimeconfig.cache
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\ref\SAPS_App.dll
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\bin\Debug\net8.0\Dapper.dll
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Areas\Identity\Pages\Account\Manage\RoleManagement\ManageRoles.cshtml.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\ErrorMessage.razor.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\InfoMessage.razor.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\SuccessMessage.razor.rz.scp.css
-C:\Users\10114629\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\ManageRoles\ApplicationUsersManagement.razor.rz.scp.css

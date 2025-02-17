@@ -13,20 +13,20 @@
     <div class="card-body">
         <form method="post" asp-controller="Suspect" asp-action="EditSuspect" class="edit-form" data-action-url ="@Url.Action("EditSuspect","Suspect")" id="edit-suspect">
             <div class="border p-3 mt-4">
-                <div class="mb-3">
+                <div class="mb-3 col-md-6">
                     <input asp-for="SuspectNumber" class="form-control" placeholder="Suspect Number" hidden />
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col-md-6">
                     <label asp-for="SuspectId"></label>
                     <input asp-for="SuspectId" class="form-control edit-form-input" placeholder="ID Number" id="id" maxlength="13" onkeypress="return allowDigits(event)" onpaste="pasteDigits(event,'id',13)" required />
                     <span asp-validation-for="SuspectId" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col-md-6">
                     <label asp-for="FirstName"></label>
                     <input asp-for="FirstName" class="form-control edit-form-input" placeholder="First Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col-md-6">
                     <label asp-for="LastName"></label>
                     <input asp-for="LastName" class="form-control edit-form-input" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
                     <span asp-validation-for="LastName" class="text-danger"></span>

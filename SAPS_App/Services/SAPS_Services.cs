@@ -9,6 +9,7 @@ namespace SAPS_App.Services
     
     public class SAPS_Services
     {
+
         private readonly SAPS_Context _db;
         private readonly string con;
         private readonly IConfiguration _config;
@@ -39,8 +40,9 @@ namespace SAPS_App.Services
             //    var user = await connection.QueryFirstOrDefaultAsync<AspNetUser>(sqlCommand, param);
             //    return user!;
             //}
-            var user = await _db.ApplicationUsers.Where(x => x.UserName == email).FirstOrDefaultAsync();
-            return user!;
+            //var user = await _db.ApplicationUsers.Where(x => x.UserName == email).FirstOrDefaultAsync();
+            
+            return null!;
 
         }
     }

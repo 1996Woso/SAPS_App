@@ -42,6 +42,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
         .UI.Services.IEmailSender' while attempting to activate 'SAPS_App.Areas.Identity.Pages.Account.RegisterModel'.*/
 
         //To Solve it, create a class EmailSender(not in the models just a class under projrect)
+        private readonly Services.EmailSender emailSender;
         private readonly SAPS_Context _db;//Added because we want to add users who are managers to Managers(table)
         public RegisterModel(
     UserManager<IdentityUser> userManager,
@@ -49,7 +50,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
     IUserStore<IdentityUser> userStore,
     SignInManager<IdentityUser> signInManager,
     ILogger<RegisterModel> logger,
-    IEmailSender emailSender,
+       Services.EmailSender emailSender,
     SAPS_Context db
             )
         {
@@ -59,7 +60,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
-            _emailSender = emailSender;
+            this.emailSender = emailSender;
             _db = db;//Added because we want to add users who are managers to Managers(table)
         }
 
@@ -201,8 +202,12 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    //Send email 
+                    var body = $@"Good day {user.Name} {user.Surname}, <br><br>
+                                   Please click this link to confirm your email:<br>
+                                   <a href = '{callbackUrl}'> Confrim Emai </a>";
+
+                    await emailSender.SendEmailAsync(user.Email, "Confirm Email", body);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

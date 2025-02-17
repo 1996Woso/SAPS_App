@@ -13,10 +13,18 @@ namespace SAPS_App.Controllers
     {
         private readonly SAPS_Context _db;
         private readonly SAPS_Services _services;
-        public CriminalRecordController(SAPS_Context db,SAPS_Services services)
+        private readonly EmailSender emailSender;
+        private readonly ISAPSService sapsService;
+
+        public CriminalRecordController(SAPS_Context db
+            ,SAPS_Services services
+            ,EmailSender emailSender,
+            ISAPSService sapsService)
         {
             _db = db;
             _services = services;
+            this.emailSender = emailSender;
+            this.sapsService = sapsService;
         }
         //CRIMINAL RECORDS
         public IActionResult Index()
@@ -32,8 +40,6 @@ namespace SAPS_App.Controllers
         public async Task<IActionResult> AddRecordsAsync(int id)//right-click to create a View
         {
             TempData["SuspectNumber"] = id;
-			ViewBag.Offences = await _services.GetOffencesAsync();
-			ViewBag.Stations = await _services.GetStationsAsync();
 			return View();
         }
         //POST
@@ -47,8 +53,6 @@ namespace SAPS_App.Controllers
 			//}
             //obj.IssueDate = DateTime.Now;
             //obj.Status = "Opened";
-			ViewBag.Offences = await _services.GetOffencesAsync();
-            ViewBag.Stations = await _services.GetStationsAsync();
             obj.Id = 0;//To fix the error (SqlException: Cannot insert explicit value for identity column in table 'CriminalRecords' when IDENTITY_INSERT is set to OFF.)
             // Check if the SuspectNumber exists in the Suspects table
             var existingSuspect = _db.Suspects.FirstOrDefault(s => s.SuspectNumber == obj.SuspectNumber);
@@ -62,7 +66,7 @@ namespace SAPS_App.Controllers
 
             // Proceed with adding the record
 
-            var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
+            var managers = _db.Case_Managers.Where(c => c.IsActive == true).Include(c => c.CriminalRecords).ToList();
             try
             {
                 if (managers.Count > 0)
@@ -83,7 +87,13 @@ namespace SAPS_App.Controllers
                         obj.CaseManagerNo = randomManager.CaseManagerNo;
                         obj.CaseManagerId = randomManager.CaseManagerId;
                         obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
+                        var appUser = await sapsService.GetAplicationUserUserAsync(obj.CaseManagerId);
 
+                        //Send Email 
+                        var body = $@"Good day {obj.CaseManagerName}, <br><br>
+                                   A new case has been assigned to you.";
+
+                        await emailSender.SendEmailAsync(appUser.UserName, "Case Assignment", body);
                         _db.CriminalRecords.Add(obj);
                         _db.SaveChanges();
                         return Ok(new

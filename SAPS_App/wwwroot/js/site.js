@@ -150,7 +150,18 @@ document.addEventListener('DOMContentLoaded', function () {
         editForm.removeEventListener('submit', EditForm);
         editForm.addEventListener('submit', EditForm);
     });
+    /* Fields editable by Case Manager, Station Manager and Police Officer*/
+    let userRolesElement = document.getElementById("userRoles");
+    let userRoles = userRolesElement ? JSON.parse(userRolesElement.textContent) : [];
+    function disableFieldsForUnauthorizedUsers(allowedRoles, fieldClass) {
+        let fields = document.querySelectorAll(fieldClass);
 
+        if (!userRoles.some(role => allowedRoles.includes(role))) {
+            fields.forEach(field => field.setAttribute("disabled", "disabled"));
+        }
+    }
+    disableFieldsForUnauthorizedUsers(["Police Officer"], ".police-only");
+    disableFieldsForUnauthorizedUsers(["Case Manager", "Station Manager"], ".manager-only");
  
 });
 async function EditForm(event) {
@@ -158,13 +169,13 @@ async function EditForm(event) {
     var inputs = this.querySelectorAll('.edit-form-input');
     var allFilled = true;
     var action = this.getAttribute('data-action-url');
-    var police, id, station, offence;
+    var police, station, station, offence;
     if (action.substring(0,15) === '/CriminalRecord') {
         police = document.getElementById('police').value;
      /*   date = document.getElementById('date').value;*/
         station = document.getElementById('station').value;
         offence = document.getElementById('offence').value;
-        id = document.getElementById('id').value;
+        station = document.getElementById('station').value;
     }
 
     inputs.forEach(function (input) {
@@ -172,7 +183,7 @@ async function EditForm(event) {
             allFilled = false;
         }
     });
-    if (police && station && offence && id) {
+    if (police && station && offence && station) {
         allFilled = true
     }
     if (allFilled) {

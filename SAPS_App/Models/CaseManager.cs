@@ -13,6 +13,7 @@ namespace SAPS_App.Models
         public string Surname { get; set; }
         public string Email { get; set; }
         public string CaseManagerId { get; set; }
+        public bool IsActive { get; set; } = true;
         [DisplayName("Total Cases")]
         public int TotalCases
         {

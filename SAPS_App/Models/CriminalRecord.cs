@@ -25,7 +25,7 @@ namespace SAPS_App.Models
 		//[Required]
 		public DateTime IssueDate { get; set; } = DateTime.Now;
 		//[Required]
-		public string? Status { get; set; } = "Opended";
+		public string? Status { get; set; } = "Opened";
 		public int SuspectNumber { get; set; }
 		public Suspect Suspect { get; set; }
 		public string? IssuerId { get; set; }

@@ -1,122 +1,222 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\",
+  "WorkspaceRootPath": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\assignroletouser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\assignroletouser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\addroletodb.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\addroletodb.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\removerolefromuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\removerolefromuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\applicationusersmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\applicationusersmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\offencestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\offencestationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\offencestation\\addoffence.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\offencestation\\addoffence.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\assignroletouser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\assignroletouser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\home\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\home\\manageroles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\removerolefromuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\removerolefromuser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\criminalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\criminalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\reoverolefromuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\reoverolefromuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\addroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\addroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\addroletodb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\addroletodb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\manageroles.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\manageroles.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\casemanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\casemanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\editrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\editrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\editrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\offencestation\\addstation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\offencestation\\addoffence.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\offencestation\\addoffence.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\offencestation\\addstation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\offencestation\\addstation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\10114629\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\editsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\services\\sapsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\services\\sapsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\services\\isapsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\services\\isapsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\criminalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\criminalrecord\\addrecords.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\casemanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\casemanager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\casemanager\\showcasemanagerdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\casemanager\\showcasemanagerdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\addroletodb.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\addroletodb.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\suspectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\controllers\\casemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\controllers\\casemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\components\\manageroles\\applicationusersmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\components\\manageroles\\applicationusersmanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resendemailconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\registerconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\resetpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\context\\saps_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\editsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\editsuspect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\reoverolefromuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\reoverolefromuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\addroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\addroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\addroletodb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\addroletodb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\manageroles.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\areas\\identity\\pages\\account\\manage\\rolemanagement\\manageroles.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|c:\\users\\eviwe\\source\\repos\\eviwe\\saps_app\\saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A4ADF96-8DD3-4240-8281-4E729312C98D}|SAPS_App\\SAPS_App.csproj|solutionrelative:saps_app\\views\\suspect\\addsuspects.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,342 +226,569 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "SAPS_App\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAJUAAAAAAAAAAADwv6gAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-18T13:43:05.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:03:45.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.json",
-              "RelativeDocumentMoniker": "SAPS_App\\appsettings.json",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.json",
-              "RelativeToolTip": "SAPS_App\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-09T19:32:16.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AddOffence.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:58:04.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationUsersManagement.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
-              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
-              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T20:48:50.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SAPS_App\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T21:00:52.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:03:13.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SuspectController.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\SuspectController.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
-              "RelativeToolTip": "SAPS_App\\Controllers\\SuspectController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAiwGwAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T19:45:24.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAIBZwA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T17:57:00.874Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T09:48:47.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageRoles.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\ManageRoles.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Home\\ManageRoles.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\ManageRoles.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Home\\ManageRoles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T09:41:12.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RemoveRoleFromUser.razor",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
+              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
+              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T14:11:40.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAqwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T20:42:57.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Program.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Program.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Program.cs",
+              "RelativeToolTip": "SAPS_App\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBAAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T08:22:41.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\_Imports.razor",
+              "RelativeDocumentMoniker": "SAPS_App\\_Imports.razor",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\_Imports.razor",
+              "RelativeToolTip": "SAPS_App\\_Imports.razor",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T15:56:19.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AssignRoleToUser.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
               "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
               "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\AssignRoleToUser.razor",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAADMAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAEwFEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-07T16:17:27.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddRoleToDb.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
-              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
-              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "EditRecord.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAqwHQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T19:23:49.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddRecords.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:17:55.892Z",
+              "WhenOpened": "2024-10-24T12:59:42.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RemoveRoleFromUser.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
-              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
-              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\RemoveRoleFromUser.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-12T14:11:40.377Z"
+              "WhenOpened": "2025-02-12T12:43:41.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SAPS_Context.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Context\\SAPS_Context.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
-              "RelativeToolTip": "SAPS_App\\Context\\SAPS_Context.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwBMAAABBAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CriminalRecordController.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\CriminalRecordController.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAAAC8AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T12:48:46.731Z"
+              "WhenOpened": "2025-02-12T09:35:27.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "SAPS_App\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAqwJkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-18T13:43:05.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAqwMAAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAEwM0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T06:12:45.063Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "OffenceStationController.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\OffenceStationController.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\OffenceStationController.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\OffenceStationController.cs",
-              "RelativeToolTip": "SAPS_App\\Controllers\\OffenceStationController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T12:42:12.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\Index.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBEAAABkAAAAAAAAAA==",
+              "Title": "AddOffence.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\OffenceStation\\AddOffence.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:48:36.166Z"
+              "WhenOpened": "2024-10-24T12:58:04.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBZwAgAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-08T06:15:56.351Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T16:05:40.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\_Imports.razor",
-              "RelativeDocumentMoniker": "SAPS_App\\_Imports.razor",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\_Imports.razor",
-              "RelativeToolTip": "SAPS_App\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAABRwAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T15:56:19.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ReoveRoleFromUser.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T14:24:21.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AddRoleToDb.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:23:33.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ManageRoles.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T12:19:05.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AddRoleToUser.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
-              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T14:24:00.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "EditRecord.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:59:42.735Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\Index.cshtml",
-              "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\Index.cshtml",
-              "RelativeToolTip": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAACBjwFsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:02:22.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 11,
               "Title": "AddStation.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
               "RelativeToolTip": "SAPS_App\\Views\\OffenceStation\\AddStation.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-24T12:58:24.329Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SAPSService.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\SAPSService.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Services\\SAPSService.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\SAPSService.cs",
+              "RelativeToolTip": "SAPS_App\\Services\\SAPSService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAUwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T13:07:05.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ISAPSService.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\ISAPSService.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Services\\ISAPSService.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\ISAPSService.cs",
+              "RelativeToolTip": "SAPS_App\\Services\\ISAPSService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T14:33:25.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddRecords.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\AddRecords.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAewBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T12:17:55.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:03:13.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\Index.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\Index.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:02:22.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CriminalRecord.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\CriminalRecord.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\CriminalRecord.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\CriminalRecord.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwBwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T16:43:34.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ShowCaseManagerDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T16:17:44.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T13:42:51.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CaseManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CaseManagerController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\CaseManagerController.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\CaseManagerController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\CaseManagerController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwv1AAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T15:51:35.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddRoleToDb.razor",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
+              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
+              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\AddRoleToDb.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T19:23:49.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SuspectController.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Controllers\\SuspectController.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Controllers\\SuspectController.cs",
+              "RelativeToolTip": "SAPS_App\\Controllers\\SuspectController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAHwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:45:24.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ApplicationUsersManagement.razor",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
+              "RelativeDocumentMoniker": "SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
+              "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T20:48:50.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ResendEmailConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:57:48.868Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 28,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:09:10.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:13:03.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ResendEmailConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAiwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T15:26:28.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T13:03:45.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RegisterConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:58:03.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:46:47.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:48:22.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ResetPasswordConfirmation.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T14:48:30.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T14:58:59.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ResetPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAIwHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T14:47:22.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwBIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T14:09:28.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T14:15:45.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Services\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Services\\EmailSender.cs",
+              "RelativeToolTip": "SAPS_App\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACAAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T12:46:17.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "SAPS_Context.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Context\\SAPS_Context.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Context\\SAPS_Context.cs",
+              "RelativeToolTip": "SAPS_App\\Context\\SAPS_Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T12:48:46.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SmtpSettings.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\SmtpSettings.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\SmtpSettings.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\SmtpSettings.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\SmtpSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T12:40:28.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\Index.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Suspect\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T12:48:36.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.json",
+              "RelativeDocumentMoniker": "SAPS_App\\appsettings.json",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\appsettings.json",
+              "RelativeToolTip": "SAPS_App\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-09T19:32:16.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "SAPS_App\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "SAPS_App\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAHgAAAAAAAAAAADwv44AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-15T12:17:24.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
               "Title": "EditSuspect.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -469,11 +796,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 46,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "SAPS_App\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T07:37:52.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAACBjwAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T06:15:56.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SAPS_App\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T16:05:40.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ReoveRoleFromUser.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ReoveRoleFromUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T14:24:21.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "AddRoleToDb.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\AddRoleToDb.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T14:23:33.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ManageRoles.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\RoleManagement\\ManageRoles.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T12:19:05.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AddRoleToUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
+              "RelativeDocumentMoniker": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
+              "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Manage\\AddRoleToUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T14:24:00.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "AddSuspects.cshtml",
-              "DocumentMoniker": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "DocumentMoniker": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
               "RelativeDocumentMoniker": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
-              "ToolTip": "C:\\Users\\10114629\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
+              "ToolTip": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\AddSuspects.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

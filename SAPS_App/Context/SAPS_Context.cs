@@ -4,17 +4,15 @@ using SAPS_App.Models;
 
 namespace SAPS_App.Context
 {
-    public class SAPS_Context : IdentityDbContext
+    public class SAPS_Context :DbContext
     {
         public SAPS_Context(DbContextOptions<SAPS_Context> options)
        : base(options)
         {
         }
-        //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Suspect> Suspects { get; set; }
         public DbSet<CriminalRecord> CriminalRecords { get; set; }
         public DbSet<SuspectSearch> SuspectCriminalRecords { get; set; }
-        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<CaseManager> Case_Managers { get; set; }
         public DbSet<Offences> Offences { get; set; }
         public DbSet<PoliceStations> PoliceStations { get; set; }

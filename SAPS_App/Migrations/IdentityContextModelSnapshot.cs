@@ -3,7 +3,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SAPS_App.Context;
 
@@ -11,12 +10,10 @@ using SAPS_App.Context;
 
 namespace SAPS_App.Migrations
 {
-    [DbContext(typeof(SAPS_Context))]
-    [Migration("20240717093605_SAPS")]
-    partial class SAPS
+    [DbContext(typeof(IdentityContext))]
+    partial class IdentityContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -232,127 +229,6 @@ namespace SAPS_App.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SAPS_App.Models.CaseManager", b =>
-                {
-                    b.Property<int>("CaseManagerNo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CaseManagerNo"));
-
-                    b.Property<string>("CaseManagerId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CaseManagerNo");
-
-                    b.ToTable("Case_Managers");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.CriminalRecord", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CaseManagerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CaseManagerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CaseManagerNo")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("IssueDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("IssuedAt")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("IssuedBy")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("OffenceCommited")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sentence")
-                        .IsRequired()
-                        .HasMaxLength(3)
-                        .HasColumnType("nvarchar(3)");
-
-                    b.Property<int>("SuspectNumber")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CaseManagerNo");
-
-                    b.HasIndex("SuspectNumber");
-
-                    b.ToTable("CriminalRecords");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.Suspect", b =>
-                {
-                    b.Property<int>("SuspectNumber")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SuspectNumber"));
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("SuspectId")
-                        .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("nvarchar(13)");
-
-                    b.HasKey("SuspectNumber");
-
-                    b.ToTable("Suspects");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.SuspectSearch", b =>
-                {
-                    b.Property<int>("SuspectNumber")
-                        .HasColumnType("int");
-
-                    b.HasIndex("SuspectNumber");
-
-                    b.ToTable((string)null);
-
-                    b.ToView(null, (string)null);
-                });
-
             modelBuilder.Entity("SAPS_App.Models.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -417,46 +293,6 @@ namespace SAPS_App.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.CriminalRecord", b =>
-                {
-                    b.HasOne("SAPS_App.Models.CaseManager", "CaseManager")
-                        .WithMany("CriminalRecords")
-                        .HasForeignKey("CaseManagerNo")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SAPS_App.Models.Suspect", "Suspect")
-                        .WithMany("CriminalRecords")
-                        .HasForeignKey("SuspectNumber")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CaseManager");
-
-                    b.Navigation("Suspect");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.SuspectSearch", b =>
-                {
-                    b.HasOne("SAPS_App.Models.Suspect", "Suspect")
-                        .WithMany()
-                        .HasForeignKey("SuspectNumber")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Suspect");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.CaseManager", b =>
-                {
-                    b.Navigation("CriminalRecords");
-                });
-
-            modelBuilder.Entity("SAPS_App.Models.Suspect", b =>
-                {
-                    b.Navigation("CriminalRecords");
                 });
 #pragma warning restore 612, 618
         }

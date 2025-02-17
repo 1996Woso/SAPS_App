@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;//This allows ApplicationUser to Inherity from IdentityUser
+﻿
+using Microsoft.AspNetCore.Identity;//This allows ApplicationUser to Inherity from IdentityUser
 
 namespace SAPS_App.Models
 {

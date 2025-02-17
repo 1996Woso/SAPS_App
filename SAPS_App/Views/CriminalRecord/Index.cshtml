@@ -82,6 +82,7 @@
                         <tr>
                             <th>Record Id</th>
                             <th>Offence</th>
+                            <th>Status</th>
                             <th>Sentence</th>
                             <th>Issued At</th>
                             <th>Issued By</th>
@@ -101,6 +102,7 @@
                                     <td>
                                         @((string.IsNullOrEmpty(obj.Sentence) ? "-" : obj.Sentence + " years"))
                                     </td>
+                                    <td>@obj.Status</td>
                                     <td>@obj.IssuedAt</td>
                                     <td>@obj.IssuedBy</td>
                                     <td>@obj.IssueDate.ToShortDateString()</td>

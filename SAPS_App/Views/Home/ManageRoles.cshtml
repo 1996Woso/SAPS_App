@@ -1,4 +1,4 @@
-﻿@attribute [Authorize(Roles = "IT Support,Developer")]
+﻿@* @attribute [Authorize(Roles = "IT Support,Developer")] *@
 @using Microsoft.AspNetCore.Authorization
 @using SAPS_App.Components.ManageRoles
 @(await Html.RenderComponentAsync<ApplicationUsersManagement>(RenderMode.Server))

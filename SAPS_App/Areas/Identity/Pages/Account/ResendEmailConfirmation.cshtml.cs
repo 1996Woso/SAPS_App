@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Office.Interop.Excel;
+using SAPS_App.Services;
 
 namespace SAPS_App.Areas.Identity.Pages.Account
 {
@@ -20,12 +22,16 @@ namespace SAPS_App.Areas.Identity.Pages.Account
     public class ResendEmailConfirmationModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _emailSender;
+        private readonly Services.EmailSender emailSender;
+        private readonly ISAPSService sapsService;
 
-        public ResendEmailConfirmationModel(UserManager<IdentityUser> userManager, IEmailSender emailSender)
+        public ResendEmailConfirmationModel(UserManager<IdentityUser> userManager
+        , Services.EmailSender emailSender
+            , ISAPSService sapsService)
         {
             _userManager = userManager;
-            _emailSender = emailSender;
+            this.emailSender = emailSender;
+            this.sapsService = sapsService;
         }
 
         /// <summary>
@@ -69,6 +75,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
             }
 
             var userId = await _userManager.GetUserIdAsync(user);
+            var appUser = await sapsService.GetAplicationUserUserAsync(userId);
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
             var callbackUrl = Url.Page(
@@ -76,10 +83,13 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                 pageHandler: null,
                 values: new { userId = userId, code = code },
                 protocol: Request.Scheme);
-            await _emailSender.SendEmailAsync(
-                Input.Email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+            //Send email 
+            var body = $@"Good day {appUser.Name} {appUser.Surname}, <br><br>
+                                   Please click this link to confirm your email:<br>
+                                   <a href = '{callbackUrl}'> Confrim Emai </a>";
+
+            await emailSender.SendEmailAsync(user.Email, "Confirm Email", body);
 
             ModelState.AddModelError(string.Empty, "Verification email sent. Please check your email.");
             return Page();

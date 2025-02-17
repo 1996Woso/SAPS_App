@@ -13,18 +13,24 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
+using SAPS_App.Services;
+
 
 namespace SAPS_App.Areas.Identity.Pages.Account
 {
     public class ForgotPasswordModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IEmailSender _emailSender;
+        private readonly EmailSender emailSender;
+        private readonly ISAPSService sapsService;
 
-        public ForgotPasswordModel(UserManager<IdentityUser> userManager, IEmailSender emailSender)
+        public ForgotPasswordModel(UserManager<IdentityUser> userManager
+            , EmailSender emailSender
+            , ISAPSService sapsService)
         {
             _userManager = userManager;
-            _emailSender = emailSender;
+            this.emailSender = emailSender;
+            this.sapsService = sapsService;
         }
 
         /// <summary>
@@ -59,7 +65,8 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                     // Don't reveal that the user does not exist or is not confirmed
                     return RedirectToPage("./ForgotPasswordConfirmation");
                 }
-
+                var userId = await _userManager.GetUserIdAsync(user);
+                var appUser = await sapsService.GetAplicationUserUserAsync(userId);
                 // For more information on how to enable account confirmation and password reset please
                 // visit https://go.microsoft.com/fwlink/?LinkID=532713
                 var code = await _userManager.GeneratePasswordResetTokenAsync(user);
@@ -70,10 +77,12 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                     values: new { area = "Identity", code },
                     protocol: Request.Scheme);
 
-                await _emailSender.SendEmailAsync(
-                    Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                //Send email 
+                var body = $@"Good day {appUser.Name} {appUser.Surname}, <br><br>
+                                   Please click this link to change your password:<br>
+                                   <a href = '{callbackUrl}'> Change Password </a>";
+
+                await emailSender.SendEmailAsync(user.Email, "Change Password", body);
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

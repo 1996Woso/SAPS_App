@@ -3,6 +3,16 @@
 @{
     ViewData["Title"] = "Confirm email";
 }
+<div class="card small-box">
+    <div class="card-header heading-form">
+        <h5>@ViewData["Title"]</h5>
+    </div>
+    <div class="card-body">
+        <partial name="_StatusMessage" model="Model.StatusMessage" />
+        <p>
+            Please <span> <a href="/Identity/Account/Login">Login</a></span>
+        </p>
+    </div>
+</div>
 
-<h1>@ViewData["Title"]</h1>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
+

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Text.Json
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -26,7 +27,7 @@
         <img src="~/Images/07-57-40-974_512.webp"/>
     </div> *@
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color:blue">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 col-md-6" style="background-color:blue">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -42,7 +43,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-controller="Home" asp-action="ManageRoles">Manage Roles</a>
                         </li>
-                        @if (User.IsInRole("Manager"))
+                        @if (User.IsInRole("Police Officer"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link" style="color:white" asp-controller="Suspect" asp-action="Index">Dashboard</a>
@@ -62,7 +63,7 @@
                                 <a class="nav-link text-danger" asp-controller="CaseManager" asp-action="Index"><img src="~/Images/CaseManager.PNG" width="50" height="50" /><br />Case<br />Managers</a>
                             </li> *@
                         }
-                        @if (User.IsInRole("CaseManager"))
+                        @if (User.IsInRole("Case Manager"))
                         {
                         @*     <li class="nav-item">
                                 <a class="nav-link " style="color:white" asp-controller="Suspect" asp-action="Record">Case</a>
@@ -86,7 +87,7 @@
         </main>
     </div>
 
-    <!-- Vendor JS Files -->
+@*     <!-- Vendor JS Files -->
     <script src="~/assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -98,7 +99,7 @@
 
     <!-- Template Main JS File -->
 
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> *@
 
     <footer class="border-top footer text-white" style="text-align: center;flex-shrink: 0;background-color:blue">
         <div class="container">
@@ -125,6 +126,11 @@
                 $('.loading-spinner').hide();
             }, 1000);
         });
+    </script>
+    <script id="userRoles" type="application/json">
+        @Html.Raw(JsonSerializer.Serialize(User.Claims
+                     .Where(c => c.Type == System.Security.Claims.ClaimTypes.Role)
+                     .Select(c => c.Value)))
     </script>
 </body>
 </html>

@@ -6,16 +6,13 @@
 <script src="~/js/site.js"></script>
 
 
-<div class="card mx-auto" style="max-width:400px;margin-top:50px">
-    <div class="card-header text-center" style="background-color:lightskyblue;color:black">
+<div class="card small-box" style="font-size:small">
+    <div class="card-header heading-form">
         <h5>Register</h5>
     </div>
     <div class="card-body">
         <section>
             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                <h5 class="border-bottom pb-3 mb-4 text-secondary text-center">
-                    Create a new account.
-                </h5>
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-2">
                     <input asp-for="Input.Name" class="form-control" aria-required="true" placeholder="Name" id="name" maxlength="20" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('name')" onpaste="pasteAlphabets(event,'name',20)" required />
@@ -51,6 +48,14 @@
                 </div>
                 <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success">Register</button>
             </form>
+            <div class="row">
+                <div class="col-md-12 mt-2 text-center">
+                    <p>
+                        Already have an account?
+                        <a href="/Identity/Account/Login">Login</a>
+                    </p>
+                </div>
+            </div>
         </section>
     </div>
 </div>
