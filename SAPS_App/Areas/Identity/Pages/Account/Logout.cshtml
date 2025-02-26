@@ -4,23 +4,19 @@
     ViewData["Title"] = "Log out";
 }
 
-<div class="card shadow-border-0 mt-4">
-    <div class="card-hrader bg-gradient ml-0 py-4" style="background-color:lightskyblue;color:white;">
-        <div class="row">
-            <div class="col-12 text-center">
-                <div class="container" style="font-size:3.5rem">
-                    ❓
-                </div>
-                
-                <h3>Are you sure you want to log out.</h3>
-            </div>
+<div class="card small-box">
+    <div class="card-header heading-form">
+        <div class="container" style="font-size:3.5rem">
+            ❓
         </div>
+
+        <h6>Are you sure you want to log out.</h6>
     </div>
     <div class="card-body p-4">
         @if (User.Identity?.IsAuthenticated ?? false)
         {
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-success text-dark w-100">Click here to Logout</button>
+                <button type="submit" class="nav-link btn btn-success text-white w-100">Click here to Logout</button>
             </form>
         }
         else

@@ -2,22 +2,21 @@
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
+
 @{
     ViewData["Title"] = "Index";
+    var userRoles = User.Claims.Where(c => c.Type == System.Security.Claims.ClaimTypes.Role).Select(c => c.Value).ToList();
+    var userId = UserManager.GetUserId(User); // Get the logged-in user's ID
 }
-@*To display notifications*@
+
 <partial name="_Notifications" />
-@*This is for data-tables*@
+
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
 <div class="card shadow-border-9 mt-4">
-    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
-        <div class="row" style="height:0.5rem">
-            <div class="col-md-12 text-md-center">
-                <h5>Criminal Record List</h5>
-            </div>
-        </div>
+    <div class="card-header heading-form">
+        <h5>Criminal Record List</h5>
     </div>
     <div class="card-body p-4">
         <div class="btn-group w-100 mb-4" role="group">
@@ -28,104 +27,70 @@
                 <span>Download List</span>
             </div>
         </div>
-        @if (User.IsInRole("Manager"))
-        {
-            <table class="table table-striped" id="myTable">
-                <thead>
-                    <tr>
-                        <th>Record Id</th>
-                        <th>Offence</th>
-                        <th>Sentence</th>
-                        <th>Issued At</th>
-                        <th>Issued By</th>
-                        <th>Issued Date</th>
-                        @*      <th>Manager Number</th> *@
-                        <th>Case Manager Name</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var obj in Model)
+
+        <table class="table table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>Record Id</th>
+                    <th>Offence</th>
+                    <th>Status</th>
+                    <th>Sentence</th>
+                    <th>Issued At</th>
+                    <th>Issued By</th>
+                    <th>Issued Date</th>
+                    <th>Case Manager Name</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    // Show only records assigned to the logged-in Case Manager
+                    if (!User.IsInRole("Case Manager") || obj.CaseManagerId == userId)
                     {
                         <tr>
                             <td>@obj.Id</td>
                             <td>@obj.OffenceCommited</td>
-                            <td>@obj.Sentence years</td>
+                            <td>@obj.Status</td>
+                            <td>@(string.IsNullOrEmpty(obj.Sentence) ? "-" : obj.Sentence + " years")</td>
                             <td>@obj.IssuedAt</td>
                             <td>@obj.IssuedBy</td>
                             <td>@obj.IssueDate.ToShortDateString()</td>
-                            @*    <th>@obj.CaseManagerNo</th> *@
                             <td>@obj.CaseManagerName</td>
-                            @*Edit Button*@
+
+                            @* Buttons for Editing and Reassigning *@
                             <td>
                                 <div class="w-75 btn-group" role="group">
-                                    <div class="hover-btn">
-                                        <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@obj.Id" class="btn mx-2">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </a>
-                                        <span>Edit</span>
-                                    </div>
+                                    @* Show edit button if status is NOT closed or if user is Station Manager *@
+                                    @if (obj.Status != "Closed" || (obj.Status == "Closed" && userRoles.Contains("Station Manager")))
+                                    {
+                                        <div class="hover-btn">
+                                            <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@obj.Id" class="btn mx-2">
+                                                <i class="bi bi-pencil-square"></i>
+                                            </a>
+                                            <span>Edit</span>
+                                        </div>
+                                    }
+
+                                    @* Show Re-Assign button only to Station Manager if case is not closed *@
+                                    @if (userRoles.Contains("Station Manager") && obj.Status != "Closed")
+                                    {
+                                        <div class="hover-btn">
+                                            <a asp-controller="CriminalRecord" asp-action="ReAssignCase" asp-route-id="@obj.Id" asp-route-managerId="@obj.CaseManagerId" class="btn mx-2">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </a>
+                                            <span>Re-Assign</span>
+                                        </div>
+                                    }
                                 </div>
                             </td>
                         </tr>
                     }
-                </tbody>
-            </table>
-        }
-        @if (!(User.IsInRole("Manager")))
-        {
-            @if (SignInManager.IsSignedIn(User))
-            {
-                var userId = UserManager.GetUserId(User);
-                <table class="table table-striped" id="myTable">
-                    <thead>
-                        <tr>
-                            <th>Record Id</th>
-                            <th>Offence</th>
-                            <th>Status</th>
-                            <th>Sentence</th>
-                            <th>Issued At</th>
-                            <th>Issued By</th>
-                            <th>Issued Date</th>
-                            <th>Edit</th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-                        @foreach (var obj in Model)
-                        {
-                            @if (@obj.CaseManagerId == userId)
-                            {
-                                <tr>
-                                    <td>@obj.Id</td>
-                                    <td>@obj.OffenceCommited</td>
-                                    <td>
-                                        @((string.IsNullOrEmpty(obj.Sentence) ? "-" : obj.Sentence + " years"))
-                                    </td>
-                                    <td>@obj.Status</td>
-                                    <td>@obj.IssuedAt</td>
-                                    <td>@obj.IssuedBy</td>
-                                    <td>@obj.IssueDate.ToShortDateString()</td>
-                                    <td>
-                                        <div class="w-75 btn-group" role="group">
-                                            <div class="hover-btn">
-                                                <a asp-controller="CriminalRecord" asp-action="EditRecord" asp-route-id="@obj.Id" class="btn mx-2">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </a>
-                                                <span>Edit</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            }
-                        }
-                    </tbody>
-                </table>
-            }
-        }
+                }
+            </tbody>
+        </table>
     </div>
 </div>
-
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -138,15 +103,11 @@
                     dataSrc: 2
                 },
                 "scrollY": "100vh",
-                // "scrollX": true,
                 "scrollCollapse": true,
                 "paging": true,
                 "pagingType": "full_numbers"
             });
         });
     </script>
-    @{
-        <partial name="_ValidationScriptsPartial" />
-    }
-
+    <partial name="_ValidationScriptsPartial" />
 }

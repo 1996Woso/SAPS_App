@@ -20,7 +20,7 @@ namespace SAPS_App.Services
             this.sapsContext = sapsContext;
         }
 
-        public async Task<ApplicationUser> GetAplicationUserUserAsync(string id)
+        public async Task<ApplicationUser> GetAplicationUserUserByIdAsync(string id)
         {
             return await identityContext.ApplicationUsers.FirstOrDefaultAsync(x => x.Id == id);
         }
@@ -56,5 +56,13 @@ namespace SAPS_App.Services
             return await Task.FromResult(statuses.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value));
         }
 
+        public async Task<List<OffenceCountDto>> GetOffenceStatisticsAsync()
+        {
+            return sapsContext.CriminalRecords
+           .GroupBy(c => c.OffenceCommited)
+           .Select(g => new OffenceCountDto { Offence = g.Key, Count = g.Count() })
+           .Where(g => g.Count > 0) // Ensure zero counts are excluded
+           .ToList();
+        }
     }
 }

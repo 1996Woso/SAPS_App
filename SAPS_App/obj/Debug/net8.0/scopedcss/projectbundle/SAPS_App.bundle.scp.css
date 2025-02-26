@@ -47,45 +47,116 @@ button[b-agusg2x05r] {
 /* _content/SAPS_App/Components/AlertMessages/ErrorMessage.razor.rz.scp.css */
 body[b-ptf82fb9f9] {
 }
+
 .btn-close[b-ptf82fb9f9] {
-    width: 2rem;           
-    height: 2rem;           
-    border-radius: 50%;     
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
 }
 
-.btn-close:hover[b-ptf82fb9f9] {
-    background-color: darkgray;  
-    color: white;                
+    .btn-close:hover[b-ptf82fb9f9] {
+        background-color: darkgray;
+        color: white;
+    }
+
+.alert-box[b-ptf82fb9f9] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-ptf82fb9f9] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-ptf82fb9f9] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-ptf82fb9f9] {
+    font-size: small;
+    text-align: start;
 }
 /* _content/SAPS_App/Components/AlertMessages/InfoMessage.razor.rz.scp.css */
 body[b-v03criqyp6] {
 }
 
 .btn-close[b-v03criqyp6] {
-    width: 2rem;           
-    height: 2rem;           
-    border-radius: 50%;     
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
 }
 
-.btn-close:hover[b-v03criqyp6] {
-    background-color: darkgray;  
-    color: white;                
+    .btn-close:hover[b-v03criqyp6] {
+        background-color: darkgray;
+        color: white;
+    }
+
+.alert-box[b-v03criqyp6] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-v03criqyp6] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-v03criqyp6] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-v03criqyp6] {
+    font-size: small;
+    text-align: start;
 }
 /* _content/SAPS_App/Components/AlertMessages/SuccessMessage.razor.rz.scp.css */
 body[b-0pvi1u6ucu] {
 }
-.success-message[b-0pvi1u6ucu]{
 
+.success-message[b-0pvi1u6ucu] {
 }
+
 .btn-close[b-0pvi1u6ucu] {
-    width: 2rem;           
-    height: 2rem;           
-    border-radius: 50%;     
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
 }
 
-.btn-close:hover[b-0pvi1u6ucu] {
-    background-color: darkgray;  
-    color: white;                
+    .btn-close:hover[b-0pvi1u6ucu] {
+        background-color: darkgray;
+        color: white;
+    }
+
+.alert-box[b-0pvi1u6ucu] {
+    background-color: white;
+    border: 2px solid cadetblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.alert-icon[b-0pvi1u6ucu] {
+    display: inline-block;
+    border: 2px solid cadetblue;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+    .alert-icon img[b-0pvi1u6ucu] {
+        opacity: 0.7; /* Adjust transparency */
+    }
+
+.alert-message[b-0pvi1u6ucu] {
+    font-size: small;
+    text-align: start;
 }
 /* _content/SAPS_App/Components/ManageRoles/ApplicationUsersManagement.razor.rz.scp.css */
 .fade-message[b-nr9kannyhl] {

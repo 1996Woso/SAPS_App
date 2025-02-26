@@ -1,14 +1,38 @@
-﻿
+﻿@using SAPS_App.Services
+@inject ISAPSService service
 @{
+    var offenceCount = await service.GetOffenceStatisticsAsync();
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4"><strong>Welcome To SAPS</strong></h1>
-   @*  <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+<div style="height:400px;width:500px">
+    <canvas id="bar_chart">
+    </canvas>
+</div>
+<div id="chart_div">
+
 </div>
 
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var labels = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Offence)));
+            var data = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Count)));
 
+            // Default chart type
+            var currentChartType = "bar";
+            renderChart("bar_chart", currentChartType, labels, data, "Total Offences Committed");
+
+            // // Handle chart type change
+            // document.getElementById("chartTypeSelector").addEventListener("change", function () {
+            //     currentChartType = this.value;
+            //     renderChart("offenceChart", currentChartType, labels, data, "Total Offences Committed");
+            // });
+        });
+    </script>
+
+}
 
 
 

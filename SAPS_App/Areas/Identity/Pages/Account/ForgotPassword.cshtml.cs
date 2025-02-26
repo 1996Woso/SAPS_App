@@ -66,7 +66,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                     return RedirectToPage("./ForgotPasswordConfirmation");
                 }
                 var userId = await _userManager.GetUserIdAsync(user);
-                var appUser = await sapsService.GetAplicationUserUserAsync(userId);
+                var appUser = await sapsService.GetAplicationUserUserByIdAsync(userId);
                 // For more information on how to enable account confirmation and password reset please
                 // visit https://go.microsoft.com/fwlink/?LinkID=532713
                 var code = await _userManager.GeneratePasswordResetTokenAsync(user);
@@ -79,8 +79,10 @@ namespace SAPS_App.Areas.Identity.Pages.Account
 
                 //Send email 
                 var body = $@"Good day {appUser.Name} {appUser.Surname}, <br><br>
-                                   Please click this link to change your password:<br>
-                                   <a href = '{callbackUrl}'> Change Password </a>";
+                                   Please click this link to change your password:
+                                   <a href = '{callbackUrl}'> Change Password </a>
+                                   <br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
 
                 await emailSender.SendEmailAsync(user.Email, "Change Password", body);
 

@@ -17,45 +17,45 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
-        /* max-width: 600px; */
+        max-width: 600px;
         width: 100%;
         height: 100%;
-        margin: 50px auto;
+        margin: 0px auto;
     }
 
         .unauthorized-container img {
             max-width: 150px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
 
-        .unauthorized-container h2 {
+        .unauthorized-container h5 {
             color: #dc3545; /* Red color for error */
-          /*   font-size: 34px; */
+            /*   font-size: 34px; */
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-            .unauthorized-container h2::before {
+            .unauthorized-container h5::before {
                 content: '⛔'; /* Prohibited sign */
                 color: #dc3545;
-              /*   font-size: 36px; */
+                /*   font-size: 36px; */
                 margin-right: 10px;
             }
 
         .unauthorized-container p {
             color: #6c757d;
-            font-size: 18px;
+            font-size: small;
             margin-bottom: 20px;
         }
 
         .unauthorized-container a {
-            height:2.5rem;
+            height: 2.5rem;
             width: 6rem;
             display: inline-block;
-           /*  padding: 12px 25px; */
-           /*  font-size: 16px; */
+            /*  padding: 12px 25px; */
+            /*  font-size: 16px; */
             color: white;
             background-color: #007bff; /* Primary blue */
             border-radius: 5px;
@@ -68,11 +68,11 @@
             }
 </style>
 
-<div class="unauthorized-container mx-auto" style="max-width: 600px;font-size:small">
+<div class="unauthorized-container">
     <img src="~/Images/Access Denied.png" alt="Unauthorized Access" />
     <h5>Access Denied</h5>
-    <p style="font-size:small"><b>You do not have the necessary permissions to access this page.</b></p>
-    <p style="font-size:small"><b>Please get in touch with the 'IT Support' if you think this is an error.</b></p>
+    <p><b>You do not have the necessary permissions to access this page.</b></p>
+    <p><b>Please get in touch with the Adminstrator (eviwe.khohlombe@gmail.com) if you think this is an error.</b></p>
     <a  href="/">
         <i class="bi bi-house-door-fill"></i> Home
     </a>

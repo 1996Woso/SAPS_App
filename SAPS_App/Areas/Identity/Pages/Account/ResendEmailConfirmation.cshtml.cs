@@ -75,7 +75,7 @@ namespace SAPS_App.Areas.Identity.Pages.Account
             }
 
             var userId = await _userManager.GetUserIdAsync(user);
-            var appUser = await sapsService.GetAplicationUserUserAsync(userId);
+            var appUser = await sapsService.GetAplicationUserUserByIdAsync(userId);
             var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
             var callbackUrl = Url.Page(
@@ -86,8 +86,9 @@ namespace SAPS_App.Areas.Identity.Pages.Account
 
             //Send email 
             var body = $@"Good day {appUser.Name} {appUser.Surname}, <br><br>
-                                   Please click this link to confirm your email:<br>
-                                   <a href = '{callbackUrl}'> Confrim Emai </a>";
+                                   Please click this link to confirm your email
+                                   <a href = '{callbackUrl}'> Confrim Email </a><br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
 
             await emailSender.SendEmailAsync(user.Email, "Confirm Email", body);
 

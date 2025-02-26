@@ -17,7 +17,7 @@
 @*To display notifications*@
 @* <partial name="_Notifications" /> *@
 
-<div class="card small-box">
+<div class="card">
 	<div class="card-header heading-form">
 		<h5>Add New Criminal Record</h5>
 	</div>
@@ -35,74 +35,73 @@
 			</div>
 		</div>
 		<form method="post" asp-controller="CriminalRecord" asp-action="AddRecords" class="edit-form" data-action-url ="@Url.Action("AddRecords","CriminalRecord")" id="record">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="border p-3 mt-4">
-							<div class="mb-3 col-md-6">
-								<input asp-for="Id" class="form-control" placeholder="Id" hidden />
-							</div>
-							<div class="mb-3 col-md-6">
-								<input asp-for="SuspectNumber" class="form-control" value="@suspectNumber" placeholder="Suspect Number" hidden />
-							</div>
-							<div class="mb-3 col-md-6">
-								<label asp-for="OffenceCommited"></label>
-								<select asp-for="OffenceCommited" class="form-control form-select edit-form-input" id="offence">
-									<option value="">Select Offence Commited</option>
-									@foreach(var offence in Offences)
-									{
-										<option value="@offence">@offence</option>
-									}
-								</select>
-							@* 	@Html.DropDownListFor(model => model.OffenceCommited,
-																	new SelectList(ViewBag.Offences),
-																	"Select Criminal Record",
-																	new { @class = "form-control edit-form-input", @id="offence" }) *@
-								<span asp-validation-for="OffenceCommited" class="text-danger edit-form-input"></span>
-							</div>
-						@* 	<div class="mb-3 col-md-6">
+			<div class="border p-3 mt-4">
+				<div class="mb-3 col-md-6">
+					<input asp-for="Id" class="form-control" placeholder="Id" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="SuspectNumber" class="form-control" value="@suspectNumber" placeholder="Suspect Number" hidden />
+				</div>
+				@* 	<div class="mb-3 col-md-6">
 								<label asp-for="Sentence"></label>
 								<input asp-for="Sentence" class="form-control edit-form-input" placeholder="Number of years" id="sentence" value ="0" maxlength="3" onkeypress="return allowDigits(event)" onpaste="return false" required />
 								<span asp-validation-for="Sentence" class="text-danger"></span>
 							</div> *@
-						@* 	<div class="mb-3 col-md-6">
+				@* 	<div class="mb-3 col-md-6">
 								<label asp-for="IssuedAt"></label>
 								<input asp-for="IssuedAt" class="form-control edit-form-input" type="text" required placeholder="Issued At" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" required />
 								<span asp-validation-for="IssuedAt" class="text-danger"></span>
 							</div> *@
-							<div class="mb-3 col-md-6">
-								<label asp-for="IssuedAt"></label>
-								<select asp-for="IssuedAt" class="form-control form-select edit-form-input" id="station">
-									<option value="">Select Police Station</option>
-									@foreach (var station in Stations)
-									{
-										<option value="@station">@station</option>
-									}
-								</select>
-		@* 						@Html.DropDownListFor(model => model.IssuedAt,
+				
+				<div class="mb-3 col-md-6" hidden>
+					<label asp-for="IssuedBy"></label>
+					<input asp-for="IssuedBy" value="@user.Name @user.Surname" class="form-control edit-form-input" id="police" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false" />
+					<span asp-validation-for="IssuedBy" class="text-danger"></span>
+				</div>
+				<div class="mb-3 col-md-6" hidden>
+					@* <input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date" placeholder="yyyy/mm/dd"/> *@
+					<input asp-for="IssuerId" value="@user.Id" id="id" />
+				</div>
+
+
+
+				@* <button type="submit" class="btn btn-primary" style="color:black;width:150px" onclick="CloseWindow()">Close</button> *@
+				@* <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary" style="width:150px">
+							Back To List
+							</a> *@
+				<div class="row">
+					<div class="mb-3 col-md-6">
+						<label asp-for="IssuedAt"></label>
+						<select asp-for="IssuedAt" class="form-control form-select edit-form-input" id="station">
+							<option value="">Select Police Station</option>
+							@foreach (var station in Stations)
+							{
+								<option value="@station">@station</option>
+							}
+						</select>
+						@* 						@Html.DropDownListFor(model => model.IssuedAt,
 																	new SelectList(ViewBag.Stations),
 																	"Select Police Station",
 																	new { @class = "form-control edit-form-input",@id="station" }) *@
-								<span asp-validation-for="IssuedAt" class="text-danger"></span>
-							</div>
-							<div class="mb-3 col-md-6" hidden>
-								<label asp-for="IssuedBy"></label>
-								<input asp-for="IssuedBy" value="@user.Name @user.Surname" class="form-control edit-form-input" id="police" required placeholder="Issued By" maxlength="20" onkeypress="return allowAlphabets(event)" onpaste="return false"/>
-								<span asp-validation-for="IssuedBy" class="text-danger"></span>
-							</div>
-							<div class="mb-3 col-md-6" hidden>
-								@* <input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date" placeholder="yyyy/mm/dd"/> *@
-								<input asp-for="IssuerId" value="@user.Id" id="id"/>
-							</div>
-
-
-							
-							@* <button type="submit" class="btn btn-primary" style="color:black;width:150px" onclick="CloseWindow()">Close</button> *@
-							@* <a asp-controller="Customer" asp-action="Index" class="btn btn-secondary" style="width:150px">
-							Back To List
-							</a> *@
-						</div>
+						<span asp-validation-for="IssuedAt" class="text-danger"></span>
 					</div>
+					<div class="mb-3 col-md-6">
+						<label asp-for="OffenceCommited"></label>
+						<select asp-for="OffenceCommited" class="form-control form-select edit-form-input" id="offence">
+							<option value="">Select Offence Commited</option>
+							@foreach (var offence in Offences)
+							{
+								<option value="@offence">@offence</option>
+							}
+						</select>
+						@* 	@Html.DropDownListFor(model => model.OffenceCommited,
+																	new SelectList(ViewBag.Offences),
+																	"Select Criminal Record",
+																	new { @class = "form-control edit-form-input", @id="offence" }) *@
+						<span asp-validation-for="OffenceCommited" class="text-danger edit-form-input"></span>
+					</div>
+				</div>
+				<div class="row">
 					<div class="col-md-6 mt-3">
 						<a href="/Suspect/Index" class="btn btn-success w-100">
 							<i class="bi bi-arrow-left-square"> Go Back</i>

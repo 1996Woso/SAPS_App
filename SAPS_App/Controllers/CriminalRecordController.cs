@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SAPS_App.Areas.Identity.Pages;
@@ -15,21 +16,24 @@ namespace SAPS_App.Controllers
         private readonly SAPS_Services _services;
         private readonly EmailSender emailSender;
         private readonly ISAPSService sapsService;
+        private readonly UserManager<IdentityUser> userManager;
 
         public CriminalRecordController(SAPS_Context db
             ,SAPS_Services services
             ,EmailSender emailSender,
-            ISAPSService sapsService)
+            ISAPSService sapsService,
+            UserManager<IdentityUser> userManager)
         {
             _db = db;
             _services = services;
             this.emailSender = emailSender;
             this.sapsService = sapsService;
+            this.userManager = userManager;
         }
         //CRIMINAL RECORDS
         public IActionResult Index()
         {
-            IEnumerable<Models.CriminalRecord> objCriminalRecordList = _db.CriminalRecords;
+            IEnumerable<CriminalRecord> objCriminalRecordList = _db.CriminalRecords;
             return View(objCriminalRecordList);
             //return View();
         }
@@ -87,11 +91,13 @@ namespace SAPS_App.Controllers
                         obj.CaseManagerNo = randomManager.CaseManagerNo;
                         obj.CaseManagerId = randomManager.CaseManagerId;
                         obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
-                        var appUser = await sapsService.GetAplicationUserUserAsync(obj.CaseManagerId);
+                        var appUser = await sapsService.GetAplicationUserUserByIdAsync(obj.CaseManagerId);
 
                         //Send Email 
                         var body = $@"Good day {obj.CaseManagerName}, <br><br>
-                                   A new case has been assigned to you.";
+                                   A new case has been assigned to you, Case Id is {obj.Id}.
+                                   <br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
 
                         await emailSender.SendEmailAsync(appUser.UserName, "Case Assignment", body);
                         _db.CriminalRecords.Add(obj);
@@ -123,11 +129,9 @@ namespace SAPS_App.Controllers
         //EDIT BUTTON
 
         //GET
-        [Authorize(Roles = "Police Officer")]
+        [Authorize(Roles = "Police Officer,Case Manager,Station Manager")]
         public async Task<IActionResult> EditRecordAsync(int? id)//right-click to create a View
 		{
-			ViewBag.Offences = await _services.GetOffencesAsync();
-			ViewBag.Stations = await _services.GetStationsAsync();
 			if (id == null || id == 0)
 			{
 				return NotFound();
@@ -145,8 +149,6 @@ namespace SAPS_App.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> EditRecordAsync(CriminalRecord obj)
 		{
-			//ViewBag.Offences = await _services.GetOffencesAsync();
-			//ViewBag.Stations = await _services.GetStationsAsync();
 			try
 			{
 				_db.CriminalRecords.Update(obj);//Update new row to the database
@@ -164,51 +166,106 @@ namespace SAPS_App.Controllers
 				return BadRequest(new { message = ex.Message.ToString() });
 			}
 		}
-		//[HttpPost]
-		//[ValidateAntiForgeryToken]
-		//public IActionResult AddRecords(CriminalRecord obj)
-		//{
+        /*
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddRecords(CriminalRecord obj)
+        {
 
-		//    var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
-		//    //var manager = _db.ApplicationUsers.Include(s=>s.CriminalRecords).ToList();
+            var managers = _db.Case_Managers.Include(c => c.CriminalRecords).ToList();
+            //var manager = _db.ApplicationUsers.Include(s=>s.CriminalRecords).ToList();
 
-		//    if (managers.Count > 0)
-		//    {
-		//        // Find the minimum number of cases
-		//        var minCases = managers.Min(m => m.TotalCases);
+            if (managers.Count > 0)
+            {
+                // Find the minimum number of cases
+                var minCases = managers.Min(m => m.TotalCases);
 
-		//        // Filter managers with the minimum number of cases
-		//        var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
+                // Filter managers with the minimum number of cases
+                var managersWithMinCases = managers.Where(m => m.TotalCases == minCases).ToList();
 
-		//        if (managersWithMinCases.Count > 0)
-		//        {
-		//            // If there are multiple managers with the same minimum number of cases, randomly select one
-		//            var random = new Random();
-		//            var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
+                if (managersWithMinCases.Count > 0)
+                {
+                    // If there are multiple managers with the same minimum number of cases, randomly select one
+                    var random = new Random();
+                    var randomManager = managersWithMinCases[random.Next(managersWithMinCases.Count)];
 
-		//            // Assign ManagerId and IssuedBy to the CriminalRecord
-		//            obj.CaseManagerNo = randomManager.CaseManagerNo;
-		//            obj.CaseManagerId = randomManager.CaseManagerId;
-		//            obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
+                    // Assign ManagerId and IssuedBy to the CriminalRecord
+                    obj.CaseManagerNo = randomManager.CaseManagerNo;
+                    obj.CaseManagerId = randomManager.CaseManagerId;
+                    obj.CaseManagerName = $"{randomManager.Name} {randomManager.Surname}";
 
-		//            _db.CriminalRecords.Add(obj);
-		//            _db.SaveChanges();
+                    _db.CriminalRecords.Add(obj);
+                    _db.SaveChanges();
 
-		//            TempData["SuccessMessage"] = "Criminal record is successfully added to the database.";
-		//            return RedirectToAction("Index");
-		//        }
-		//        else
-		//        {
-		//            TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-		//            return RedirectToAction("Index");
-		//        }
-		//    }
-		//    else
-		//    {
-		//        TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
-		//        return RedirectToAction("Index");
-		//    }
-		//}
+                    TempData["SuccessMessage"] = "Criminal record is successfully added to the database.";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
+                    return RedirectToAction("Index");
+                }
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "No managers available to assign the criminal record.";
+                return RedirectToAction("Index");
+            }
+        }
+        */
+        [HttpGet]
+        public async Task<IActionResult> ReAssignCase(int? id,string? managerId)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var customerFromDb = await  _db.CriminalRecords.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (customerFromDb == null)
+            {
+                return NotFound();
+            }
+            ViewBag.ManagerId = managerId;
+            return View(customerFromDb);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ReAssignCase(CriminalRecord obj, string email)
+        {
+            try
+            {
+                var newManager = await sapsService.GetAplicationUserUserByUsernameAsync(email);
+                var currentManagerEmail = await userManager.Users.Where(x => x.Id == obj.CaseManagerId).Select(x => x.UserName).FirstOrDefaultAsync();
+                obj.CaseManagerId = newManager.Id;
+                obj.CaseManagerName = $"{newManager.Name} {newManager.Surname}";
+                obj.CaseManagerNo = await _db.Case_Managers.Where(x => x.Email == email).Select(x => x.CaseManagerNo).FirstOrDefaultAsync();
+                _db.CriminalRecords.Update(obj);//Update new row to the database
+                _db.SaveChanges();//Goes to the database and save the changes(store new row)
+                                  //Send Email 
+                var body = $@"Good day {obj.CaseManagerName}, <br><br>
+                                   A new case has been assigned to you, Case Id is {obj.Id}.
+                                   <br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
+
+                await emailSender.SendEmailAsync(email, "Case Assignment", body);
+                var body1 = $@"Good day {obj.CaseManagerName}, <br><br>
+                                   A case has been un-assigned to you, Case Id is {obj.Id}.
+                                   <br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
+
+                await emailSender.SendEmailAsync(currentManagerEmail??"", "Un-assignment", body1);
+                return Ok(new
+                {
+                    message = "Case record is successfully re-assigned.",
+                    redirectUrl = Url.Action("Index", "CriminalRecord")
+                });
+            }
+            catch (Exception ex)
+            {
+                //TempData["error"] = "An error occured while editing criminal record.";
+                return BadRequest(new { message = ex.Message.ToString() });
+            }
+        }
 		public int TotalOffences(int suspectNumber)
         {
             var records = _db.CriminalRecords.Where(cr => cr.SuspectNumber == suspectNumber).ToList();

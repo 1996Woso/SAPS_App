@@ -204,10 +204,17 @@ namespace SAPS_App.Areas.Identity.Pages.Account
 
                     //Send email 
                     var body = $@"Good day {user.Name} {user.Surname}, <br><br>
-                                   Please click this link to confirm your email:<br>
-                                   <a href = '{callbackUrl}'> Confrim Emai </a>";
+                                   Please click this link to confirm your email:
+                                   <a href = '{callbackUrl}'> Confrim Email </a><br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
 
                     await emailSender.SendEmailAsync(user.Email, "Confirm Email", body);
+                    var body1 = $@"Good day Eviwe Khohlombe, <br><br>
+                                   A new user has created account on SAPS application, 
+                                   user's email is {Input.Email}, please assign role the user.<br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
+
+                    await emailSender.SendEmailAsync("eviwe.khohlombe@gmail.com", "Assign role to new user", body1);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

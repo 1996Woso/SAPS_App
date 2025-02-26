@@ -10,14 +10,17 @@ wwwroot\Images\Admin.png
 wwwroot\Images\CaseManager.PNG
 wwwroot\Images\CriminalRecord.PNG
 wwwroot\Images\Dashboard.png
+wwwroot\Images\error-icon.jpg
 wwwroot\Images\Hand cuff.png
 wwwroot\Images\homelogo.png
 wwwroot\Images\HomeLogoBlack.png
+wwwroot\Images\info-icon.png
 wwwroot\Images\Login.png
 wwwroot\Images\Logout.png
 wwwroot\Images\Police Station.png
 wwwroot\Images\Register.png
 wwwroot\Images\SAPS logo.png
+wwwroot\Images\success-icon.png
 wwwroot\Images\Suspect.PNG
 wwwroot\Images\Suspects.jpg
 wwwroot\Images\SuspectSearch.PNG

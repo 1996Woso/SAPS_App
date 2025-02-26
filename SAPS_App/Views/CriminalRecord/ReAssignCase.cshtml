@@ -1,0 +1,80 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SAPS_App.Services
+@model CriminalRecord
+@inject UserManager<IdentityUser> userManager
+@inject ISAPSService service
+@{
+	List<string> Emails =  userManager.Users.Select(x => x.UserName ?? "").ToList();
+	var ManagerId = ViewBag.ManagerId;
+	var currentManager = await service.GetAplicationUserUserByIdAsync(ManagerId);
+}
+<div class="card small-box">
+	<div class="card-header heading-form">
+		<h5>Re-Assign Case</h5>
+	</div>
+	<div class="card-body p-4">
+		<form method="post" asp-controller="CriminalRecord" asp-action="EditRecord" 
+		class="edit-form" data-action-url="@Url.Action("ReAssignCase","CriminalRecord")"
+			  onsubmit="enableFields(['manager-only','police-only','case-manager-only'])">
+			<div class="row">
+				<div class="mb-3 col-md-6">
+					<input asp-for="SuspectNumber" class="form-control" placeholder="Suspect Number" onkeypress="return allowDigits(event)" onpaste="return false"  hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="OffenceCommited" class="form-control form-select edit-form-input police-only" id="offence" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="Status" class="form-control form-select edit-form-input managers-only" id="status" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="Sentence" class="form-control edit-form-input case-manager-only sentence" id="sentence" required hidden/>
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="IssuedAt" class="form-control form-select edit-form-input police-only" id="station" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="IssuedBy" class="form-control edit-form-input" id="police" type="text"  placeholder="Issued By" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="CaseManagerNo" class="form-control" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="CaseManagerId" class="form-control" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="IssuerId" class="form-control" hidden />
+				</div>
+				<div class="mb-3 col-md-6">
+					<input asp-for="IssueDate" class="form-control edit-form-input" id="date" type="date"  placeholder="yyyy/mm/dd" hidden />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				<label>Current Case Managerr</label>
+				<p style="font-size:small">
+						<b>Name</b> &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp;@currentManager.Name<br />
+						<b>UserName</b> : &nbsp;@currentManager.UserName
+				</p>
+				</div>
+				<hr />
+				<div class="mb-3 col-md-12">
+					<label>New Case Manager</label>
+					<select class="form-control form-select" name="email">
+						@foreach(var email in Emails)
+						{
+							if(email != currentManager.UserName)
+							{
+								<option value="@email">@email</option>
+							}
+						}
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="mt-3 col-md-12">
+					<button class="btn btn-primary w-100" type="submit"><i class="bi bi-save"></i> Save</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

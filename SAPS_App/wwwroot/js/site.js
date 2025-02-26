@@ -160,9 +160,18 @@ document.addEventListener('DOMContentLoaded', function () {
             fields.forEach(field => field.setAttribute("disabled", "disabled"));
         }
     }
+
     disableFieldsForUnauthorizedUsers(["Police Officer"], ".police-only");
-    disableFieldsForUnauthorizedUsers(["Case Manager", "Station Manager"], ".manager-only");
- 
+    disableFieldsForUnauthorizedUsers(["Case Manager", "Station Manager"], ".managers-only");
+    disableFieldsForUnauthorizedUsers(["Case Manager"], ".case-manager-only");
+    //Disable Status and Sentence for Case Managers if status is closed
+    let status = document.getElementById('status');
+    status = status ? status : '';
+    if (status.value === 'Closed') {
+        disableFieldsForUnauthorizedUsers(["Station Manager"], ".managers-only");
+        disableFieldsForUnauthorizedUsers(["Station Manager"], ".case-manager-only");
+    }
+    
 });
 async function EditForm(event) {
     event.preventDefault();
@@ -277,3 +286,64 @@ async function EditForm(event) {
 //        });
 //    }
 //}
+/* Function do enable onsubit event disabled fields */
+function enableFields(classes) {
+    /*classes - is an array containing all classes that can be disabled by the
+    functions disableFieldsForUnauthorizedUsers() and disableFieldsForUnauthorizedUsers()
+    */
+    classes.forEach(className => {
+        document.querySelectorAll(`.${className}`).forEach(element => {
+            element.disabled = false;
+        });
+    });
+}
+/* For plots */
+var myChart = null;  // Variable to store the chart instance
+
+function renderChart(chartId, chartType, labels, data, chartTitle) {
+    var ctx = document.getElementById(chartId).getContext("2d");
+
+    // If a chart already exists, destroy it before creating a new one
+    if (myChart !== null) {
+        myChart.destroy();
+    }
+
+    // Create a new chart
+    myChart = new Chart(ctx, {
+        type: chartType, // 'bar' or 'pie'
+        data: {
+            labels: labels,
+            datasets: [{
+                label: chartTitle,
+                data: data,
+                backgroundColor: [
+                    "rgba(255, 99, 132, 0.5)",
+                    "rgba(54, 162, 235, 0.5)",
+                    "rgba(255, 206, 86, 0.5)",
+                    "rgba(75, 192, 192, 0.5)",
+                    "rgba(153, 102, 255, 0.5)",
+                    "rgba(255, 159, 64, 0.5)"
+                ],
+                borderColor: [
+                    "rgba(255, 99, 132, 1)",
+                    "rgba(54, 162, 235, 1)",
+                    "rgba(255, 206, 86, 1)",
+                    "rgba(75, 192, 192, 1)",
+                    "rgba(153, 102, 255, 1)",
+                    "rgba(255, 159, 64, 1)"
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: chartType === "bar" ? { y: { beginAtZero: true } } : {}
+        }
+    });
+}
+
+
+
+
+
+

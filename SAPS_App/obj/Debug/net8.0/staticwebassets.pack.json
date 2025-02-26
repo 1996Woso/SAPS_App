@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SAPS_App.bundle.scp.css",
-      "PackagePath": "staticwebassets\\SAPS_App.49stpwxq0p.bundle.scp.css"
+      "PackagePath": "staticwebassets\\SAPS_App.unfqaelxcx.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\07-57-40-974_512.webp",
@@ -69,8 +69,20 @@
       "PackagePath": "staticwebassets\\Images\\Suspects.jpg"
     },
     {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\error-icon.jpg",
+      "PackagePath": "staticwebassets\\Images\\error-icon.jpg"
+    },
+    {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\homelogo.png",
       "PackagePath": "staticwebassets\\Images\\homelogo.png"
+    },
+    {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\info-icon.png",
+      "PackagePath": "staticwebassets\\Images\\info-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\Images\\success-icon.png",
+      "PackagePath": "staticwebassets\\Images\\success-icon.png"
     },
     {
       "Id": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\datatable.css",

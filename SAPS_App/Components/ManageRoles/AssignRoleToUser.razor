@@ -1,14 +1,17 @@
-﻿@inject UserManager<IdentityUser> UserManager
+﻿@using SAPS_App.Context
+@using SAPS_App.Services
+@inject UserManager<IdentityUser> UserManager
 @inject RoleManager<IdentityRole> RoleManager
-@inject SAPS_App.Context.SAPS_Context _db
-@inject SAPS_App.Services.ISAPSService service
+@inject SAPS_Context _db
+@inject ISAPSService service
+@inject EmailSender emailSender
 
 <div class="row justify-content-center">
     <div class="col-md-6">
         <h6 class="text-center"><u>Assign Role To User</u></h6>
         <EditForm Model="assignRoleModel" OnValidSubmit="AssignRole" FormName="assignRole">
             <DataAnnotationsValidator />
-            <div class="form-floating mb-3 col-md-6">
+            <div class="form-floating mb-2">
                 <InputSelect @bind-Value="assignRoleModel.Email" class="form-control" aria-required="true" placeholder="email" id="email">
                     <option value="">Select Email</option>
                     @foreach (var email in Emails)
@@ -19,7 +22,7 @@
                 <label for="Email">Email</label>
                 <ValidationMessage For ="() => assignRoleModel.Email" class="text-danger" />
             </div>
-            <div class="form-floating mb-3 col-md-6">
+            <div class="form-floating mb-2">
                 <InputSelect @bind-Value="assignRoleModel.Role" class="form-control" aria-required="true" placeholder="role" id="role">
                     <option value="">Select Role</option>
                     @foreach (var role in Roles)
@@ -68,6 +71,7 @@
         var role = assignRoleModel.Role;
         IsFormSubmitted = true;
         var user = await UserManager.FindByEmailAsync(assignRoleModel.Email ?? "");
+        var appUser = await service.GetAplicationUserUserByUsernameAsync(user.UserName);
         if (user != null && !string.IsNullOrEmpty(assignRoleModel.Email))
         {
             if(!await UserManager.IsInRoleAsync(user, assignRoleModel.Role ?? ""))
@@ -85,7 +89,7 @@
                         var isActive = await _db.Case_Managers.AnyAsync(x => x.CaseManagerId == user.Id && x.IsActive == true);
                         if (!isExisting)
                         {//If case manager does not exist
-                            var manager = await service.GetAplicationUserUserByUsernameAsync(user.UserName);
+                            var manager = appUser;
                             var caseManager = new CaseManager
                                 {
                                     Name = manager.Name,
@@ -108,6 +112,12 @@
                           
                         }
                     }
+                    var body = $@"Good day {appUser.Name} {appUser.Surname}, <br><br>
+                                   You have been given a new role called '{role}'.
+                                   <br><br>
+                                   Kind Regards,<br> SAPS Management Admin.";
+
+                    await emailSender.SendEmailAsync(appUser.UserName!, "Role Assignment Notification", body);
                 }
             }
             else
