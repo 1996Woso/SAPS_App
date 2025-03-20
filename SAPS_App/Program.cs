@@ -9,15 +9,15 @@ using SAPS_App.Services;
 using SAPS_App.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var connectionString = builder.Configuration["DB_Connection_String"];
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<IdentityContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("Somee")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
 builder.Services.AddServerSideBlazor(); //This service is for Razor Components(Blazor Components)
 //This is done after connecting MsServer and creating a table on  (appsettings.json and ApplictationsDbContext.cs
 builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
-            builder.Configuration.GetConnectionString("Somee")
+            builder.Configuration.GetConnectionString("connectionString")
             ));/* after writing this code , install Microsoft.EntityFrameworkCore.SqlServer
                 * Then Add a migration (first install Microsoft.EntityFrameworkCore.Tools)
                 * to add migration go to toolS>Nuget Package manager>package manager console

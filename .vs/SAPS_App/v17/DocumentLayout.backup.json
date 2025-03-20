@@ -274,8 +274,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\ManageRoles\\ApplicationUsersManagement.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T20:48:50.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T20:48:50.968Z"
             },
             {
               "$type": "Document",
@@ -287,8 +286,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:48:36.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T12:48:36.166Z"
             },
             {
               "$type": "Document",
@@ -300,8 +298,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\CaseManager\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:02:22.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:02:22.541Z"
             },
             {
               "$type": "Document",
@@ -313,8 +310,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\CaseManager\\ShowCaseManagerDetails.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T16:17:44.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T16:17:44.642Z"
             },
             {
               "$type": "Document",
@@ -326,8 +322,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\EditRecord.cshtml",
               "ViewState": "AgIAADUAAAAAAAAAAAAnwFsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:59:42.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T12:59:42.735Z"
             },
             {
               "$type": "Document",
@@ -352,8 +347,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\EditSuspect.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T12:56:23.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T12:56:23.113Z"
             },
             {
               "$type": "Document",
@@ -365,8 +359,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\AlertMessages\\SuccessMessage.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-20T16:56:34.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T16:56:34.589Z"
             },
             {
               "$type": "Document",
@@ -378,8 +371,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\AlertMessages\\SuccessMessage.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-20T16:56:57.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T16:56:57.183Z"
             },
             {
               "$type": "Document",
@@ -391,8 +383,7 @@
               "RelativeToolTip": "SAPS_App\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAGwAAAAAAAAAAAAYwI8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-15T12:17:24.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T12:17:24.081Z"
             },
             {
               "$type": "Document",
@@ -404,8 +395,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\Suspect\\ShowSuspectDetails.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T23:15:54.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T23:15:54.204Z"
             },
             {
               "$type": "Document",
@@ -417,8 +407,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwCAAAACbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-16T20:42:57.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T20:42:57.87Z"
             },
             {
               "$type": "Document",
@@ -430,8 +419,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-24T13:03:13.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T13:03:13.048Z"
             },
             {
               "$type": "Document",
@@ -443,8 +431,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\CriminalRecord\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T23:50:00.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T23:50:00.434Z"
             },
             {
               "$type": "Document",
@@ -456,8 +443,7 @@
               "RelativeToolTip": "SAPS_App\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwB0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T16:05:40.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-07T16:05:40.499Z"
             },
             {
               "$type": "Document",
@@ -469,8 +455,7 @@
               "RelativeToolTip": "SAPS_App\\Controllers\\CriminalRecordController.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAnwJYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T09:35:27.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T09:35:27.059Z"
             },
             {
               "$type": "Document",
@@ -482,8 +467,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T14:48:22.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:48:22.473Z"
             },
             {
               "$type": "Document",
@@ -495,8 +479,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T13:42:51.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T13:42:51.264Z"
             },
             {
               "$type": "Document",
@@ -508,8 +491,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\RegisterConfirmation.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T14:58:03.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:58:03.015Z"
             },
             {
               "$type": "Document",
@@ -521,8 +503,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T18:15:45.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T18:15:45.418Z"
             },
             {
               "$type": "Document",
@@ -534,8 +515,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\AlertMessages\\InfoMessage.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-20T16:56:06.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T16:56:06.269Z"
             },
             {
               "$type": "Document",
@@ -547,8 +527,7 @@
               "RelativeToolTip": "SAPS_App\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T14:09:10.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T14:09:10.189Z"
             },
             {
               "$type": "Document",
@@ -584,8 +563,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\AlertMessages\\ErrorMessage.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-20T16:54:52.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T16:54:52.949Z"
             },
             {
               "$type": "Document",
@@ -597,8 +575,7 @@
               "RelativeToolTip": "SAPS_App\\Components\\AlertMessages\\ErrorMessage.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-20T16:53:46.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T16:53:46.193Z"
             },
             {
               "$type": "Document",
