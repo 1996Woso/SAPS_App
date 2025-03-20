@@ -2,19 +2,16 @@
 @*To display notifications*@
 @* <partial name="_Notifications" /> *@
 
-<div class="card shadow-border-0 mt-4">
-    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
-        <div class="row" style="height:0.5rem">
-            <div class="col-md-12 text-md-center">
-                <h5>Edit Suspect Details</h5>
-            </div>
-        </div>
+<div class="card mt-4">
+    <div class="card-header heading-form">
+        <h5>Edit Suspect Details</h5>
     </div>
     <div class="card-body">
         <form method="post" asp-controller="Suspect" asp-action="EditSuspect" class="edit-form" data-action-url ="@Url.Action("EditSuspect","Suspect")" id="edit-suspect">
-            <div class="border p-3 mt-4">
+            <div class="row">
                 <div class="mb-3 col-md-6">
-                    <input asp-for="SuspectNumber" class="form-control" placeholder="Suspect Number" hidden />
+                    <label asp-for="SuspectNumber"></label>
+                    <input asp-for="SuspectNumber" class="form-control" placeholder="Suspect Number" readonly />
                 </div>
                 <div class="mb-3 col-md-6">
                     <label asp-for="SuspectId"></label>
@@ -31,13 +28,11 @@
                     <input asp-for="LastName" class="form-control edit-form-input" placeholder="Last Name" maxlength="20" id="surname" onkeypress="return allowAlphabets(event)" onkeyup="letterCapitalize('surname')" onpaste="pasteAlphabets(event,'surname',20)" required />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <a href="/Suspect/Index" class=" btn btn-success w-100"><i class="bi bi-arrow-left-square w-100"> Go Back</i></a>
-                    </div>
-                    <div class="col-6">
-                        <button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
-                    </div>
+                <div class="col-md-6 mt-3">
+                    <a href="/Suspect/Index" class=" btn btn-success w-100"><i class="bi bi-arrow-left-square w-100"> Go Back</i></a>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>
                 </div>
             </div>
         </form>

@@ -10,17 +10,10 @@
     </div>
 }
  *@
-@*This is for data-tables*@
-<link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
-<div class="card shadow-border-0 mt-4">
-    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
-        <div class="row" style="height:0.5rem">
-            <div class="col-md-12 text-md-center">
-                <h5>Suspect List</h5>
-            </div>
-        </div>
+<div class="card mt-4">
+    <div class="card-header heading-form">
+        <h5>Suspect List</h5>
     </div>
     <div class="card-body p-4">
         <div class="btn-group w-100 mb-4" role="group">
@@ -99,48 +92,11 @@
     </div>
 </div>
 
-@* <div class="col-3">
-    <form asp-controller="Suspect" asp-action="SearchSuspect">
-        <div class="input-group">
-            <input type="text" name="suspectId" class="form-control" placeholder="Enter Suspect ID">
-            <button type="submit" class="btn btn-primary" style="color:black;background-color:grey"><i class="bi bi-search"></i> Search</button>
-        </div>
-    </form>
-</div> *@
-
 
 
 @section Scripts {
-      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    @* <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                order: [[2, 'asc']],
-                rowGroup: {
-                    dataSrc: 2
-                },
-                "scrollY": "50vh",
-                // "scrollX": true,
-                "scrollCollapse": true,
-                "paging": true,
-                "pagingType": "full_numbers"
-            });
-        });
-    </script> *@
     <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                autoWidth: false, // Prevent DataTables from automatically resizing
-                scrollY: "100vh",
-                scrollCollapse: true,
-                paging: true,
-                pagingType: "full_numbers",
-                columnDefs: [
-                    { targets: '_all', className: 'dt-center' } // Center align all columns
-                ]
-            });
-        });
+        initializeDatatable('myTable')
     </script>
 
     @{

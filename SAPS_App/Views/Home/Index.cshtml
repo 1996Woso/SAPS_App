@@ -5,34 +5,115 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div style="height:400px;width:500px">
+<style>
+    .welcome{
+        font-size: 2rem;
+        font-weight: bold;
+        color: black;
+        opacity: 0;
+    }
+    .welcome-hr{
+        border-top: 3px solid #000000;
+        width: 100%;
+    }
+    /*Fade-in effect*/
+    .fade-in{
+        opacity: 0;
+    }
+    .fade-in.visible{
+        opacity: 1;
+    }
+    /*Slide-in effect*/
+    .slide-in{
+        width: 0%;
+    }
+    .slide-in.visible{
+        width: 100%;
+    }
+    /*Individual letter animation*/
+    .letter{
+        display: inline-block;
+        opacity: 0;
+        transform: translate(20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+</style>
+
+
+<div class="container">
+    <div class="text-center mt-5">
+        <p class="display-4 welcome fade-in" id="animated-heading">Welcome To SAPS Application</p>
+        <hr class="welcome-hr slide-in" />
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const heading = document.getElementById("animated-heading");
+            const text = heading.innerText;
+            heading.innerHTML = "";
+
+            const letterDelay = 150; //Time to display each letter in millsecons (150ms = 0.15s)
+            const totalTime = text.length * letterDelay / 1000 //Convert milliseconds to seconds
+
+            //Apply calculated total time to transitions dynamically
+            document.querySelector('.fade-in').style.transition = `opacity ${totalTime}s ease-in-out`;
+            document.querySelector('.slide-in').style.transition = `width ${totalTime}s ease-in-out`;
+
+            text.split("").forEach((char, index) =>{
+                const span = document.createElement("span");
+                span.classList.add("letter");
+
+                if(char === " "){
+                    span.innerHTML = "&nbsp;"; //Preserve spaces
+                }
+                else{
+                    span.textContent = char;
+                }
+
+                heading.appendChild(span);
+                //Add delay to each letter
+                setTimeout(() => {
+                    span.style.opacity = "1";
+                    span.style.transform = "translateY(0)";
+                }, index * letterDelay);
+            });
+
+            //Trigger the fade-in and slide-in effects
+            setTimeout(() =>{
+                document.querySelector('.fade-in').classList.add('visible');
+                document.querySelector('.slide-in').classList.add('visible');
+            }, 100);
+        });
+    </script>
+@* <div style="height:400px;width:500px">
     <canvas id="bar_chart">
     </canvas>
 </div>
 <div id="chart_div">
 
-</div>
+</div> *@
 
 @section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var labels = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Offence)));
-            var data = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Count)));
+    @* <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> *@
+    @* <script> *@
+    @*     document.addEventListener("DOMContentLoaded", function () { *@
+    @*         var labels = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Offence))); *@
+    @*         var data = @Html.Raw(Json.Serialize(offenceCount.Select(o => o.Count))); *@
 
-            // Default chart type
-            var currentChartType = "bar";
-            renderChart("bar_chart", currentChartType, labels, data, "Total Offences Committed");
+    @*         // Default chart type *@
+    @*         var currentChartType = "bar"; *@
+    @*         renderChart("bar_chart", currentChartType, labels, data, "Total Offences Committed"); *@
 
-            // // Handle chart type change
-            // document.getElementById("chartTypeSelector").addEventListener("change", function () {
-            //     currentChartType = this.value;
-            //     renderChart("offenceChart", currentChartType, labels, data, "Total Offences Committed");
-            // });
-        });
-    </script>
+    @*         // // Handle chart type change *@
+    @*         // document.getElementById("chartTypeSelector").addEventListener("change", function () { *@
+    @*         //     currentChartType = this.value; *@
+    @*         //     renderChart("offenceChart", currentChartType, labels, data, "Total Offences Committed"); *@
+    @*         // }); *@
+    @*     }); *@
+    @* </script> *@
 
 }
 
 
 
+   

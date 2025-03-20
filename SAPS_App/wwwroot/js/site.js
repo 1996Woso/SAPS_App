@@ -298,50 +298,65 @@ function enableFields(classes) {
     });
 }
 /* For plots */
-var myChart = null;  // Variable to store the chart instance
+//var myChart = null;  // Variable to store the chart instance
 
-function renderChart(chartId, chartType, labels, data, chartTitle) {
-    var ctx = document.getElementById(chartId).getContext("2d");
+//function renderChart(chartId, chartType, labels, data, chartTitle) {
+//    var ctx = document.getElementById(chartId).getContext("2d");
 
-    // If a chart already exists, destroy it before creating a new one
-    if (myChart !== null) {
-        myChart.destroy();
-    }
+//    // If a chart already exists, destroy it before creating a new one
+//    if (myChart !== null) {
+//        myChart.destroy();
+//    }
 
-    // Create a new chart
-    myChart = new Chart(ctx, {
-        type: chartType, // 'bar' or 'pie'
-        data: {
-            labels: labels,
-            datasets: [{
-                label: chartTitle,
-                data: data,
-                backgroundColor: [
-                    "rgba(255, 99, 132, 0.5)",
-                    "rgba(54, 162, 235, 0.5)",
-                    "rgba(255, 206, 86, 0.5)",
-                    "rgba(75, 192, 192, 0.5)",
-                    "rgba(153, 102, 255, 0.5)",
-                    "rgba(255, 159, 64, 0.5)"
-                ],
-                borderColor: [
-                    "rgba(255, 99, 132, 1)",
-                    "rgba(54, 162, 235, 1)",
-                    "rgba(255, 206, 86, 1)",
-                    "rgba(75, 192, 192, 1)",
-                    "rgba(153, 102, 255, 1)",
-                    "rgba(255, 159, 64, 1)"
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scales: chartType === "bar" ? { y: { beginAtZero: true } } : {}
-        }
+//    // Create a new chart
+//    myChart = new Chart(ctx, {
+//        type: chartType, // 'bar' or 'pie'
+//        data: {
+//            labels: labels,
+//            datasets: [{
+//                label: chartTitle,
+//                data: data,
+//                backgroundColor: [
+//                    "rgba(255, 99, 132, 0.5)",
+//                    "rgba(54, 162, 235, 0.5)",
+//                    "rgba(255, 206, 86, 0.5)",
+//                    "rgba(75, 192, 192, 0.5)",
+//                    "rgba(153, 102, 255, 0.5)",
+//                    "rgba(255, 159, 64, 0.5)"
+//                ],
+//                borderColor: [
+//                    "rgba(255, 99, 132, 1)",
+//                    "rgba(54, 162, 235, 1)",
+//                    "rgba(255, 206, 86, 1)",
+//                    "rgba(75, 192, 192, 1)",
+//                    "rgba(153, 102, 255, 1)",
+//                    "rgba(255, 159, 64, 1)"
+//                ],
+//                borderWidth: 1
+//            }]
+//        },
+//        options: {
+//            responsive: true,
+//            scales: chartType === "bar" ? { y: { beginAtZero: true } } : {}
+//        }
+//    });
+//}
+/* Data table*/
+function initializeDatatable(tableId) {
+    $(document).ready(function () {
+        $(`#${tableId}`).DataTable({
+            autoWidth: false, // Prevent DataTables from automatically resizing
+            scrollY: "100vh",
+            scrollX: "100vh",
+            scrollCollapse: true,
+            paging: true,
+            pagingType: "full_numbers",
+            columnDefs: [
+                { targets: '_all', className: 'dt-center' } // Center align all columns
+            ]
+        });
     });
 }
-
 
 
 

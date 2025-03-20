@@ -6,17 +6,11 @@
         @TempData["SuccessMessage"]
     </div>
 }
-@*This is for data-tables*@
-<link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" asp-append-version="true" />
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
 
-<div class="card shadow-border-9 mt-4">
-    <div class="card-header bg-gredient ml-0 py-4" style="background-color:lightskyblue;color:black">
-        <div class="row" style="height:0.5rem">
-            <div class="col-md-12 text-md-center">
-                <h5>Case Manager List</h5>
-            </div>
-        </div>
+
+<div class="card mt-4">
+    <div class="card-header heading-form">
+        <h5>Case Manager List</h5>
     </div>
     <div class="card-body p-4">
         <section>
@@ -27,12 +21,12 @@
                     </a>
                     <span>Download List</span>
                 </div>
-                <div class="hover-btn">
-                    <a class="btn" id="register" asp-area="Identity" asp-page="/Account/Register">
-                        <i class="bi bi-plus-circle"></i>
-                    </a>
-                    <span>Add New Case Manager</span>
-                </div>
+                @* <div class="hover-btn"> *@
+                @*     <a class="btn" id="register" asp-area="Identity" asp-page="/Account/Register"> *@
+                @*         <i class="bi bi-plus-circle"></i> *@
+                @*     </a> *@
+                @*     <span>Add New Case Manager</span> *@
+                @* </div> *@
             </div>
             <table class="table table-striped" id="myTable">
                 <thead>
@@ -80,23 +74,10 @@
 
 
 @section Scripts {
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                order: [[2, 'asc']],
-                    rowGroup: {
-                            dataSrc: 2
-                        },
-                        "scrollY": "100vh",
-                        // "scrollX": true,
-                        "scrollCollapse": true,
-                        "paging": true,
-                        "pagingType": "full_numbers"
-                    });
-                });
+        initializeDatatable('myTable')
     </script>
+
     @{
         <partial name="_ValidationScriptsPartial" />
     }

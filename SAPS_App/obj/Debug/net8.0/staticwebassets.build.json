@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D9mhVlpJymr1jGRgW3iVLX3s4Awcx6u7cZPXV2j3pwg=",
+  "Hash": "N9fcLR1qplJwXLzZMmCwnvQV9HHyuWvfFTk1an+hWuo=",
   "Source": "SAPS_App",
   "BasePath": "_content/SAPS_App",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "fpwug28jjc",
-      "Integrity": "7WaQJFXKkWO+z7s1xMJFSQS/8dkNuNucPtIFCk/BuII=",
+      "Fingerprint": "s51pul8qbn",
+      "Integrity": "4Nv7lvR1FaKU8yGQUhA2OeI7/uI0/N/h5dcR33a3J70=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SAPS_App.styles.css"
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "unfqaelxcx",
-      "Integrity": "NlxlCCM0Nlz1xMJXnlwIN7GgsYPYZQFVLd8WHXpKwyA=",
+      "Fingerprint": "1udhal0r05",
+      "Integrity": "Sd4godQTGoJfuyogPoZ0HsEtaL9fke0URwCk7cjkyAw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SAPS_App.bundle.scp.css"
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yt4rg9u41t",
-      "Integrity": "yvpAlQTkIljxvxKn12dEUEYVfH0NVegKoRMPn0lKL3c=",
+      "Fingerprint": "2a0tzoempx",
+      "Integrity": "qmkOnZ3hsqdKKhOe4bDtP8r79lLezdSYO2xNYmnZf60=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1942,8 +1942,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s7iyekuh3m",
-      "Integrity": "uE6lk1Ny2QNmPvj00f3OdShzwrdr5CL8t0AKmKCCQvI=",
+      "Fingerprint": "5dmx93l1nk",
+      "Integrity": "h+s/d5j//CT8kuh2dIEzOMG0EsA7RcmXrGhVqxUbYgw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -3468,6 +3468,51 @@
       ]
     },
     {
+      "Route": "css/site.2a0tzoempx.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3584"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qmkOnZ3hsqdKKhOe4bDtP8r79lLezdSYO2xNYmnZf60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 09:40:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2a0tzoempx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qmkOnZ3hsqdKKhOe4bDtP8r79lLezdSYO2xNYmnZf60="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3478,7 +3523,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3145"
+          "Value": "3584"
         },
         {
           "Name": "Content-Type",
@@ -3486,11 +3531,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"yvpAlQTkIljxvxKn12dEUEYVfH0NVegKoRMPn0lKL3c=\""
+          "Value": "\"qmkOnZ3hsqdKKhOe4bDtP8r79lLezdSYO2xNYmnZf60=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 12:22:32 GMT"
+          "Value": "Thu, 20 Mar 2025 09:40:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3500,52 +3545,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-yvpAlQTkIljxvxKn12dEUEYVfH0NVegKoRMPn0lKL3c="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.yt4rg9u41t.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3145"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yvpAlQTkIljxvxKn12dEUEYVfH0NVegKoRMPn0lKL3c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 15 Feb 2025 12:22:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yt4rg9u41t"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-yvpAlQTkIljxvxKn12dEUEYVfH0NVegKoRMPn0lKL3c="
+          "Value": "sha256-qmkOnZ3hsqdKKhOe4bDtP8r79lLezdSYO2xNYmnZf60="
         }
       ]
     },
@@ -7656,6 +7656,51 @@
       ]
     },
     {
+      "Route": "js/site.5dmx93l1nk.js",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13609"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h+s/d5j//CT8kuh2dIEzOMG0EsA7RcmXrGhVqxUbYgw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 23:56:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5dmx93l1nk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h+s/d5j//CT8kuh2dIEzOMG0EsA7RcmXrGhVqxUbYgw="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -7666,7 +7711,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12996"
+          "Value": "13609"
         },
         {
           "Name": "Content-Type",
@@ -7674,11 +7719,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uE6lk1Ny2QNmPvj00f3OdShzwrdr5CL8t0AKmKCCQvI=\""
+          "Value": "\"h+s/d5j//CT8kuh2dIEzOMG0EsA7RcmXrGhVqxUbYgw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 15:15:51 GMT"
+          "Value": "Tue, 18 Mar 2025 23:56:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7688,52 +7733,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uE6lk1Ny2QNmPvj00f3OdShzwrdr5CL8t0AKmKCCQvI="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.s7iyekuh3m.js",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12996"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uE6lk1Ny2QNmPvj00f3OdShzwrdr5CL8t0AKmKCCQvI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 15:15:51 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s7iyekuh3m"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-uE6lk1Ny2QNmPvj00f3OdShzwrdr5CL8t0AKmKCCQvI="
+          "Value": "sha256-h+s/d5j//CT8kuh2dIEzOMG0EsA7RcmXrGhVqxUbYgw="
         }
       ]
     },
@@ -12412,6 +12412,51 @@
       ]
     },
     {
+      "Route": "SAPS_App.1udhal0r05.bundle.scp.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SAPS_App.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3441"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Sd4godQTGoJfuyogPoZ0HsEtaL9fke0URwCk7cjkyAw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Mar 2025 09:15:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1udhal0r05"
+        },
+        {
+          "Name": "label",
+          "Value": "SAPS_App.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Sd4godQTGoJfuyogPoZ0HsEtaL9fke0URwCk7cjkyAw="
+        }
+      ]
+    },
+    {
       "Route": "SAPS_App.bundle.scp.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SAPS_App.bundle.scp.css",
       "Selectors": [],
@@ -12422,7 +12467,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5544"
+          "Value": "3441"
         },
         {
           "Name": "Content-Type",
@@ -12430,11 +12475,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NlxlCCM0Nlz1xMJXnlwIN7GgsYPYZQFVLd8WHXpKwyA=\""
+          "Value": "\"Sd4godQTGoJfuyogPoZ0HsEtaL9fke0URwCk7cjkyAw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 17:03:03 GMT"
+          "Value": "Thu, 20 Mar 2025 09:15:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12444,12 +12489,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NlxlCCM0Nlz1xMJXnlwIN7GgsYPYZQFVLd8WHXpKwyA="
+          "Value": "sha256-Sd4godQTGoJfuyogPoZ0HsEtaL9fke0URwCk7cjkyAw="
         }
       ]
     },
     {
-      "Route": "SAPS_App.fpwug28jjc.styles.css",
+      "Route": "SAPS_App.s51pul8qbn.styles.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SAPS_App.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -12463,7 +12508,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5666"
+          "Value": "3563"
         },
         {
           "Name": "Content-Type",
@@ -12471,11 +12516,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WaQJFXKkWO+z7s1xMJFSQS/8dkNuNucPtIFCk/BuII=\""
+          "Value": "\"4Nv7lvR1FaKU8yGQUhA2OeI7/uI0/N/h5dcR33a3J70=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 17:03:03 GMT"
+          "Value": "Thu, 20 Mar 2025 09:15:29 GMT"
         },
         {
           "Name": "Link",
@@ -12485,11 +12530,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fpwug28jjc"
+          "Value": "s51pul8qbn"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7WaQJFXKkWO+z7s1xMJFSQS/8dkNuNucPtIFCk/BuII="
+          "Value": "sha256-4Nv7lvR1FaKU8yGQUhA2OeI7/uI0/N/h5dcR33a3J70="
         },
         {
           "Name": "label",
@@ -12512,7 +12557,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5666"
+          "Value": "3563"
         },
         {
           "Name": "Content-Type",
@@ -12520,11 +12565,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WaQJFXKkWO+z7s1xMJFSQS/8dkNuNucPtIFCk/BuII=\""
+          "Value": "\"4Nv7lvR1FaKU8yGQUhA2OeI7/uI0/N/h5dcR33a3J70=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 17:03:03 GMT"
+          "Value": "Thu, 20 Mar 2025 09:15:29 GMT"
         },
         {
           "Name": "Link",
@@ -12534,52 +12579,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7WaQJFXKkWO+z7s1xMJFSQS/8dkNuNucPtIFCk/BuII="
-        }
-      ]
-    },
-    {
-      "Route": "SAPS_App.unfqaelxcx.bundle.scp.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SAPS_App.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5544"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NlxlCCM0Nlz1xMJXnlwIN7GgsYPYZQFVLd8WHXpKwyA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 17:03:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "unfqaelxcx"
-        },
-        {
-          "Name": "label",
-          "Value": "SAPS_App.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NlxlCCM0Nlz1xMJXnlwIN7GgsYPYZQFVLd8WHXpKwyA="
+          "Value": "sha256-4Nv7lvR1FaKU8yGQUhA2OeI7/uI0/N/h5dcR33a3J70="
         }
       ]
     }
