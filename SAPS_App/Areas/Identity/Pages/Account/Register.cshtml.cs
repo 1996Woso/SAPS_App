@@ -209,12 +209,13 @@ namespace SAPS_App.Areas.Identity.Pages.Account
                                    Kind Regards,<br> SAPS Management Admin.";
 
                     await emailSender.SendEmailAsync(user.Email, "Confirm Email", body);
-                    var body1 = $@"Good day Eviwe Khohlombe, <br><br>
-                                   A new user has created account on SAPS application, 
-                                   user's email is {Input.Email}, please assign role the user.<br><br>
-                                   Kind Regards,<br> SAPS Management Admin.";
+                    //var body1 = $@"Good day Eviwe Khohlombe, <br><br>
+                    //               A new user has created account on SAPS application, 
+                    //               user's email is {Input.Email}.<br> Please assign a role the user:
+                    //               <a href = 'http://eviwekhohlombe-001-site1.ltempurl.com/Identity/Account/Login'> Login</a> <br><br>
+                    //               Kind Regards,<br> SAPS Management Admin.";
 
-                    await emailSender.SendEmailAsync("eviwe.khohlombe@gmail.com", "Assign role to new user", body1);
+                    //await emailSender.SendEmailAsync("eviwe.khohlombe@gmail.com", "Assign role to new user", body1);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

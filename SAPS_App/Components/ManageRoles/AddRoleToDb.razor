@@ -1,58 +1,79 @@
-﻿@inject RoleManager<IdentityRole> RoleManager
+﻿@using SAPS_App.Services
+@inject RoleManager<IdentityRole> RoleManager
+@inject IJSRuntime IJSRuntime
+@inject IMessageService messageService
+@implements IDisposable
+<div class="container small-box">
+    @if(messageService.IsFormDisplayed)
+    {
+        <div class="card">
+            <div class="card-header heading-form">
+                <p>
+                    Add Role To Batabase
+                </p>
+            </div>
+            <div class="card-body">
+                <EditForm Model="@Role" OnValidSubmit="AddRole" FormName="addRoleToDb">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <h6 class="text-center"><u>Add Role To Batabase</u></h6>
-        <EditForm Model="@Role" OnValidSubmit="AddRole" FormName="addRoleToDb">
-            <DataAnnotationsValidator />
-            <ValidationSummary />
+                    <div class="input-group">
+                        <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name"/>
+                        <ValidationMessage For="() => Role.Name" class="text-danger" />
+                        <button type="submit" class="btn btn-outline-primary">
+                            <i class="bi bi-plus-circle"> Add Role</i>
+                        </button>
+                    </div>
+                </EditForm>
 
-            <div class="input-group">
-                <InputText @bind-Value="Role.Name" class="form-control" placeholder="Role Name"/>
-                <ValidationMessage For="() => Role.Name" class="text-danger" />
-                <button type="submit" class="btn btn-outline-primary">
-                    <i class="bi bi-plus-circle"> Add Role</i>
-                </button>
             </div>
-        </EditForm>
-
-        @if (!string.IsNullOrEmpty(ErrorMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="error-div">
-                <ErrorMessage Message="@ErrorMessage" IsDivDisplayed="true"/>
-            </div>
-           @*  return; *@
-        }
-        else if (!string.IsNullOrEmpty(SuccessMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="success-div">
-                <SuccessMessage Message="@SuccessMessage" IsDivDisplayed="true"/>
-            </div>
-  @*           return; *@
-        }
-        else if (!string.IsNullOrEmpty(InfoMessage) && IsFormSubmitted)
-        {
-            <div class="fade-message w-100" id="info-div">
-                <InfoMessage Message="@InfoMessage" IsDivDisplayed ="true" />
-            </div>
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(messageService.ErrorMessage))
+    {
+        <div class="fade-message w-100" id="error-div">
+            <ErrorMessage Message="@messageService.ErrorMessage" IsDivDisplayed="true" />
+        </div>
+        @*  return; *@
+    }
+    else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
+    {
+        <div class="fade-message w-100" id="success-div">
+            <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true" />
+        </div>
+        @*           return; *@
+    }
+    else if (!string.IsNullOrEmpty(messageService.InfoMessage))
+    {
+        <div class="fade-message w-100" id="info-div">
+            <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed="true" />
+        </div>
         @*     return; *@
-        }
-    </div>
+    }
 </div>
+
 @code {
     private IdentityRole? Role = new IdentityRole();
-    private string? ErrorMessage { get; set; }
-    private string? SuccessMessage { get; set; }
-    private string? InfoMessage { get; set; }
-    private bool IsFormSubmitted = false;
 
+    // protected override async Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     if (!string.IsNullOrEmpty(ErrorMessage) || !string.IsNullOrEmpty(SuccessMessage) || !string.IsNullOrEmpty(InfoMessage))
+    //     {
+    //         await IJSRuntime.InvokeVoidAsync("initializeTimeouts");
+    //         IsFormSubmitted = false;
+    //     }
+    // }
+    protected override async Task OnInitializedAsync()
+    {
+        messageService.Onchange += StateHasChanged;
+    }
     private async Task AddRole()
     {
-        IsFormSubmitted = true;
         // Ensure Name is bound properly
         if (Role == null || string.IsNullOrEmpty(Role.Name))
         {
-            InfoMessage = "Role name cannot be empty.";
+            messageService.Show("", "Role name cannot be empty.", "");
+            await messageService.HideAsync();
             return;
         }
 
@@ -65,23 +86,64 @@
 
             if (result.Succeeded)
             {
-                SuccessMessage = $"Role '{Role.Name}' added successfully.";
-                ErrorMessage = "";
-                InfoMessage = "";
+                messageService.Show("", "", $"Role '{Role.Name}' added successfully.");
+                await messageService.HideAsync();
                 Role = new IdentityRole(); // Reset form
             }
             else
             {
-                ErrorMessage = "Error adding Role: " + string.Join(", ", result.Errors.Select(e => e.Description));
-                SuccessMessage = "";
-                InfoMessage = "";
+                messageService.Show("Error adding Role: " + string.Join(", ", result.Errors.Select(e => e.Description)), "", "");
+                await messageService.HideAsync();
             }
         }
         else
         {
-            InfoMessage = $"Role '{Role.Name}' already exists.";
-            SuccessMessage = "";
-            ErrorMessage = "";
+            messageService.Show("",$"Role '{Role.Name}' already exists.", "");
+            await messageService.HideAsync();
         }
     }
+
+    public void Dispose()
+    {
+        messageService.Onchange -= StateHasChanged;
+    }
 }
+<script>
+    function initializeTimeouts() {
+        const errorDiv = document.getElementById('error-div');
+        const successDiv = document.getElementById('success-div');
+        const infoDiv = document.getElementById('info-div');
+        if (errorDiv) {
+            errorDiv.classList.remove('fade-out');
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    errorDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (successDiv) {
+            successDiv.classList.remove('fade-out');
+            successDiv.style.display = 'block';
+            setTimeout(() => {
+                successDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+
+        if (infoDiv) {
+            infoDiv.classList.remove('fade-out');
+            infoDiv.style.display = 'block';
+            setTimeout(() => {
+                infoDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    infoDiv.style.display = 'none';
+                }, 2500);
+            }, 2500);
+        }
+    }
+</script>

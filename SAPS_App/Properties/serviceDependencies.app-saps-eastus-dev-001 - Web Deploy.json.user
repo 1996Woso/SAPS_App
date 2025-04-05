@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2025-03-21T15:48:45.7480276Z"
+    }
+  },
+  "parameters": {
+    "app-saps-eastus-dev-001.resourceGroupLocation": {
+      "Name": "app-saps-eastus-dev-001.resourceGroupLocation",
+      "Type": null,
+      "Value": "eastus"
+    },
+    "app-saps-eastus-dev-001.subscriptionId": {
+      "Name": "app-saps-eastus-dev-001.subscriptionId",
+      "Type": "subscription",
+      "Value": "7f54fd70-55a1-46a8-8a88-96162b538717"
+    },
+    "app-saps-eastus-dev-001.resourceGroupName": {
+      "Name": "app-saps-eastus-dev-001.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-saps-eastus-dev-001"
+    },
+    "app-saps-eastus-dev-001.resourceName": {
+      "Name": "app-saps-eastus-dev-001.resourceName",
+      "Type": null,
+      "Value": "app-saps-eastus-dev-001"
+    }
+  }
+}

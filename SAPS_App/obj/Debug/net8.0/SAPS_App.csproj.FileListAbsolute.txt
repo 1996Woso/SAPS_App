@@ -2691,7 +2691,6 @@ C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.Mv
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.RazorAssemblyInfo.cache
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.RazorAssemblyInfo.cs
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\SAPS_App.sourcelink.json
-C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Areas\Identity\Pages\Account\Manage\RoleManagement\ManageRoles.cshtml.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\ErrorMessage.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\InfoMessage.razor.rz.scp.css
 C:\Users\eviwe\source\repos\Eviwe\SAPS_App\SAPS_App\obj\Debug\net8.0\scopedcss\Components\AlertMessages\SuccessMessage.razor.rz.scp.css

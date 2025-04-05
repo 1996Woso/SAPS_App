@@ -9,20 +9,19 @@ using SAPS_App.Services;
 using SAPS_App.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration["DB_Connection_String"];
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<IdentityContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("connectionString")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("Somee")));
 builder.Services.AddServerSideBlazor(); //This service is for Razor Components(Blazor Components)
 //This is done after connecting MsServer and creating a table on  (appsettings.json and ApplictationsDbContext.cs
 builder.Services.AddDbContext<SAPS_Context>(options => options.UseSqlServer(
-            builder.Configuration.GetConnectionString("connectionString")
+            builder.Configuration.GetConnectionString("Somee")
             ));/* after writing this code , install Microsoft.EntityFrameworkCore.SqlServer
                 * Then Add a migration (first install Microsoft.EntityFrameworkCore.Tools)
                 * to add migration go to toolS>Nuget Package manager>package manager console
                 * The after PM> write add-migration AddCustomerToDatabase(migration name) 
-                * then write and run update-database (to push migrations to database.
+                * then write and run update-database (to push migrations to database.z
                 * After all these steps , the project will be connected to MSSQL
                 */
 //This  Code did not add roles
@@ -47,6 +46,7 @@ builder.Services.AddScoped<IEmailSender,EmailSender>();//Registering what is in 
 builder.Services.AddScoped<EmailSender>();
 builder.Services.AddScoped<SAPS_Services>();
 builder.Services.AddScoped<ISAPSService, SAPSService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 // Set EPPlus license context
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Or LicenseContext.Commercial if you have a commercial license
 var app = builder.Build();
