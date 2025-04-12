@@ -4,7 +4,7 @@
 @* <partial name="_Notifications" /> *@
 <div class="card mt-4">
     <div class="card-header heading-form">
-        <h5>Add New Suspect</h5>
+        <p>Add New Suspect</p>
     </div>
     <div class="card-body p-4">
         <form method="post" asp-controller="Suspect" asp-action="AddSuspects" class="edit-form" data-action-url="@Url.Action("AddSuspects","Suspect")">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <a href="/Suspect/Index" class=" btn btn-success w-100"><i class="bi bi-arrow-left-square w-100"> Go Back</i></a>
+                        <a href="/Suspect/Index" class=" btn btn-success w-100"><i class="bi bi-arrow-left-square w-100"> </i> Go Back</a>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-success w-100" type="submit"><i class="bi bi-save"></i> Save</button>

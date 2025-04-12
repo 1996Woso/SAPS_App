@@ -4,12 +4,12 @@
     {
         <div class="card shadow-border-0 mt-4">
             <div class="card-header heading-form">
-                <h5>Details of @Model.Suspect.FirstName @Model.Suspect.LastName</h5>
+                <p>Details of @Model.Suspect.FirstName @Model.Suspect.LastName</p>
             </div>
             <div class="card-body p-4">
                 <div class="row">
                     <!-- First column (Search Form) -->
-                    <div class="col-lg-4 mt-3">
+                    <div class="col-md-4 mt-3" style="border-right:1px solid black;">
                         @*          <form asp-controller="Suspect" asp-action="SearchSuspect">
                     <div class="input-group">
                     <input type="text" name="suspectId" class="form-control" size="15" placeholder="Enter Suspect ID">
@@ -50,16 +50,15 @@
                         }
                     }
                 </div>
-
                 <!-- Second column (Suspect Records) -->
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     @if (Model != null && Model.Suspect != null)
                         {
                             @if (Model.CriminalRecords.Any())
                             {
-                                <div class="card mt-3">
-                                    <div class="card-header">
-                                        <h2><img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />Criminal Records</h2>
+                                <div class="card mt-3" style="border:none !important;">
+                                    <div class="card-header heading-form">
+                                        <p><img src="~/Images/CriminalRecord.PNG" width="50" height="50" /><br />Criminal Records</p>
                                     </div>
                                     <div class="hover-btn">
                                         <a asp-controller="CriminalRecord" asp-action="AddRecords" asp-route-id="@Model.Suspect.SuspectNumber" class="btn">
