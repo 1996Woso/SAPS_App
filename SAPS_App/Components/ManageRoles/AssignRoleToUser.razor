@@ -9,8 +9,8 @@
 @implements IDisposable
 
 <div class="container small-box">
-    @if(messageService.IsFormDisplayed)
-    {
+    @* @if(messageService.IsFormDisplayed) *@
+    @* { *@
         <div class="card">
         <div class="card-header heading-form">
             <p>
@@ -48,16 +48,16 @@
             </EditForm>
         </div>
     </div>
-    }
+    @* } *@
     @if (!string.IsNullOrEmpty(messageService.InfoMessage))
     {
-        <div class="fade-message w-100" id="info-div">
+        <div class="overlay-alert">
             <InfoMessage Message="@messageService.InfoMessage" IsDivDisplayed ="true"/>
         </div>
     }
     else if (!string.IsNullOrEmpty(messageService.SuccessMessage))
     {
-        <div class="fade-message w-100" id="success-div">
+        <div class="overlay-alert">
             <SuccessMessage Message="@messageService.SuccessMessage" IsDivDisplayed="true"/>
         </div>
     }

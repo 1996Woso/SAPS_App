@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xDIqyeQ+3kQjHB5hrS2RJ0VmBuaU82A2g48KSXznrNk=",
+  "Hash": "yfJ6D/Q68hNAsa2pOfUhCX2sxGsvsq6q9WURxdEgMjM=",
   "Source": "SAPS_App",
   "BasePath": "_content/SAPS_App",
   "Mode": "Default",
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0ubkb0b2zz",
-      "Integrity": "GGxm/ANEu9X6DJ8WNJFOR/q2Oxs2LS8hDvSU7wCOFmA=",
+      "Fingerprint": "qfyw5hyin3",
+      "Integrity": "Vh+gddEE8hFys2rFbroa9qwbTij9DGViB0DrAbr7y2c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3468,51 +3468,6 @@
       ]
     },
     {
-      "Route": "css/site.0ubkb0b2zz.css",
-      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4662"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GGxm/ANEu9X6DJ8WNJFOR/q2Oxs2LS8hDvSU7wCOFmA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 08:41:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "0ubkb0b2zz"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GGxm/ANEu9X6DJ8WNJFOR/q2Oxs2LS8hDvSU7wCOFmA="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -3523,7 +3478,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4662"
+          "Value": "4847"
         },
         {
           "Name": "Content-Type",
@@ -3531,11 +3486,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GGxm/ANEu9X6DJ8WNJFOR/q2Oxs2LS8hDvSU7wCOFmA=\""
+          "Value": "\"Vh+gddEE8hFys2rFbroa9qwbTij9DGViB0DrAbr7y2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 08:41:19 GMT"
+          "Value": "Mon, 05 May 2025 10:02:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3545,7 +3500,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GGxm/ANEu9X6DJ8WNJFOR/q2Oxs2LS8hDvSU7wCOFmA="
+          "Value": "sha256-Vh+gddEE8hFys2rFbroa9qwbTij9DGViB0DrAbr7y2c="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.qfyw5hyin3.css",
+      "AssetFile": "C:\\Users\\eviwe\\source\\repos\\Eviwe\\SAPS_App\\SAPS_App\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4847"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vh+gddEE8hFys2rFbroa9qwbTij9DGViB0DrAbr7y2c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 10:02:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qfyw5hyin3"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vh+gddEE8hFys2rFbroa9qwbTij9DGViB0DrAbr7y2c="
         }
       ]
     },

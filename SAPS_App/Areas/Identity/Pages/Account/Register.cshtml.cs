@@ -100,11 +100,11 @@ namespace SAPS_App.Areas.Identity.Pages.Account
             public string Email { get; set; }
             [Required]
             [Display(Name = "First Name")]
-            [StringLength(20, MinimumLength = 2, ErrorMessage = "The First Name must be between 2 and 20 characters.")]
+            [StringLength(40, MinimumLength = 2, ErrorMessage = "The First Name must be between 2 and 40 characters.")]
             public string Name { get; set; }
             [Required]
             [Display(Name = "Last Name")]
-            [StringLength(20, MinimumLength = 2, ErrorMessage = "The First Name must be between 2 and 20 characters.")]
+            [StringLength(40, MinimumLength = 2, ErrorMessage = "The Last Name must be between 2 and 40 characters.")]
             public string Surname { get; set; }
 
             /// <summary>
