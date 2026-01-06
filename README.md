@@ -10,7 +10,7 @@ This system leverages **ASP.NET Core**, **MVC**, **Blazor**, and **MS SQL Server
 ## 🚀 Features
 
 - **Role-Based Access Control**  
-  Different user roles (e.g., Admin, Officer, Investigator) with tailored permissions.
+  Different user roles (e.g., Admin, Police Officer, Case Manager, Station Manager) with tailored permissions.
 
 - **Suspect Records Management**  
   Create, update, and maintain detailed suspect profiles.
@@ -20,9 +20,7 @@ This system leverages **ASP.NET Core**, **MVC**, **Blazor**, and **MS SQL Server
 
 - **Case Tracking**  
   Monitor case progress from initial suspect capture to final resolution.
-
-- **Audit & Accountability**  
-  Logs and tracking mechanisms ensure transparency and accountability in case handling.
+  
 ---
 
 ## 🧰 Tech Stack
@@ -33,6 +31,7 @@ This system leverages **ASP.NET Core**, **MVC**, **Blazor**, and **MS SQL Server
 - ASP.NET Core Identity
 - SQL Server
 ---
+
 **Frontend:**
 - Razor Views and Blazor Components
 - JavaScript
