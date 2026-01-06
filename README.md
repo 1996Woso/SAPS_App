@@ -1,6 +1,11 @@
-#  SAPS Application
+# Police Station Case Management System
 
-A web-based dating platform that enables users to create profiles, discover potential matches, communicate securely, and access personalized features through authenticated user accounts.
+## 📖 Overview
+The Police Station Case Management System is a **web-based application** designed to streamline the management of suspect records, criminal cases, and case assignments. It provides law enforcement agencies with a modern, efficient, and accountable way to track cases from suspect capture through to closure.
+
+This system leverages **ASP.NET Core**, **MVC**, **Blazor**, and **MS SQL Server** to deliver a secure, scalable, and user-friendly solution.
+
+---
 
 ## 🚀 Features
 
@@ -18,6 +23,7 @@ A web-based dating platform that enables users to create profiles, discover pote
 
 - **Audit & Accountability**  
   Logs and tracking mechanisms ensure transparency and accountability in case handling.
+---
 
 ## 🧰 Tech Stack
 
@@ -26,7 +32,7 @@ A web-based dating platform that enables users to create profiles, discover pote
 - Entity Framework Core
 - ASP.NET Core Identity
 - SQL Server
-
+---
 **Frontend:**
 - Razor Views and Blazor Components
 - JavaScript
